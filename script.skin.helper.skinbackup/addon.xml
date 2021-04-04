@@ -20,5 +20,9 @@
 		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
 		<website></website>
 		<source>https://github.com/kodi-community-addons/script.skin.helper.skinbackup</source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
 	</extension>
 </addon>

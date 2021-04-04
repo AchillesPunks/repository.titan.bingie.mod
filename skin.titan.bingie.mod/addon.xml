@@ -17,14 +17,14 @@
 		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">BINGIE MOD... The new Titan skin for Kodi Leia.</summary>
-		<description>Titan is back for Kodi Leia with the new BINGIE MOD layout!</description>
+		<summary lang="en_GB">Titan BINGIE MOD... The new Titan skin for Kodi Matrix.</summary>
+		<description>Titan is back for Kodi Matrix with the new NETFLIX layout!</description>
 		<platform>all</platform>
 		<license>GPL v2.0</license>
 		<forum>https://forum.kodi.tv/showthread.php?tid=355993</forum>
 		<website>https://forum.kodi.tv/showthread.php?tid=355993</website>
 		<email></email>
-		<source>https://github.com/AchillesPunks/repository.bingie.mod.git/</source>
+		<source>https://github.com/AchillesPunks/skin.titan.bingie.mod/</source>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
