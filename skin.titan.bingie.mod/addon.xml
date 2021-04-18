@@ -9,7 +9,7 @@
         <import addon="script.skin.helper.widgets" version="1.0.0"/>
         <import addon="script.skin.helper.backgrounds" version="1.0.0"/>
         <import addon="resource.images.skinbackgrounds.titanium" version="1.0.0"/>
-        <import addon="resource.images.skinicons.wide" version="1.0.0"/>
+        <import addon="resource.images.skinicons.wide" version="1.0.5"/>
         <import addon="resource.images.backgroundoverlays.basic" version="1.0.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
@@ -41,7 +41,7 @@
             <screenshot>resources/screenshot010.jpg</screenshot>
 		</assets>
 		<news>
-			[B]Titan BINGIE MOD v1[/B][CR]Follow the forum thread about the latest news for the skin.[CR]https://forum.kodi.tv/showthread.php?tid=355993
+			[B]Titan BINGIE MOD v2[/B][CR]Follow the forum thread about the latest news for the skin.[CR]https://forum.kodi.tv/showthread.php?tid=355993
 		</news>
 	</extension>
 </addon>
