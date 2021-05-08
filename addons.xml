@@ -150,7 +150,7 @@
 	</extension>
 </addon>
 
-     <addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.0.43" provider-name="marcelveldt and others">
+     <addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.0.44" provider-name="marcelveldt and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
         <import addon="xbmc.addon" version="12.0.0"/>
@@ -167,6 +167,9 @@
         <summary lang="en">Ready to use widgets for all kind of media types</summary>
         <description></description>
 	<news>
+Version 1.0.44
+* fix for similar
+
 Version 1.0.43
 * back old code for "recommended movies"
 * more py3 changes
@@ -200,14 +203,10 @@ Version 1.0.37
         <forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
         <website></website>
         <source>https://github.com/kodi-community-addons/script.skin.helper.widgets</source>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
     </extension>
 </addon>
 
-<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.35" provider-name="marcelveldt and others">
+<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.36" provider-name="marcelveldt and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
         <import addon="xbmc.addon" version="12.0.0"/>
@@ -252,6 +251,10 @@ Version 1.0.37
         <summary lang="en">Helper service for Kodi skins</summary>
         <description>Helper service for Kodi skins</description>
         <news>
+v1.1.36
+- Hungarian lang created
+- remove get_repo_addoninfo
+- Fix for "Resume" in dialog
 v1.1.35
 - fix setskinconstant
 
@@ -302,7 +305,7 @@ v1.1.25
     </extension>
 </addon>
 
-    <addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" version="1.0.21" provider-name="marcelveldt and others">
+<addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" version="1.0.21" provider-name="marcelveldt and others">
 	<requires>
 	    <import addon="xbmc.python" version="3.0.0"/>
         <import addon="xbmc.addon" version="12.0.0"/>
@@ -329,6 +332,7 @@ v1.1.25
 		</assets>
 	</extension>
 </addon>
+
 
    <addon id="script.skinshortcuts" name="Skin Shortcuts" version="1.1.4" provider-name="BigNoid, marcelveldt, SiLVO">
 	<requires>
@@ -551,7 +555,7 @@ v1.1.25
 	 <!-- MODULES -->
 <addon id="script.module.metadatautils"
        name="Metadata and Artwork module"
-       version="1.0.40"
+       version="1.0.41"
        provider-name="marcelveldt and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -569,6 +573,9 @@ v1.1.25
         <description lang="en">The metadata and artwork module for Kodi provides rich metadata, including artwork for various metatypes by scraping (and caching) this information from sites like TMDB, musicbrainz and fanart.tv. This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
 		<description lang="es">El módulo de metadatos e ilustraciones para Kodi proporciona metadatos enriquecidos, que incluyen ilustraciones paravarios metatipos al raspar (y almacenar en caché) esta información se extrae de sitios como TMDB, musicbrainz and fanart.tv.[CR][CR]Este producto utiliza la API de TMDb pero no está avalado ni certificado por TMDb</description>
         <news>
+v1.0.41
+- Fixed ExtraPosters
+- Fix for "Resume" in dialog
 v1.0.40
 - Fix for missing TADB key
 v1.0.39
@@ -624,7 +631,7 @@ v1.0.25 (marcelveldt)
         <platform>all</platform>
 		<assets>
 			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>		
+			<fanart>fanart.jpg</fanart>
 		</assets>
     </extension>
 </addon>
