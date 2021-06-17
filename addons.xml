@@ -203,7 +203,7 @@ Version 1.0.37
     </extension>
 </addon>
 
-<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.36" provider-name="marcelveldt and others">
+<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.37" provider-name="marcelveldt and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
         <import addon="xbmc.addon" version="12.0.0"/>
@@ -248,6 +248,9 @@ Version 1.0.37
         <summary lang="en">Helper service for Kodi skins</summary>
         <description>Helper service for Kodi skins</description>
         <news>
+v1.1.37
+- fix for saveskinimage
+- Update listitem_monitor.py	
 v1.1.36
 - Hungarian lang created
 - remove get_repo_addoninfo
@@ -302,7 +305,7 @@ v1.1.25
     </extension>
 </addon>
 
-<addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" version="1.0.21" provider-name="marcelveldt and others">
+<addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" version="1.0.22" provider-name="marcelveldt and others">
 	<requires>
 	    <import addon="xbmc.python" version="3.0.0"/>
         <import addon="xbmc.addon" version="12.0.0"/>
@@ -367,7 +370,7 @@ v1.1.25
 	</extension>
 </addon>
 
-   <addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.35" provider-name="marcelveldt and others">
+   <addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.36" provider-name="marcelveldt and others">
 	<requires>
         <import addon="script.module.simplecache" version="1.0.0"/>
         <import addon="script.module.metadatautils" version="1.0.31"/>
@@ -547,7 +550,7 @@ v1.1.25
 	 <!-- MODULES -->
 <addon id="script.module.metadatautils"
        name="Metadata and Artwork module"
-       version="1.0.41"
+       version="1.0.42"
        provider-name="marcelveldt and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
