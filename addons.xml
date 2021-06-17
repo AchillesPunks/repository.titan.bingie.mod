@@ -80,7 +80,7 @@
 </addon>
 	
 	 <!-- TITAN BINGIE -->
-   <addon id="skin.titan.bingie.mod" version="2.0.0" name="Titan BINGIE MOD" provider-name="AchillesPunks, HugoL, Matke">
+   <addon id="skin.titan.bingie.mod" version="2.0.1" name="Titan BINGIE MOD" provider-name="AchillesPunks, HugoL, Matke">
 	<requires>
 		<import version="5.15.0" addon="xbmc.gui"/>
 		<import addon="script.bingie.helper" version="1.0.0"/>
@@ -117,9 +117,6 @@
 			<screenshot>resources/screenshot006.jpg</screenshot>
 			<screenshot>resources/screenshot007.jpg</screenshot>
 			<screenshot>resources/screenshot008.jpg</screenshot>
-			<screenshot>resources/screenshot009.jpg</screenshot>
-            <screenshot>resources/screenshot010.jpg</screenshot>
-			<screenshot>resources/screenshot011.jpg</screenshot>
 		</assets>
 		<news>
 			[B]Titan BINGIE MOD v2[/B][CR]Follow the forum thread about the latest news for the skin.[CR]https://forum.kodi.tv/showthread.php?tid=355993
@@ -326,15 +323,10 @@ v1.1.25
 		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
 		<website></website>
 		<source>https://github.com/kodi-community-addons/script.skin.helper.skinbackup</source>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
 	</extension>
 </addon>
 
-
-   <addon id="script.skinshortcuts" name="Skin Shortcuts" version="1.1.4" provider-name="BigNoid, marcelveldt, SiLVO">
+   <addon id="script.skinshortcuts" name="Skin Shortcuts" version="1.1.5" provider-name="BigNoid, marcelveldt, SiLVO">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.unidecode" version="0.4.14"/>
@@ -375,7 +367,7 @@ v1.1.25
 	</extension>
 </addon>
 
-    <addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.35" provider-name="marcelveldt and others">
+   <addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.35" provider-name="marcelveldt and others">
 	<requires>
         <import addon="script.module.simplecache" version="1.0.0"/>
         <import addon="script.module.metadatautils" version="1.0.31"/>
@@ -414,8 +406,8 @@ v1.1.25
 		<forum>https://forum.kodi.tv/showthread.php?tid=235676</forum>
 		<source>https://github.com/kodi-community-addons/script.skin.helper.colorpicker</source>
 		<assets>
-			<icon>resources/icon.png</icon>
-			<fanart>resources/fanart.jpg</fanart>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
 		</assets>
 	</extension>
 </addon>
@@ -630,8 +622,13 @@ v1.0.25 (marcelveldt)
         <source>https://github.com/kodi-community-addons/script.module.metadatautils</source>
         <platform>all</platform>
 		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
 		</assets>
     </extension>
 </addon>
