@@ -438,7 +438,7 @@ v1.1.25
 	</assets>
 </addon>
 
-    <addon id="script.extendedinfo" name="ExtendedInfo Script" version="5.6.0+matrix.3" provider-name="phil65 (Philipp Temminghoff)">
+    <addon id="script.extendedinfo" name="ExtendedInfo Script" version="5.6.1+matrix.3" provider-name="phil65 (Philipp Temminghoff)">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="resource.images.studios.white" version="0.0.25"/>
