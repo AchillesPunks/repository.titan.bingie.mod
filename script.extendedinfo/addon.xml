@@ -24,8 +24,8 @@
 		<email>phil65@kodi.tv</email>
 		<news>Python 3 fixes by scott967.  Requires Kodi65 module version 1.2.1+matrix.1 which is also available</news>
 		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
 </addon>

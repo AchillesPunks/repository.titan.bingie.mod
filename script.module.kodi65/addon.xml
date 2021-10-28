@@ -17,6 +17,6 @@
 		<news>Python3 ver Adjust to latest core changes, bugfixes, API extensions by scott967</news>
 	</extension>
 	<assets>
-		<icon>icon.png</icon>
+		<icon>resources/icon.png</icon>
 	</assets>
 </addon>
