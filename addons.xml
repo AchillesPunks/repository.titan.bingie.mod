@@ -79,8 +79,8 @@
 	</extension>
 </addon>
 	
-	 <!-- TITAN BINGIE -->
-   <addon id="skin.titan.bingie.mod" version="2.0.2" name="Titan BINGIE MOD" provider-name="AchillesPunks, HugoL, Matke">
+	<!-- TITAN BINGIE MOD -->
+<addon id="skin.titan.bingie.mod" version="2.0.3" name="Titan BINGIE MOD" provider-name="AchillesPunks, HugoL, Matke">
 	<requires>
 		<import version="5.15.0" addon="xbmc.gui"/>
 		<import addon="script.bingie.helper" version="1.0.0"/>
@@ -148,7 +148,7 @@
 	</extension>
 </addon>
 
-     <addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.1.0" provider-name="marcelveldt, matke and others">
+<addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.1.1" provider-name="marcelveldt, matke and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
         <import addon="xbmc.addon" version="12.0.0"/>
@@ -167,6 +167,8 @@
 	<news>
 Version 1.1.0
 * Initial release
+Version 1.1.1
+* Bug fixes
 </news>
 		<assets>
             <icon>icon.png</icon>
@@ -181,7 +183,7 @@ Version 1.1.0
     </extension>
 </addon>
 
-<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.39" provider-name="marcelveldt and others">
+<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.40" provider-name="marcelveldt and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
         <import addon="xbmc.addon" version="12.0.0"/>
@@ -225,6 +227,8 @@ Version 1.1.0
         <summary lang="en">Helper service for Kodi skins</summary>
         <description>Helper service for Kodi skins</description>
         <news>
+v1.1.40
+- bump version
 v1.1.39
 - clean trace of webservice
 v1.1.38
@@ -554,7 +558,7 @@ v1.1.25
 	 <!-- MODULES -->
 <addon id="script.module.metadatautils"
        name="Metadata and Artwork module"
-       version="1.0.43"
+       version="1.0.44"
        provider-name="marcelveldt and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -572,7 +576,7 @@ v1.1.25
         <description lang="en">The metadata and artwork module for Kodi provides rich metadata, including artwork for various metatypes by scraping (and caching) this information from sites like TMDB, musicbrainz and fanart.tv. This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
 		<description lang="es">El módulo de metadatos e ilustraciones para Kodi proporciona metadatos enriquecidos, que incluyen ilustraciones paravarios metatipos al raspar (y almacenar en caché) esta información se extrae de sitios como TMDB, musicbrainz and fanart.tv.[CR][CR]Este producto utiliza la API de TMDb pero no está avalado ni certificado por TMDb</description>
         <news>
-v1.0.43
+v1.0.43, v1.0.44
 - Fixed SUPPORTS_POOL for Android
 v1.0.42
 - Fixed stripchars PVR Title
