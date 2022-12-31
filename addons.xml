@@ -839,6 +839,9 @@ Version 1.1.0
 		<website></website>
 		<email></email>
 		<source>https://github.com/im85288/resource.images.languageflags.colour</source>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
 	</extension>
 </addon>	
 </addons>
