@@ -2,7 +2,7 @@
 	<addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.36" provider-name="marcelveldt and others">
 	<requires>
         <import addon="script.module.simplecache" version="1.0.0"/>
-        <import addon="script.module.metadatautils" version="1.0.31"/>
+        <import addon="script.module.metadatautils" version="1.1.0"/>
 	</requires>
 
     <extension point="xbmc.python.library" library="default.py" />
