@@ -83,7 +83,7 @@
 	<requires>
 		<import version="5.15.0" addon="xbmc.gui"/>
 		<import addon="script.bingie.helper" version="1.1.2"/>
-		<import addon="script.skinshortcuts" version="2.1.0"/>
+		<import addon="script.skinshortcuts" version="2.0.3"/>
 		<import addon="script.skin.helper.service" version="1.2.0"/>
         <import addon="script.skin.helper.widgets" version="1.1.2"/>
         <import addon="script.skin.helper.backgrounds" version="1.0.36"/>
