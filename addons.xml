@@ -79,29 +79,29 @@
 </addon>
 	
 	<!-- TITAN BINGIE MOD -->
-<addon id="skin.titan.bingie.mod" version="2.1.0" name="Titan BINGIE MOD" provider-name="AchillesPunks, HugoL, Matke">
+<addon id="skin.titan.bingie.mod" version="2.1.1" name="Titan BINGIE MOD" provider-name="AchillesPunks, HugoL, Matke">
 	<requires>
 		<import version="5.15.0" addon="xbmc.gui"/>
 		<import addon="script.bingie.helper" version="1.1.2"/>
 		<import addon="script.skinshortcuts" version="2.1.0"/>
-		<import addon="script.skin.helper.service" version="1.2.0"/>
-        <import addon="script.skin.helper.widgets" version="1.1.2"/>
+		<import addon="script.skin.helper.service" version="1.30.0"/>
+        <import addon="script.skin.helper.widgets" version="1.30.0"/>
         <import addon="script.skin.helper.backgrounds" version="1.0.36"/>
         <import addon="resource.images.skinbackgrounds.titanium" version="1.0.0"/>
         <import addon="resource.images.skinicons.wide" version="1.0.5"/>
         <import addon="resource.images.backgroundoverlays.basic" version="1.0.0"/>
 		<import addon="resource.images.studios.coloured" version="0.0.23" />
-		<import addon="resource.images.languageflags.colour" version="0.0.5" />
-		<import addon="plugin.video.themoviedb.helper" version="5.0.41" />
+		<import addon="plugin.video.themoviedb.helper" version="5.2.12" />
 		<import addon="plugin.program.autocompletion" version="2.1.2" />
+		<import addon="plugin.video.youtube" version="7.0.2.2" />
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
 		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Titan BINGIE MOD... The new Titan skin for Kodi Matrix.</summary>
-		<description>Titan is back for Kodi Matrix with the new NETFLIX layout!</description>
+		<summary lang="en_GB">Titan BINGIE MOD... The new Titan skin for Kodi Nexus.</summary>
+		<description>Titan is back for Kodi Nexus with the new NETFLIX layout!</description>
 		<platform>all</platform>
 		<license>GPL v2.0</license>
 		<forum>https://forum.kodi.tv/showthread.php?tid=355993</forum>
@@ -130,22 +130,24 @@
 
 <!-- PLUGINS -->
 <addon id="plugin.video.themoviedb.helper"
-version="5.0.45"
+version="5.2.12"
 name="TheMovieDb Helper"
 provider-name="jurialmunkey">
 <requires>
-  <import addon="xbmc.python" version="3.0.0"/>
+  <import addon="xbmc.python" version="3.0.1"/>
   <import addon="script.module.requests" version="2.9.1"/>
   <import addon="script.module.pil" version="1.1.7"/>
   <import addon="script.module.addon.signals" version="0.0.6" />
-  <import addon="script.module.tmdbhelper" version="0.0.7" />
+  <import addon="script.module.jurialmunkey" version="0.1.14" />
+  <import addon="script.module.infotagger" version="0.0.5" />
   <import addon="script.module.beautifulsoup4" version="4.9.3" />
 </requires>
-<extension point="xbmc.python.pluginsource" library="plugin.py">
+<extension point="xbmc.python.pluginsource" library="resources/plugin.py">
   <provides>video</provides>
 </extension>
-<extension point="xbmc.python.script" library="script.py" />
-<extension point="xbmc.service" library="service.py" />
+<extension point="xbmc.python.script" library="resources/script.py" />
+<extension point="xbmc.service" library="resources/service.py" />
+<extension point="xbmc.python.module" library="resources/modules"/>
 <extension point="xbmc.addon.metadata">
   <reuselanguageinvoker>false</reuselanguageinvoker>
   <summary lang="en_GB">TheMovieDb Helper</summary>
@@ -186,11 +188,11 @@ provider-name="jurialmunkey">
 	</extension>
 </addon>
 
-<addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.1.2" provider-name="marcelveldt, matke and others">
+    <addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.30.0" provider-name="marcelveldt, matke and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
         <import addon="xbmc.addon" version="12.0.0"/>
-        <import addon="script.module.metadatautils" version="1.1.0"/>
+        <import addon="script.module.metadatautils" version="1.30.0"/>
         <import addon="script.module.simplecache" version="2.0.2"/>
     </requires>
 
@@ -203,13 +205,8 @@ provider-name="jurialmunkey">
         <summary lang="en">Ready to use widgets for all kind of media types</summary>
         <description></description>
 	<news>
-Version 1.1.0
-* Initial release
-Version 1.1.1
-* Bug fixes
-Version 1.1.2
-* New lists
-* Bug fixes
+Version 1.30.0
+* Nexus version
 </news>
 		<assets>
             <icon>icon.png</icon>
@@ -224,13 +221,13 @@ Version 1.1.2
     </extension>
 </addon>
 
-<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.2.0" provider-name="marcelveldt and others">
+<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.30.0" provider-name="marcelveldt and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
         <import addon="xbmc.addon" version="12.0.0"/>
         <import addon="script.module.simplejson" version="3.3.0"/>
-        <import addon="script.module.simplecache" version="1.0.0"/>
-        <import addon="script.module.metadatautils" version="1.1.0"/>
+        <import addon="script.module.simplecache" version="2.0.2"/>
+        <import addon="script.module.metadatautils" version="1.30.0"/>
     </requires>
 
     <extension point="kodi.context.item">
@@ -268,8 +265,8 @@ Version 1.1.2
         <summary lang="en">Helper service for Kodi skins</summary>
         <description>Helper service for Kodi skins</description>
         <news>
-Version 1.2.0
-* Initial release
+v1.30.0
+* Nexus version
         </news>
 		<assets>
             <icon>icon.png</icon>
@@ -374,7 +371,7 @@ Version 1.2.0
 	</extension>
 </addon>
 	
-   <addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="2.0.2" provider-name="marcelveldt,sualfred and others">
+<addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="2.0.3" provider-name="marcelveldt,sualfred and others">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.pil" version="1.1.7"/>
@@ -388,13 +385,13 @@ Version 1.2.0
 		<forum>https://forum.kodi.tv/showthread.php?tid=235676</forum>
 		<source>https://github.com/kodi-community-addons/script.skin.helper.colorpicker</source>
 		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
 </addon>
 	
-<addon id="script.artwork.beef" name="Artwork Beef" version="0.28.7" provider-name="rmrector">
+<addon id="script.artwork.beef" name="Artwork Beef" version="0.28.8" provider-name="rmrector">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="xbmc.json" version="6.20.0" />
@@ -579,7 +576,7 @@ v0.28.0 (2020-02-08)
 	 <!-- MODULES -->
 <addon id="script.module.metadatautils"
        name="Metadata and Artwork module"
-       version="1.1.0"
+       version="1.30.0"
        provider-name="marcelveldt and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -588,7 +585,8 @@ v0.28.0 (2020-02-08)
         <import addon="script.module.thetvdb" version="1.0.34" />
         <import addon="script.module.musicbrainz" version="0.7.0"/>
         <import addon="script.module.simplecache" version="2.0.2"/>
-        <import addon="script.module.arrow" version="1.1.0"/>
+        <import addon="script.module.arrow" version="0.15.5"/>
+        <import addon="script.module.infotagger" version="0.0.1" />
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.addon.metadata">
@@ -597,8 +595,9 @@ v0.28.0 (2020-02-08)
         <description lang="en">The metadata and artwork module for Kodi provides rich metadata, including artwork for various metatypes by scraping (and caching) this information from sites like TMDB, musicbrainz and fanart.tv. This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
 		<description lang="es">El módulo de metadatos e ilustraciones para Kodi proporciona metadatos enriquecidos, que incluyen ilustraciones paravarios metatipos al raspar (y almacenar en caché) esta información se extrae de sitios como TMDB, musicbrainz and fanart.tv.[CR][CR]Este producto utiliza la API de TMDb pero no está avalado ni certificado por TMDb</description>
         <news>
-Version 1.1.0
-* Initial release
+v1.30.0
+* Nexus version
+
         </news>
         <license>Apache 2.0</license>
         <forum>https://forum.kodi.tv/showthread.php?tid=350315</forum>
@@ -704,17 +703,36 @@ Version 1.1.0
     </extension>
 </addon>
 
-<addon id="script.module.tmdbhelper" name="TMDbHelper Common" provider-name="jurialmunkey" version="0.0.7">
+<addon id="script.module.infotagger" name="InfoTagger" provider-name="jurialmunkey" version="0.0.8">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1"/>
+  </requires>
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
-    <description lang="en">Common code required by TMDbHelper and other related jurialmunkey add-ons</description>
-    <reuselanguageinvoker>false</reuselanguageinvoker>
-    <license></license>
-    <language></language>
-    <website></website>
+    <platform>all</platform>
+    <summary lang="en_GB">Python wrapper for setInfo on Nexus InfoTags</summary>
+    <description lang="en_GB">Python wrapper for setInfo on Nexus InfoTags</description>
+    <license>GPL-3.0-or-later</license>
+    <website>https://github.com/jurialmunkey/script.module.infotagger</website>
+    <source>https://github.com/jurialmunkey/script.module.infotagger</source>
     <assets>
       <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.jurialmunkey" name="jurialmunkey common" provider-name="jurialmunkey" version="0.1.17">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+  </requires>
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en_GB">Common code required by TMDbHelper and other related jurialmunkey add-ons</description>
+    <license>GPL-3.0-or-later</license>
+    <website>https://github.com/jurialmunkey/script.module.jurialmunkey</website>
+    <assets>
+      <icon>icon.png</icon>
     </assets>
   </extension>
 </addon>

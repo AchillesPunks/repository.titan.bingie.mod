@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-	<addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="2.0.2" provider-name="marcelveldt,sualfred and others">
+	<addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="2.0.3" provider-name="marcelveldt,sualfred and others">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.pil" version="1.1.7"/>
@@ -13,8 +13,8 @@
 		<forum>https://forum.kodi.tv/showthread.php?tid=235676</forum>
 		<source>https://github.com/kodi-community-addons/script.skin.helper.colorpicker</source>
 		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
 </addon>
