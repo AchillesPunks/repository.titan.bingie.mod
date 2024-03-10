@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<includes>
+    <include name="View_507_FanArt">	
+	 <!--View 507-->
+        <control type="group">
+            <visible>Control.IsVisible(507)</visible>
+			<visible>Integer.IsGreater(Container(507).NumItems,0)</visible>
+            <include>animation_view_change</include>
+            <!-- fanart image -->
+            <control type="multiimage">
+				<visible>!Skin.HasSetting(View507_DisableFanArt)</visible>
+                <include>FullscreenDimensions</include>
+                <imagepath background="true">$VAR[backgroundVar]</imagepath>
+                <aspectratio>scale</aspectratio>
+                <fadetime>350</fadetime>
+                <include>fanartSpeed</include>
+                <randomize>true</randomize>
+                <loop>yes</loop>
+            </control>
+			<include>WatchedIndicatorLarge</include>
+            
+             <!-- ID="52" -->
+            <control type="panel" id="507">
+                <posx>0</posx>
+                <posy>40</posy>
+                <width>100%</width>
+                <height>800</height>
+                <onup>9000</onup>
+                <ondown condition="Skin.HasSetting(EnableQuickJump)">7000</ondown>
+                <ondown condition="!Skin.HasSetting(EnableQuickJump)">60</ondown>
+                <onleft>507</onleft>
+                <onright>507</onright>
+                <viewtype label="31434">fanart</viewtype>
+				<include content="View_Forced">
+					<param name="viewtype" value="$LOCALIZE[31434]" />
+				</include>
+                <scrolltime tween="Cubic" easing="inout">500</scrolltime>
+                <focusposition>0</focusposition>
+                <orientation>horizontal</orientation>
+                <preloaditems>2</preloaditems>
+				<itemlayout height="2500" width="1920">
+                </itemlayout>
+                <focusedlayout height="2500" width="1920">
+                </focusedlayout>
+            </control>
+			
+			<!--Info-->
+			<control type="group">
+				<visible>Control.IsVisible(507) + !String.IsEmpty(ListItem.Label)</visible>
+				<visible>Skin.HasSetting(FanArtViewShowInfo)</visible>
+				<include>animation_view_change</include>
+				<bottom>13%</bottom>
+				<height>283</height>
+
+				<control type="image">
+				    <posy>-65</posy>
+					<posx>50</posx>
+					<height>298</height>
+					<width>1820</width>
+					<texture>diffuse/panel2.png</texture>
+					<colordiffuse>bb0f0f0f</colordiffuse>
+				</control>
+				
+				<control type="grouplist">
+					<!--Regie, Duration... Movies, TV-Shows, Sesaons, Music-Videos-->
+					<itemgap>20</itemgap>
+					<onup>500</onup>
+					<ondown>500</ondown>
+					<onleft>100</onleft>
+					<orientation>vertical</orientation>
+					<posx>71</posx>
+					<posy>-50</posy>
+					<control type="label">
+						<height>70</height>
+						<width>1775</width>
+						<font>Bold74</font>
+						<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+						<label>[UPPERCASE]$VAR[mediatitle][/UPPERCASE]</label>
+					</control>
+                    <control type="label">
+						  <height>40</height>
+						  <width>1775</width>
+						  <font>bold40</font>
+						  <textcolor>$INFO[Skin.String(ViewDetailsListItemTextFocusColor)]</textcolor>
+						  <label>$VAR[Details]</label>
+					</control>
+					<control type="textbox">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1775</width>
+						<height>115</height>
+						<label>$VAR[Plots]</label>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextFocusColor)]</textcolor>
+						<align>justify</align>
+						<font>Reg30</font>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1100</width>
+						<height>20</height>
+						<label/>
+					</control>
+				</control>						
+			</control>					
+		</control>
+     </include> 
+</includes>

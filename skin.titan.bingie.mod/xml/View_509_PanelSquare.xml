@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="View_509_PanelSquare">
+    <control type="group">
+      <visible>Control.IsVisible(509)</visible>
+      <include>animation_view_change</include>
+		<!-- Fanart Image Added to View-->
+            <control type="multiimage">
+				<visible>!Skin.HasSetting(View509_DisableFanArt)</visible>
+                <include>FullscreenDimensions</include>
+                <texture>diffuse/panel2.png</texture>
+			    <colordiffuse>33ffffff</colordiffuse>
+				<imagepath background="true">$VAR[backgroundVar]</imagepath>
+                <aspectratio>scale</aspectratio>
+                <fadetime>350</fadetime>
+                <include>fanartSpeed</include>
+                <randomize>true</randomize>
+                <loop>yes</loop>
+		<!-- Background Animation -->
+                <animation effect="zoom" start="110" end="130" center="auto" time="12000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(BackgroundAnimation)">Conditional</animation>
+                <animation effect="slide" start="-10,-10" end="10,10" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(BackgroundAnimation)">Conditional</animation>
+            </control>
+      <control type="panel" id="509">
+        <viewtype label="31436">icons</viewtype>
+          <include content="View_Forced">
+              <param name="viewtype" value="$LOCALIZE[31436]" />
+          </include>
+        <posx>60</posx>
+        <bottom>13%</bottom>
+        <width>1820</width>
+        <height>765</height>
+        <orientation>vertical</orientation>
+        <onleft>9000</onleft>
+        <onright condition="Skin.HasSetting(EnableQuickJump)">6000</onright>
+        <onright condition="!Skin.HasSetting(EnableQuickJump)">60</onright>
+        <onup>509</onup>
+        <ondown>509</ondown>
+        <preloaditems>4</preloaditems>
+        <pagecontrol>60</pagecontrol>
+        <scrolltime tween="quadratic" easing="out">300</scrolltime>
+          <itemlayout height="255" width="260">
+            <control type="group">
+                <width>240</width>
+                <height>240</height>
+                <include>SquarePosterPanelLayout</include>
+            </control>
+        </itemlayout>
+        <focusedlayout height="255" width="260">
+		  <control type="group">
+                <width>240</width>
+                <height>240</height>
+                <include>SquarePosterPanelLayoutFocus</include>
+            </control>
+        </focusedlayout>
+	  </control>
+      
+	  <!--vertical Scollbar-->
+		<control type="scrollbar" id="60">
+			<visible>Control.IsVisible(509) + Integer.IsGreater(Container.NumItems,0)</visible>
+			<right>15</right>
+			<bottom>163</bottom>
+			<height>734</height>
+			<onup>60</onup>
+			<ondown>6000</ondown>
+			<onleft>509</onleft>
+			<animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)] + !Control.IsVisible(6002)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)] | Control.IsVisible(6002)">Conditional</animation>
+		</control>	  	
+    </control>
+  </include>
+</includes>

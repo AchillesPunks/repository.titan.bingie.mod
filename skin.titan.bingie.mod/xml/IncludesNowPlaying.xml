@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<includes>
+	<include name="NowPlayingModern">
+        <include condition="!Skin.HasSetting(DisableNowPlayingInfoBar)">NowPlayingInfoBar</include>
+    </include>
+	
+    <include name="NowPlayingInfoBar">
+        <control type="group" id="88888">
+            <!--Panel-->
+            <visible>!Skin.HasSetting(DisableNowPlayingInfoBar)</visible>
+            <visible>!Window.IsActive(notification) + !Window.IsActive(extendedprogressdialog) + !ControlGroup(400).HasFocus() + !Control.IsVisible(77551)</visible>
+			<visible>[[Player.HasVideo + !String.IsEmpty(VideoPlayer.Title)] | [Player.HasAudio + !String.IsEmpty(MusicPlayer.Title)] | Player.IsInternetStream]</visible>
+			<visible>String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+			<visible>!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + ![Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml) | Window.IsActive(MyPVRTimers.xml)]</visible>
+			<include>FullscreenDimensions</include>
+			<animation effect="slide" start="0,-400" end="0,0" tween="cubic" easing="out" delay="0" time="250" reversible="false">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,-400" tween="cubic" easing="out" delay="0" time="250" reversible="false">Hidden</animation>
+			
+            <control type="image">
+				<posx>0</posx>
+				<posy>-5</posy>
+				<width>100%</width>
+				<height>145</height>
+				<texture border="5">diffuse/panel2.png</texture>
+				<colordiffuse>$INFO[Skin.String(HeaderPanelColor)]</colordiffuse>
+			</control>
+            <control type="label">
+                <!--Now Playing-->
+                <posx>267</posx>
+                <posy>7</posy>
+                <width>885</width>
+                <align>left</align>
+                <font>Reg30</font>
+                <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                <label>$VAR[NowPlayingLabel]</label>
+				<animation effect="slide" end="-47" condition="Player.HasAudio + Skin.HasSetting(DisableNowPlayingDiscArt)">Conditional</animation>
+				<animation effect="slide" end="-76" condition="Player.HasVideo + Skin.HasSetting(DisableNowPlayingDiscArt)">Conditional</animation>
+				<animation effect="slide" end="-27" condition="Player.HasVideo + !Skin.HasSetting(DisableNowPlayingDiscArt)">Conditional</animation>
+            </control>
+            <control type="label">
+                <!--Title-->
+                <posx>267</posx>
+                <posy>62</posy>
+                <width>1150</width>
+                <align>left</align>
+                <font>Bold55</font>
+                <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                <label>$VAR[NowPlayingTitle]</label>
+                <scroll>false</scroll>
+				<animation effect="slide" end="-47" condition="Player.HasAudio + Skin.HasSetting(DisableNowPlayingDiscArt)">Conditional</animation>
+				<animation effect="slide" end="-76" condition="Player.HasVideo + Skin.HasSetting(DisableNowPlayingDiscArt)">Conditional</animation>
+				<animation effect="slide" end="-27" condition="Player.HasVideo + !Skin.HasSetting(DisableNowPlayingDiscArt)">Conditional</animation>
+            </control>
+            
+            <!-- AUDIO COVER + DISCART -->
+            <control type="group">
+                <visible>Player.HasAudio</visible>
+                <!-- cd cover -->
+                <control type="image">
+                    <posx>115</posx>
+                    <posy>13</posy>
+                    <width>114</width>
+                    <height>114</height>
+                    <aligny>center</aligny>
+                    <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+                    <fadetime>300</fadetime>
+                    <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+                    <texture background="true" fallback="defaultcovers/cd_small.png" diffuse="diffuse/cdmask_small_new.png">$VAR[PlayerDiscArtImage]</texture>
+                    <visible>!Skin.HasSetting(DisableNowPlayingDiscArt)</visible>
+                </control>
+                <control type="image">
+                    <!--Music bg-->
+                    <posx>60</posx>
+                    <posy>9</posy>
+                    <width>122</width>
+                    <height>122</height>
+                    <fadetime>200</fadetime>
+                    <aspectratio scalediffuse="true" align="center" aligny="center">stretch</aspectratio>
+                    <texture border="5">diffuse/music_cover_cd.png</texture>
+                    <colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+                </control>
+                <control type="image" id="13333">
+                    <!--music cover-->
+                    <posx>60</posx>
+                    <posy>9</posy>
+                    <width>122</width>
+                    <height>122</height>
+                    <fadetime>200</fadetime>
+                    <texture background="true" diffuse="diffuse/music_cover_cd.png" fallback="DefaultMusicSongs.png">$VAR[AudioPlayerCoverImage]</texture>
+                    <visible>!Skin.HasSetting(DisableNowPlayingDiscArt)</visible>
+                </control>
+                <control type="image">
+                    <!--music cover-->
+                    <posx>60</posx>
+                    <posy>9</posy>
+                    <width>122</width>
+                    <height>122</height>
+                    <fadetime>200</fadetime>
+                    <texture background="true" fallback="DefaultMusicSongs.png">$VAR[AudioPlayerCoverImage]</texture>
+                    <visible>Skin.HasSetting(DisableNowPlayingDiscArt)</visible>
+                </control>
+            </control>
+            
+            <!-- VIDEO COVER -->
+            <control type="group">
+                <visible>Player.HasVideo</visible>
+                <control type="image">
+                    <posx>81</posx>
+                    <posy>9</posy>
+                    <width>122</width>
+                    <height>122</height>
+                    <aligny>center</aligny>
+                    <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+                    <fadetime>300</fadetime>
+                    <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+                    <texture background="true" fallback="defaultcovers/cd_small.png" diffuse="diffuse/cdmask_small_new.png">$VAR[PlayerDiscArtImage]</texture>
+                    <visible>!Skin.HasSetting(DisableNowPlayingDiscArt) + [!String.IsEmpty(Player.Art(poster)) | !String.IsEmpty(Player.Art(tvshow.poster))]</visible>
+                </control>
+                <control type="image">
+                    <!--Cover image-->
+                    <posx>60</posx>
+                    <posy>5</posy>
+                    <width>93</width>
+                    <height>130</height>
+                    <fadetime>200</fadetime>
+                    <texture background="true">$VAR[VideoPlayerPoster]</texture>
+                    <aspectratio scalediffuse="true" align="center" aligny="center">stretch</aspectratio>
+                </control>
+            </control>
+            
+			<!-- hidden button to go fullscreen on click -->
+			<control type="button">
+				<posx>-60</posx>
+				<posy>-20</posy>
+				<width>2040</width>
+				<height>180</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Light28</font>
+				<label/>
+				<textcolor/>
+				<focusedcolor/>
+				<disabledcolor/>
+				<texturefocus/>
+				<texturenofocus/>
+				<onclick condition="Player.HasAudio">ActivateWindow(visualisation)</onclick>
+				<onclick condition="Player.HasVideo">ActivateWindow(fullscreenvideo)</onclick>
+			</control>
+            <!-- clearart -->
+            <control type="image" id="884455">
+				<right>60</right>
+                <posy>5</posy>
+				<width>300</width>
+				<height>130</height>
+				<fadetime>200</fadetime>
+				<texture background="true">$VAR[VideoPlayerClearArt]</texture>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+				<visible>!String.IsEmpty(Control.GetLabel(884455)) + !Skin.HasSetting(DisableNowPlayingClearArt)</visible>
+			</control>
+            
+            <!-- clock -->
+            <control type="group">
+                <animation type="Conditional" condition="Window.IsActive(volumebar)">
+                    <effect type="slide" start="0,0" end="-120,0" time="400" tween="cubic" easing="inout" delay="0" />
+                </animation>
+                <visible>!Control.IsVisible(884455) + !Skin.HasSetting(DisableNowPlayingClock) + Skin.HasSetting(DisableNowPlayingClearArt)</visible>
+                <control type="grouplist">
+                    <!--Time Grouplist Line 1-->
+                    <posx>1260</posx>
+                    <posy>3</posy>
+                    <width>600</width>
+                    <height>100</height>
+                    <align>right</align>
+                    <itemgap>4</itemgap>
+                    <orientation>horizontal</orientation>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <control type="label">
+                        <!--Time-->
+                        <width min="0" max="300">auto</width>
+                        <height>100</height>
+                        <info>System.Time(hh:mm)</info>
+                        <font>Bold55</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                    </control>
+                    <control type="label">
+                        <!--AM-->
+                        <visible>String.EndsWith(system.time,AM)</visible>
+                        <width min="0" max="150">auto</width>
+                        <height>100</height>
+                        <label>378</label>
+                        <font>Bold55</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                    </control>
+                    <control type="label">
+                        <!--PM-->
+                        <visible>String.EndsWith(system.time,PM)</visible>
+                        <width min="0" max="150">auto</width>
+                        <height>100</height>
+                        <label>379</label>
+                        <font>Bold55</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                    </control>
+                </control>
+                <control type="grouplist">
+                    <!--Date Grouplist Line 2-->
+                    <posx>1260</posx>
+                    <posy>76</posy>
+                    <width>600</width>
+                    <height>50</height>
+                    <align>right</align>
+                    <itemgap>4</itemgap>
+                    <orientation>horizontal</orientation>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <control type="label">
+                        <!--Day-->
+                        <width min="0" max="400">auto</width>
+                        <height>50</height>
+                        <info>System.Date(DDD)</info>
+                        <font>Reg30</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                    </control>
+                    <control type="label">
+                        <width min="0" max="400">auto</width>
+                        <height>50</height>
+                        <label>, </label>
+                        <font>Reg30</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                    </control>
+                    <control type="label">
+                        <!--Date-->
+                        <width min="0" max="400">auto</width>
+                        <height>50</height>
+                        <info>System.Date(d)</info>
+                        <font>Reg30</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                    </control>
+                    <control type="label">
+                        <visible>String.Contains(System.Language,German)</visible>
+                        <width min="0" max="400">auto</width>
+                        <height>50</height>
+                        <label>. </label>
+                        <font>Reg30</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                    </control>
+                    <control type="label">
+                        <label/>
+                        <visible>!String.Contains(System.Language,German)</visible>
+                        <width min="0" max="400">auto</width>
+                        <height>50</height>
+                        <font>Reg30</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                    </control>
+                    <control type="label">
+                        <!--Month-->
+                        <width min="0" max="400">auto</width>
+                        <height>50</height>
+                        <info>System.Date(MMM)</info>
+                        <font>Reg30</font>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                    </control>
+                </control>
+            </control>
+ 		</control>
+     </include>
+    
+    <include name="NowPlayingBackground">
+        <control type="group">
+            <visible>Player.HasMedia + !Control.IsVisible(507)</visible>
+            <visible>![!String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + Player.HasAudio]</visible>
+            <include condition="Player.HasAudio + !Window.IsActive(Home) + !Window.IsActive(1109)">NowPlayingMusicBackground</include>
+			<include condition="Player.HasVideo">NowPlayingVideoBackground</include>
+            
+            <!--Background Overlay-->
+            <control type="group">
+                <visible>![Window.IsActive(tvguide) + !String.IsEmpty(Window(Home).Property(pvrGuideOnFullscreenVideo))] + !Window.IsActive(visualisation)</visible>
+                <control type="image">
+                    <description>panel diffuse bg</description>
+                    <include>FullscreenDimensions</include>
+                    <texture>colors/color_white.png</texture>
+                    <visible>!Window.IsActive(visualisation)</visible>
+                    <colordiffuse>$INFO[Skin.String(BackgroundDiffuseColor.base)]</colordiffuse>
+                    <visible>Skin.String(BackgroundDiffuseColor) + !String.IsEqual(Skin.String(BackgroundDiffuseColor),None)</visible>
+                    <visible>!Window.IsActive(visualisation)</visible>
+                    <animation effect="fade" start="100" end="80" time="150" condition="true">Conditional</animation>
+                </control>
+                <include>DialogOverlay</include>
+            </control>           
+        </control>
+    </include>
+    
+    <include name="NowPlayingMusicBackground">
+        <control type="group">
+            <control type="visualisation" id="2">
+                <description>visualisation</description>
+                <include>FullscreenDimensions</include>
+                <visible>Visualisation.Enabled + ![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,opengl spectrum) | String.IsEqual(Visualisation.Name,directx spectrum)] + !String.IsEmpty(Visualisation.Name) + !String.IsEqual(Visualisation.Name,None)</visible>
+            </control>
+            <!-- music fanart -->
+            <control type="multiimage" id="3333">
+				<visible>!Visualisation.Enabled</visible>
+				<visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
+                <aspectratio>scale</aspectratio>
+                <include>FullscreenDimensions</include>
+                <timeperimage>20000</timeperimage>
+                <randomize>true</randomize>
+                <fadetime>600</fadetime>
+                <loop>yes</loop>
+                <imagepath background="true">$VAR[music_fanart]</imagepath>
+                <animation effect="fade" start="100" end="20" time="0" condition="Visualisation.Enabled + ![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,opengl spectrum) | String.IsEqual(Visualisation.Name,directx spectrum)] + !String.IsEmpty(Visualisation.Name) + !String.IsEqual(Visualisation.Name,None)">Conditional</animation>
+                <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animateMusicArt)">Conditional</animation>
+                <animation effect="slide" start="-10,-10" end="10,10" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animateMusicArt)">Conditional</animation>
+            </control>
+            <control type="visualisation" id="2">
+                <description>visualisation</description>
+                <include>FullscreenDimensions</include>
+                <visible>Visualisation.Enabled + [String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,opengl spectrum) | String.IsEqual(Visualisation.Name,directx spectrum)]</visible>
+            </control>
+        </control>
+    </include>
+    
+	<include name="NowPlayingVideoBackground">
+		<control type="group">
+            <visible>Player.HasVideo</visible>
+            
+            <!-- black background -->
+            <control type="image">
+                <include>FullscreenDimensions</include>
+                <texture>colors/color_black.png</texture>
+            </control>
+            
+			<control type="videowindow">
+				<include>FullscreenDimensions</include>
+			</control>
+            
+		</control>
+	</include>
+    
+    <variable name="music_fanart">
+        <value condition="Skin.String(MusicArtistFanart,slideshow) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ExtraFanArt))">$INFO[Window(Home).Property(SkinHelper.Player.Art.ExtraFanArt)]</value>
+		<value condition="!Skin.String(MusicArtistFanart,disabled) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+        <value condition="String.Contains(Skin.String(MusicBackground),VAR)">$VAR[MusicBackground]</value>
+        <value condition="Skin.String(MusicBackground)">$INFO[Skin.String(MusicBackground)]</value>
+        <value>colors/color_black.png</value>
+    </variable>
+	
+</includes>

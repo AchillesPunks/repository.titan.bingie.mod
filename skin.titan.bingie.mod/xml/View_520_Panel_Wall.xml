@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    <include name="View_520_Panel_Wall">	
+		<!-- panel no info -->
+        <control type="group">
+            <visible>Control.IsVisible(520)</visible>
+            <include>animation_view_change</include>
+			<include>GlobalBackground</include>
+			
+			<!-- Fanart Image Added to View-->
+            <control type="multiimage">
+				<visible>!Skin.HasSetting(View520_DisableFanArt)</visible>
+                <include>FullscreenDimensions</include>
+                <texture>diffuse/panel2.png</texture>
+			    <colordiffuse>33ffffff</colordiffuse>
+				<imagepath background="true">$VAR[backgroundVar]</imagepath>
+                <aspectratio>scale</aspectratio>
+                <fadetime>350</fadetime>
+                <include>fanartSpeed</include>
+                <randomize>true</randomize>
+                <loop>yes</loop>
+			<!-- Background Animation -->
+                <animation effect="zoom" start="110" end="130" center="auto" time="12000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(BackgroundAnimation)">Conditional</animation>
+                <animation effect="slide" start="-10,-10" end="10,10" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(BackgroundAnimation)">Conditional</animation>
+            </control>
+			
+            <control type="panel" id="520">
+                <posx>21</posx>
+                <top>21</top>
+                <height>1040</height>
+                <width>1881</width>
+                <onup>520</onup>
+                <ondown>520</ondown>
+                <onleft>9000</onleft>
+                <onright condition="Skin.HasSetting(EnableQuickJump)">6000</onright>
+        <onright condition="!Skin.HasSetting(EnableQuickJump)">60</onright>
+                <pagecontrol>60</pagecontrol>
+                <viewtype label="31423">icons</viewtype>
+                <include content="View_Forced">
+                    <param name="viewtype" value="$LOCALIZE[31423]" />
+                </include>
+                <scrolltime tween="Cubic" easing="inout">500</scrolltime>
+                <focusposition>0</focusposition>
+                <orientation>vertical</orientation>
+                <preloaditems>2</preloaditems>
+                <animation effect="slide" end="0,80" time="0" condition="Skin.HasSetting(EnableFooterBar) + String.IsEqual(Skin.AspectRatio,16:10)">Conditional</animation>
+                <!-- itemlayout movies -->
+                <itemlayout height="260" width="188">
+                    <control type="group">
+                        <width>186</width>
+                        <height>258</height>
+                        <include>SmallPosterPanelLayout</include>
+          <control type="group">
+			<!--Watched Overlay-->
+			<right>8</right>
+			<top>8</top>
+			<include>WatchedIndicatorSmall</include>
+		</control>
+                      </control>
+                </itemlayout>
+                <!-- focussed layout movies -->
+                <focusedlayout height="260" width="188">
+                    <control type="group">
+                        <width>186</width>
+                        <height>258</height>
+                        <include>SmallPosterPanelLayoutFocus</include>
+          <control type="group">
+			<!--Watched Overlay-->
+			<right>8</right>
+			<top>8</top>
+			<include>WatchedIndicatorSmall</include>
+		</control>
+                      </control>
+                </focusedlayout>
+			</control>
+		
+			<!--vertical Scollbar-->
+			<control type="scrollbar" id="60">
+				<texturesliderbackground border="5" colordiffuse="$INFO[Skin.String(ScrollbarBackgroundColor)]">scrollbar/texturesliderbar_small.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="$INFO[Skin.String(ScrollbarUnfocusedColor)]" border="5">scrollbar/texturesliderbar_small.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="$INFO[Skin.String(ScrollbarFocusedColor)]" border="5">scrollbar/texturesliderbar_small.png</texturesliderbarfocus>
+				<textureslidernib colordiffuse="$INFO[Skin.String(ScrollbarUnfocusedColor)]">scrollbar/texturesliderbar_nib.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$INFO[Skin.String(ScrollbarFocusedColor)]">scrollbar/texturesliderbar_nib.png</textureslidernibfocus>
+				<visible>Control.IsVisible(520) + Integer.IsGreater(Container.NumItems,0)</visible>
+				<right>0</right>
+				<top>28</top>
+				<height>1022</height>
+				<width>10</width>
+				<onup>60</onup>
+				<ondown>6000</ondown>
+				<onleft>520</onleft>
+                <animation effect="slide" end="0,80" time="0" condition="Skin.HasSetting(EnableFooterBar) + String.IsEqual(Skin.AspectRatio,16:10)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)] + !Control.IsVisible(6002)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)] | Control.IsVisible(6002)">Conditional</animation>
+			</control>
+            <include condition="!Skin.HasSetting(EnableFooterBar) + String.IsEqual(Skin.AspectRatio,16:10)">Footer</include>
+		</control>
+    </include>
+</includes>

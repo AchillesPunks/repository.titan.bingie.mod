@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+	<defaultcontrol always="true">900</defaultcontrol>
+    <onunload>ClearProperty(powermenu,Home)</onunload>
+	<controls>
+	
+	    <!--Global Background-->
+        <include>GlobalBackground</include>
+		<!-- Now playing -->
+		<include>NowPlayingModern</include>
+        <!--Header-->
+        <include>Header</include>
+ 		<include condition="!Skin.HasSetting(EnableFooterBar)">Footer</include>
+		
+		<!--header label-->
+		<control type="label" id="500"> 
+			<left>20</left>
+			<width>460</width>
+			<label/>
+			<textcolor>black</textcolor>
+			<font>Reg26</font>
+			<scroll>false</scroll>
+			<visible>false</visible>
+		</control>
+		
+		<control type="group">
+			<visible>!Window.IsActive(ShutdownMenu) + !Window.IsActive(contextmenu) + !Window.IsActive(filebrowser) + !Window.IsActive(virtualkeyboard) + !Window.IsVisible(selectdialog)</visible>
+			<include>animation_window_open_close</include>
+			<width>1920</width>
+			<bottom>125</bottom>
+			<height>75%</height>
+			
+			<!--background panel default -->
+			<control type="image">
+				<posx>60</posx>
+				<posy>0</posy>
+				<width>1800</width>
+				<texture border="15">diffuse/bgpanel.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+			</control>
+			<!-- black bg panel - if not mainmenu window -->
+			<control type="image">
+				<visible>!String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+				<posx>60</posx>
+				<posy>0</posy>
+				<width>1800</width>
+				<texture border="15">colors/color_black.png</texture>
+			</control>
+
+			<!-- left panel -->
+			<control type="group" id="200">
+				<!--Current shortcuts -->
+				<control type="list" id="211">
+					<left>88</left>
+					<top>18</top>
+					<width>620</width>
+					<height>774</height>
+					<onright condition="String.IsEmpty(Window.Property(widgetcontrols))">900</onright>
+                    <onright condition="!String.IsEmpty(Window.Property(widgetcontrols))">9000</onright>
+					<orientation>vertical</orientation>
+					<viewtype label="535">list</viewtype>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>260</pagecontrol>
+					<scrolltime>0</scrolltime>
+					<selectedcolor>FF00b8ff</selectedcolor>
+					<itemlayout width="620" height="86">
+						<!--bg-->
+						<control type="image">
+							<width>589</width>
+							<height>81</height>
+							<aligny>center</aligny>
+							<texture border="10" colordiffuse="$INFO[Skin.String(ButtonColor)]">diffuse/panel.png</texture>
+						</control>
+						<!-- thumb -->
+						<control type="image">
+							<left>2</left>
+							<top>4</top>
+							<height>73.3</height>
+							<width>166.7</width>
+							<aspectratio aligny="center">keep</aspectratio>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<!--label-->
+						<control type="label">
+							<left>175</left>
+							<width>460</width>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Reg26</font>
+							<scroll>false</scroll>
+							<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+							<selectedcolor>FF00b8ff</selectedcolor>
+						</control>
+					</itemlayout>				
+					<focusedlayout width="620" height="86">
+						<!--focus bg-->
+						<control type="image">
+							<width>589</width>
+							<height>81</height>
+							<aligny>center</aligny>
+							<texture border="10" colordiffuse="$INFO[Skin.String(ButtonFocusColor)]">diffuse/panel.png</texture>
+							<animation effect="fade" start="100" end="35" time="100" condition="!Control.HasFocus(211)">Conditional</animation>
+						</control>
+						<!-- thumb -->
+						<control type="image">
+							<top>4</top>
+							<left>2</left>
+							<height>73.3</height>
+							<width>166.7</width>
+							<aspectratio aligny="center">keep</aspectratio>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<!--label-->
+						<control type="label">
+							<left>175</left>
+							<width>460</width>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>$INFO[Skin.String(ButtonFocusTextColor)]</textcolor>
+							<font>Reg26</font>
+							<scroll>false</scroll>
+						</control>
+					</focusedlayout>
+				</control>
+				
+				<!-- right panel -->
+				<control type="image">
+					<right>78</right>
+					<posy>18</posy>
+					<width>549</width>
+					<height>775</height>
+					<texture border="15">diffuse/bgpanel.png</texture>
+					<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+				</control>
+				
+				<control type="grouplist">
+                    <right>107</right>
+                    <width>500</width>
+					<posy>8</posy>
+
+					<!--widget content label-->
+					<control type="label">
+						<left>150</left>
+						<width>460</width>
+						<label>[B]$LOCALIZE[31851,,:][/B]</label>
+						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+						<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+						<visible>!String.IsEqual(Container(211).ListItem.Property(labelid),137)</visible>
+						<font>Reg22</font>
+					</control>
+					
+					<!--widget1 label-->
+					<control type="button">						
+                        <textoffsetx>0</textoffsetx>
+                        <font>Reg22</font>
+                        <textwidth>350</textwidth>
+                        <align>left</align>
+                        <width>500</width>
+                        <height>30</height>
+                        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <texturenofocus/>
+                        <label>[B]$LOCALIZE[31499] 1:[/B]</label>
+                        <label2 fallback="231">$INFO[Container(211).Listitem.Property(widgetName)]</label2>
+                        <enable>false</enable>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Skin.String(HomeLayout),3)</visible>
+						<visible>!String.IsEqual(Container(211).ListItem.Property(labelid),137)</visible>
+					</control>
+					
+					<!--widget2 label-->
+					<control type="button">						
+                        <textoffsetx>0</textoffsetx>
+                        <font>Reg22</font>
+                        <textwidth>350</textwidth>
+                        <align>left</align>
+                        <width>500</width>
+                        <height>30</height>
+                        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <texturenofocus/>
+                        <label>[B]$LOCALIZE[31499] 2:[/B]</label>
+                        <label2 fallback="231">$INFO[Container(211).Listitem.Property(widgetName.1)]</label2>
+                        <enable>false</enable>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Skin.String(HomeLayout),3)</visible>
+						<visible>!String.IsEqual(Container(211).ListItem.Property(labelid),31534) + !String.IsEqual(Container(211).ListItem.Property(labelid),137)</visible>
+					</control>
+					
+					<!--widget3 label-->
+					<control type="button">						
+                        <textoffsetx>0</textoffsetx>
+                        <font>Reg22</font>
+                        <textwidth>350</textwidth>
+                        <align>left</align>
+                        <width>500</width>
+                        <height>30</height>
+                        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <texturenofocus/>
+                        <label>[B]$LOCALIZE[31499] 3:[/B]</label>
+                        <label2 fallback="231">$INFO[Container(211).Listitem.Property(widgetName.2)]</label2>
+                        <enable>false</enable>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Skin.String(HomeLayout),3)</visible>
+						<visible>!String.IsEqual(Container(211).ListItem.Property(labelid),31534) + !String.IsEqual(Container(211).ListItem.Property(labelid),137)</visible>
+					</control>
+                    <!--widget4 label-->
+					<control type="button">						
+                        <textoffsetx>0</textoffsetx>
+                        <font>Reg22</font>
+                        <textwidth>350</textwidth>
+                        <align>left</align>
+                        <width>500</width>
+                        <height>30</height>
+                        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <texturenofocus/>
+                        <label>[B]$LOCALIZE[31499] 4:[/B]</label>
+                        <label2 fallback="231">$INFO[Container(211).Listitem.Property(widgetName.3)]</label2>
+                        <enable>false</enable>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Skin.String(HomeLayout),3)</visible>
+						<visible>!String.IsEqual(Container(211).ListItem.Property(labelid),31534) + !String.IsEqual(Container(211).ListItem.Property(labelid),137)</visible>
+					</control>
+                    <!--widget5 label-->
+					<control type="button">						
+                        <textoffsetx>0</textoffsetx>
+                        <font>Reg22</font>
+                        <textwidth>350</textwidth>
+                        <align>left</align>
+                        <width>500</width>
+                        <height>30</height>
+                        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <texturenofocus/>
+                        <label>[B]$LOCALIZE[31499] 5:[/B]</label>
+                        <label2 fallback="231">$INFO[Container(211).Listitem.Property(widgetName.4)]</label2>
+                        <enable>false</enable>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Skin.String(HomeLayout),3)</visible>
+                        <visible>!String.IsEmpty(Container(211).Listitem.Property(widgetName.4))</visible>
+						<visible>!String.IsEqual(Container(211).ListItem.Property(labelid),31534) + !String.IsEqual(Container(211).ListItem.Property(labelid),137)</visible>
+					</control>
+                    <!--widget6 label-->
+					<control type="button">						
+                        <textoffsetx>0</textoffsetx>
+                        <font>Reg22</font>
+                        <textwidth>350</textwidth>
+                        <align>left</align>
+                        <width>500</width>
+                        <height>30</height>
+                        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <texturenofocus/>
+                        <label>[B]$LOCALIZE[31499] 6:[/B]</label>
+                        <label2 fallback="231">$INFO[Container(211).Listitem.Property(widgetName.5)]</label2>
+                        <enable>false</enable>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Skin.String(HomeLayout),3)</visible>
+                        <visible>!String.IsEmpty(Container(211).Listitem.Property(widgetName.5))</visible>
+						<visible>!String.IsEqual(Container(211).ListItem.Property(labelid),31534) + !String.IsEqual(Container(211).ListItem.Property(labelid),137)</visible>
+					</control>
+                    <!--widget7 label-->
+					<control type="button">						
+                        <textoffsetx>0</textoffsetx>
+                        <font>Reg22</font>
+                        <textwidth>350</textwidth>
+                        <align>left</align>
+                        <width>500</width>
+                        <height>30</height>
+                        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <texturenofocus/>
+                        <label>[B]$LOCALIZE[31499] 7:[/B]</label>
+                        <label2 fallback="231">$INFO[Container(211).Listitem.Property(widgetName.6)]</label2>
+                        <enable>false</enable>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Skin.String(HomeLayout),3)</visible>
+                        <visible>!String.IsEmpty(Container(211).Listitem.Property(widgetName.6))</visible>
+						<visible>!String.IsEqual(Container(211).ListItem.Property(labelid),31534) + !String.IsEqual(Container(211).ListItem.Property(labelid),137)</visible>
+					</control>
+                    <!--widget8 label-->
+					<control type="button">						
+                        <textoffsetx>0</textoffsetx>
+                        <font>Reg22</font>
+                        <textwidth>350</textwidth>
+                        <align>left</align>
+                        <width>500</width>
+                        <height>30</height>
+                        <disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+                        <texturenofocus/>
+                        <label>[B]$LOCALIZE[31499] 8:[/B]</label>
+                        <label2 fallback="231">$INFO[Container(211).Listitem.Property(widgetName.7)]</label2>
+                        <enable>false</enable>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Skin.String(HomeLayout),3)</visible>
+                        <visible>!String.IsEmpty(Container(211).Listitem.Property(widgetName.7))</visible>
+						<visible>!String.IsEqual(Container(211).ListItem.Property(labelid),31534) + !String.IsEqual(Container(211).ListItem.Property(labelid),137)</visible>
+					</control>
+					
+					<!--blank label-->
+					<control type="label">
+						<label/>
+						<font>Reg26</font>
+						<scroll>false</scroll>
+						<height>20</height>
+					</control>
+					<!--action label-->
+					<control type="label">
+						<left>5</left>
+						<width>500</width>
+						<height>25</height>
+						<label>[B]$LOCALIZE[31501]:[/B]</label>
+                        <font>Reg24</font>
+						<scrollspeed>160</scrollspeed>
+						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+					</control>
+					<control type="fadelabel">
+						<left>5</left>
+                        <width>500</width>
+						<height>20</height>
+						<label>$INFO[Container(211).Listitem.Property(translatedPath)]</label>
+						<font>Reg20</font>
+						<scrollout>false</scrollout>
+						<scroll>true</scroll>
+						<scrollspeed>50</scrollspeed>
+						<pauseatend>2500</pauseatend>
+						<orientation>horizontal</orientation>
+                        <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+					</control>
+				</control>
+				
+				<!--fake list -->
+				<control type="list" id="111"> 
+					<visible>false</visible>
+					<orientation>vertical</orientation>
+					<selectedcolor>FF00b8ff</selectedcolor>
+					<itemlayout width="1000" height="65">
+					</itemlayout>
+					<focusedlayout width="1000" height="65">			
+					</focusedlayout>
+				</control>
+				
+				<control type="group">
+					
+					<control type="scrollbar" id="260"> <!--scrollbar-->
+						<left>700</left>
+						<top>18</top>
+						<height>775</height>
+						<onleft>211</onleft>
+						<onright>211</onright>
+						<showonepage>false</showonepage>
+						<animation effect="fade" start="0" end="100" time="400" condition="Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="400" condition="![Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)]">Conditional</animation>
+					</control>				
+				</control>
+				
+			</control>
+
+
+			<!-- menu controls -->
+			<control type="grouplist" id="900">
+				<left>745</left>
+				<top>18</top>
+				<width>500</width>
+				<height>775</height>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+				<onleft>211</onleft>
+				<scrolltime>0</scrolltime>
+                <pagecontrol>270</pagecontrol>
+                <visible>String.IsEmpty(Window.Property(widgetcontrols))</visible>
+				<!--new shortcut-->
+				<control type="button" id="301"> 
+					<width>500</width>
+					<align>center</align>
+					<label>$ADDON[script.skinshortcuts 32000]</label>
+					<visible>false</visible>
+				</control>
+	
+				<!--ADD-->
+				<control type="button" id="1301"> 
+					<width>500</width>
+					<align>center</align>
+					<label>$ADDON[script.skinshortcuts 32000]</label>
+					<visible>!Integer.IsGreater(Container(200).NumItems,34)</visible>
+				</control>
+				
+				<!--Widgets-->
+                <control type="button" id="1312"> 
+					<width>500</width>
+					<align>center</align>
+                    <onclick>SetProperty(widgetcontrols,1)</onclick>
+                    <onclick>SetFocus(9000,1)</onclick>
+					<label>31564</label>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>!String.IsEqual(Skin.String(HomeLayout),3)</visible>
+					<visible>!String.IsEqual(Container(211).ListItem.Property(labelid),137)</visible>
+				</control>
+				
+				<!--Move Up-->
+				<control type="button" id="303"> 
+					<width>500</width>
+					<align>center</align>
+					<label>$ADDON[script.skinshortcuts 32002]</label>
+				</control>
+				
+				<!--Move Down-->
+				<control type="button" id="304"> 
+					<width>500</width>
+					<align>center</align>
+					<label>$ADDON[script.skinshortcuts 32003]</label>
+				</control>
+
+				<!--Delete-->				
+				<control type="button" id="302"> 
+					<width>500</width>
+					<align>center</align>
+					<label>$ADDON[script.skinshortcuts 32001]</label>
+				</control>
+				
+				<!--Set Label-->
+				<control type="button" id="305">
+					<width>500</width>
+					<align>center</align>
+					<onclick>SetProperty(shortcutDialog, label,Home)</onclick>
+					<label>$ADDON[script.skinshortcuts 32025]</label>
+				</control>
+				
+				<!--Edit Thumbnail -->
+				<control type="button" id="4311">
+					<width>500</width>
+					<align>center</align>
+                    <label>31369</label>
+                    <onclick>RunScript(script.skin.helper.service,action=selectimage,skinshortcutsproperty=thumb,header=$LOCALIZE[31369],allowmulti=true,resourceaddon=resource.images.skinicons,skinhelperbackgrounds=true,skinstring=CustomBackgroundSetting,currentvalue=$INFO[Container(211).ListItem.Property(ThumbName)])</onclick>
+				</control>
+				
+				<!--Change Shortcut-->
+				<control type="button" id="401"> 
+					<width>500</width>
+					<align>center</align>
+					<visible>true</visible>
+					<label>31175</label>
+				</control>
+				
+				<!--Sub Menu-->
+				<control type="button" id="405"> 
+					<width>500</width>
+					<align>center</align>
+					<label>$ADDON[script.skinshortcuts 32072]</label>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>!Skin.HasSetting(DisableAllSubmenus)</visible>
+				</control>
+				
+				<!--shortcut type label-->
+				<control type="label" id="101">
+					<width>500</width>
+					<align>center</align>
+					<visible>false</visible>
+				</control>				
+				
+				<!--change action-->
+				<control type="button" id="307"> 
+					<width>500</width>
+					<align>center</align>
+					<label>$ADDON[script.skinshortcuts 32027]</label>
+				</control>
+                
+                <!--change infoline-->
+                <control type="button" id="31687"> 
+					<width>500</width>
+					<align>center</align>
+					<label>31687</label>
+                    <onclick>RunScript(script.skin.helper.service,action=setskinshortcutsproperty,header=$LOCALIZE[31687],property=infoline,setting=infoline)</onclick>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>!String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
+				</control>
+
+                <control type="button" id="306"> 
+					<label/>
+					<visible>false</visible>
+				</control>
+				<control type="button" id="309"> 
+					<label/>
+					<visible>false</visible>
+				</control>
+                <control type="button" id="310"> 
+					<label/>
+					<visible>false</visible>
+				</control>
+                <control type="button" id="311"> 
+					<label/>
+					<visible>false</visible>
+				</control>
+				
+				<control type="button" id="308"> <!--reset-->
+					<width>500</width>
+					<align>center</align>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+				</control>
+				
+				<!--hidden button for properties-->
+				<control type="button" id="404"> 
+					<width>500</width>
+					<label/>
+					<align>center</align>
+					<onclick>SetProperty(chooseProperty, true)</onclick>
+					<visible>false</visible>
+				</control>
+				
+                <!-- hidden button to set widget -->
+                <control type="button" id="312">
+					<visible>false</visible>
+				</control>
+                
+                <!--submenu heading-->
+                <control type="button" id="31773"> 
+					<width>500</width>
+					<label>31773</label>
+					<align>center</align>
+                    <onclick>RunScript(script.skin.helper.service,action=setskinshortcutsproperty,header=$LOCALIZE[31773],property=customsubmenuheader,setting=customsubmenuheader)</onclick>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>Skin.String(SubmenuLayout, subpage)</visible>
+                </control>
+                
+                <!-- disable shortcut-->
+                <control type="radiobutton" id="313">
+                    <width>500</width>
+					<align>center</align>
+                    <label>$ADDON[script.skinshortcuts 32117]</label>
+                    <selected>String.Contains(Container(211).ListItem.Property(skinshortcuts-disabled),true)</selected>
+				</control>
+                
+                <!--close button-->
+				<control type="button" id="2404"> 
+					<width>500</width>
+					<label>$LOCALIZE[31308]</label>
+					<align>center</align>
+					<onclick>back</onclick>
+				</control>
+
+								
+			</control>
+            <control type="scrollbar" id="270"> <!--scrollbar-->
+                <left>1260</left>
+                <top>18</top>
+                <height>775</height>
+                <onleft>211</onleft>
+                <onright>211</onright>
+                <showonepage>false</showonepage>
+                <visible>String.IsEmpty(Window.Property(widgetcontrols))</visible>
+                <animation effect="fade" start="0" end="100" time="400" condition="Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="400" condition="![Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)]">Conditional</animation>
+            </control>				
+            <!-- widget actions -->
+			<control type="grouplist" id="9000">
+				<visible>!String.IsEqual(Container(211).ListItem.Property(labelid),31534)</visible>
+				<left>745</left>
+				<top>20</top>
+				<width>500</width>
+				<height>770</height>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+                <onback>ClearProperty(widgetcontrols)</onback>
+                <onright>ClearProperty(widgetcontrols)</onright>
+                <onright>SetFocus(900)</onright>
+				<onleft>211</onleft>
+                <pagecontrol>280</pagecontrol>
+				<scrolltime>0</scrolltime>
+                <animation effect="slide" start="0" end="1200" time="0" condition="String.IsEmpty(Window.Property(widgetcontrols))">Conditional</animation>                                            
+                
+                <!-- WIDGET 1 -->
+                <include content="skinshortcuts-widgetselect">
+                    <param name="widgetpos" value="1" />
+                    <param name="widgetid" value="" />
+                    <param name="widgetprop" value="" />
+                </include>
+                
+                <!-- WIDGET 2 -->
+                <include content="skinshortcuts-widgetselect">
+                    <param name="widgetpos" value="2" />
+                    <param name="widgetid" value="1" />
+                    <param name="widgetprop" value=".1" />
+                </include>
+                
+                <!-- WIDGET 3 -->
+                <include content="skinshortcuts-widgetselect2">
+                    <param name="widgetpos" value="3" />
+                    <param name="widgetid" value="2" />
+                    <param name="widgetprop" value=".2" />
+                </include>
+
+                <!-- WIDGET 4 -->
+                <include content="skinshortcuts-widgetselect">
+                    <param name="widgetpos" value="4" />
+                    <param name="widgetid" value="3" />
+                    <param name="widgetprop" value=".3" />
+                </include>
+                
+                <!-- WIDGET 5 -->
+                <include content="skinshortcuts-widgetselect">
+                    <param name="widgetpos" value="5" />
+                    <param name="widgetid" value="4" />
+                    <param name="widgetprop" value=".4" />
+                </include>
+                
+                <!-- WIDGET 6 -->
+                <include content="skinshortcuts-widgetselect">
+                    <param name="widgetpos" value="6" />
+                    <param name="widgetid" value="5" />
+                    <param name="widgetprop" value=".5" />
+                </include>
+                
+                <!-- WIDGET 7 -->
+                <include content="skinshortcuts-widgetselect">
+                    <param name="widgetpos" value="7" />
+                    <param name="widgetid" value="6" />
+                    <param name="widgetprop" value=".6" />
+                </include>
+                
+                <!-- WIDGET 8 -->
+                <include content="skinshortcuts-widgetselect">
+                    <param name="widgetpos" value="8" />
+                    <param name="widgetid" value="7" />
+                    <param name="widgetprop" value=".7" />
+                </include>               
+                
+                <!-- back -->
+                <control type="label" id="9060"> 
+					<width>500</width>
+					<align>center</align>
+					<label/>
+                    <height>45</height>
+				</control>
+                <control type="button" id="9061"> 
+					<width>500</width>
+                    <height>45</height>
+					<align>center</align>
+                    <onclick>ClearProperty(widgetcontrols)</onclick>
+                    <onclick>SetFocus(900)</onclick>
+					<label>31654</label>
+				</control>
+                								
+			</control>
+			<!-- widget actions -->
+			<control type="grouplist" id="9000">
+				<visible>String.IsEqual(Container(211).ListItem.Property(labelid),31534)</visible>
+				<left>745</left>
+				<top>20</top>
+				<width>500</width>
+				<height>770</height>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+                <onback>ClearProperty(widgetcontrols)</onback>
+                <onright>ClearProperty(widgetcontrols)</onright>
+                <onright>SetFocus(900)</onright>
+				<onleft>211</onleft>
+                <pagecontrol>280</pagecontrol>
+				<scrolltime>0</scrolltime>
+                <animation effect="slide" start="0" end="1200" time="0" condition="String.IsEmpty(Window.Property(widgetcontrols))">Conditional</animation>                                            
+                
+                <!-- WIDGET 1 -->
+                <include content="skinshortcuts-widgetselect1">
+                    <param name="widgetpos" value="1" />
+                    <param name="widgetid" value="" />
+                    <param name="widgetprop" value="" />
+                </include>                              
+                
+                <!-- back -->
+                <control type="label" id="9060"> 
+					<width>500</width>
+					<align>center</align>
+					<label/>
+                    <height>45</height>
+				</control>
+                <control type="button" id="9061"> 
+					<width>500</width>
+                    <height>45</height>
+					<align>center</align>
+                    <onclick>ClearProperty(widgetcontrols)</onclick>
+                    <onclick>SetFocus(900)</onclick>
+					<label>31654</label>
+				</control>
+                								
+			</control>
+            <control type="scrollbar" id="280"> <!--scrollbar-->
+                <left>1260</left>
+                <top>18</top>
+                <height>775</height>
+                <onleft>211</onleft>
+                <onright>211</onright>
+                <showonepage>false</showonepage>
+                <visible>!String.IsEmpty(Window.Property(widgetcontrols))</visible>
+                <animation effect="fade" start="0" end="100" time="400" condition="Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="400" condition="![Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)]">Conditional</animation>
+            </control>		
+    
+    </control>
+		<!--Titan bingie Version-->
+        <include>BingieLogo</include>
+		
+	</controls>
+	
+</window>

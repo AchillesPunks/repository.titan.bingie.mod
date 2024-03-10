@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<includes>
+    
+    <include name="Header">
+        <include condition="!Skin.HasSetting(CompactHeader) + Skin.String(home_header,disable) | !Skin.HasSetting(CompactHeader) + !Skin.String(home_header,disable)">Header_Normal</include>
+        <include condition="Skin.HasSetting(CompactHeader) + Skin.String(home_header,disable) | Skin.HasSetting(CompactHeader) + !Skin.String(home_header,disable)">Header_Compact</include>
+    </include>
+    
+    <include name="Header_Normal">
+        <!-- Header Normal -->
+        <control type="group">
+            <visible>!Window.IsActive(notification) + !Window.IsActive(extendedprogressdialog) + !Control.IsVisible(77551) + !Control.IsVisible(88888) + !Control.IsVisible(88883)</visible>
+            <visible>![[String.Contains(Skin.String(HomeLayout), 2) | String.Contains(Skin.String(HomeLayout), 1)] + !String.IsEmpty(Window(Home).Property(ShowWidget))]</visible>
+            <visible>!Control.IsVisible(525) | !Control.IsVisible(527)</visible>
+            <!-- header panel -->
+            <control type="image">
+				<posx>0</posx>
+				<posy>-5</posy>
+				<width>100%</width>
+				<height>145</height>
+				<texture border="5">diffuse/panel2.png</texture>
+				<colordiffuse>$INFO[Skin.String(HeaderPanelColor)]</colordiffuse>
+                <include>animation_fade_visible</include>
+                <visible>![[Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.IsEqual(Skin.String(HomeLayout),bingie)]</visible>
+			</control>
+            
+            <!-- Header Logo left -->
+            <control type="group">
+                <include condition="[!Window.IsActive(Home) + String.Contains(Skin.String(general_header),logo)] | [Window.IsActive(Home) + String.Contains(Skin.String(home_header),logo)]">HeaderLogo</include>
+                <include>animation_fade_visible</include>
+                <visible>![String.IsEqual(Window(Home).Property(ShowViewSubMenu),show) | Control.IsVisible(882) | !String.IsEmpty(Control.GetLabel(29476))]</visible>
+            </control>
+            
+            <!-- Time right -->
+            <control type="group">
+                <include condition="[![Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.Contains(Skin.String(general_header),time)] | [[Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.Contains(Skin.String(home_header),time)]">TimeInfo</include>
+                <include>animation_fade_visible</include>
+                <visible>![Window.IsActive(volumebar) | Control.IsVisible(881)]</visible>
+            </control>
+            
+            <!-- Title left -->
+            <control type="group">
+                <include condition="[!Window.IsActive(Home) + String.Contains(Skin.String(general_header),title)] | [Window.IsActive(Home) + String.Contains(Skin.String(home_header),title)]">HeaderTitle</include>
+                <include>animation_fade_visible</include>
+                <visible>![String.IsEqual(Window(Home).Property(ShowViewSubMenu),show) | Control.IsVisible(882) | !String.IsEmpty(Control.GetLabel(29476))]</visible>
+            </control>
+            
+            <!-- Weather left -->
+            <control type="group">
+                <include condition="[!Window.IsActive(Home) + String.Contains(Skin.String(general_header),weather-)] | [Window.IsActive(Home) + String.Contains(Skin.String(home_header),weather-)]">WeatherInfoLeft</include>
+                <animation effect="slide" end="420" time="0" tween="cubic" easing="inout" delay="0" condition="Window.IsActive(Home) + String.Contains(Skin.String(home_header),slideweather)">Conditional</animation>
+                <include>animation_fade_visible</include>
+                <visible>![String.IsEqual(Window(Home).Property(ShowViewSubMenu),show) | Control.IsVisible(882) | !String.IsEmpty(Control.GetLabel(29476))]</visible>
+            </control>
+            
+            <!-- Weather right -->
+            <control type="group">
+                <include condition="[![Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.Contains(Skin.String(general_header),-weather)] | [[Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.Contains(Skin.String(home_header),-weather)]">WeatherInfoRight</include>
+                <include>animation_fade_visible</include>
+                <visible>![Window.IsActive(volumebar) | Control.IsVisible(881)]</visible>
+            </control>
+            
+            <!-- Weather + clock right -->
+            <control type="group">
+                <include condition="[![Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.Contains(Skin.String(general_header),-weathclock)] | [[Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.Contains(Skin.String(home_header),-weathclock)]">WeatherClockInfoRight</include>
+                <include>animation_fade_visible</include>
+                <visible>![Window.IsActive(volumebar) | Control.IsVisible(881)]</visible>
+            </control>
+
+            <!-- Profile right -->
+            <control type="group">
+                <right>60</right>
+                <include condition="Window.IsActive(Home) + String.Contains(Skin.String(home_header),-profile)">ProfileInfo</include>
+                <include>animation_fade_visible</include>
+                <visible>![Window.IsActive(volumebar)]</visible>
+            </control>
+            
+            <!-- Profile left -->
+            <control type="group">
+                <left>60</left>
+                <include>ProfileInfo</include>
+                <include>animation_fade_visible</include>
+                <visible>![Window.IsActive(volumebar) | !String.IsEmpty(Control.GetLabel(29476))]</visible>
+                <visible>Window.IsActive(Home) + String.Contains(Skin.String(home_header),profile-)</visible>
+            </control>
+            
+        </control>
+        
+    </include>
+    <include name="Header_Compact">
+        <!-- Header Compact -->
+        <control type="group">
+            <visible>Skin.HasSetting(CompactHeader)</visible>
+            <include>animation_fade_visible</include>
+            <visible>!Window.IsActive(notification) + !Window.IsActive(extendedprogressdialog) + !Control.IsVisible(77551) + !Control.IsVisible(88888) + !Control.IsVisible(88883)</visible>
+            <visible>!Control.IsVisible(525) | !Control.IsVisible(527)</visible>
+            <!-- header panel -->
+            <control type="image">
+				<posx>0</posx>
+				<posy>-5</posy>
+				<width>100%</width>
+				<height>112</height>
+				<texture border="5">diffuse/panel2.png</texture>
+				<colordiffuse>$INFO[Skin.String(HeaderPanelColor)]</colordiffuse>
+                <visible>Skin.String(HeaderPanelColor) + !Skin.String(HeaderPanelColor,none)</visible>
+                <visible>![[Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.IsEqual(Skin.String(HomeLayout),bingie)]</visible>
+			</control>
+            
+            <!-- Header Logo left -->
+            <control type="group">
+                <include condition="Skin.HasSetting(CompactHeader)">HeaderLogo</include>
+                <include>animation_fade_visible</include>
+                <visible>![String.IsEqual(Window(Home).Property(ShowViewSubMenu),show) | Control.IsVisible(882)]</visible>
+                <visible>[!Window.IsActive(Home) + String.Contains(Skin.String(general_header),logo)] | [Window.IsActive(Home) + String.Contains(Skin.String(home_header),logo)]</visible>
+            </control>
+            
+            <!-- Time right -->
+            <control type="group">
+                <include>TimeInfoCompact</include>
+                <include>animation_fade_visible</include>
+                <visible>![Window.IsActive(volumebar) | Control.IsVisible(881)]</visible>
+                <visible>[![Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.Contains(Skin.String(general_header),time)] | [[Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.Contains(Skin.String(home_header),time)]</visible>
+            </control>
+            
+            <!-- Profile right -->
+            <control type="group">
+                <include>ProfileInfoCompact</include>
+                <include>animation_fade_visible</include>
+                <visible>![Window.IsActive(volumebar)]</visible>
+                <visible>Window.IsActive(Home) + String.Contains(Skin.String(home_header),-profile)</visible>
+            </control>
+            
+            <control type="grouplist" id="5555">
+                <include>animation_fade_visible</include>
+                <include condition="String.IsEqual(Skin.String(HomeLayout),bingie)">BingieNoCircularWidgetHeaderAnim</include>
+                <orientation>horizontal</orientation>
+                <itemgap>25</itemgap>
+                <posx>-10</posx>
+                <top>25</top>
+                <onright>890</onright>
+                <ondown>9000</ondown>
+                <onup>9000</onup>
+                <visible>![String.IsEqual(Window(Home).Property(ShowViewSubMenu),show) | Control.IsVisible(882)]</visible>
+                <!-- Title left -->
+                <control type="group" id="99226">
+                    <visible>[!Window.IsActive(Home) + String.Contains(Skin.String(general_header),title)] | [Window.IsActive(Home) + String.Contains(Skin.String(home_header),title)]</visible>
+                    <control type="label">
+                        <top>-13</top>
+                        <align>left</align>
+                        <width>800</width>
+                        <label>$VAR[value_header]</label>
+                        <font>Bold30</font>
+                        <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                        <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+                    </control>
+                    <control type="label">
+                        <top>17</top>
+                        <align>left</align>
+                        <width>800</width>
+                        <label>$VAR[value_subheader]</label>
+                        <font>Reg26</font>
+                        <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                        <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+                    </control>
+                </control>
+            </control>
+            
+            <!-- Weather right -->
+            <control type="group">
+                <include>WeatherInfoCompactRight</include>
+                <include>animation_fade_visible</include>
+                <visible>![Window.IsActive(volumebar) | Control.IsVisible(881)]</visible>
+                <animation effect="slide" end="-180,0" time="400" tween="cubic" easing="inout" delay="0" condition="Window.IsActive(volumebar)">Conditional</animation>
+                <visible>[![Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.Contains(Skin.String(general_header),-weather)] | [[Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.Contains(Skin.String(home_header),-weather)]</visible>
+            </control>
+			
+			<!-- Weather left -->
+            <control type="group">
+                <include>WeatherInfoCompactLeft</include>
+                <include>animation_fade_visible</include>
+                <visible>[!Window.IsActive(Home) + String.Contains(Skin.String(general_header),weather-time)]</visible>
+                <animation effect="slide" end="-180,0" time="400" tween="cubic" easing="inout" delay="0" condition="Window.IsActive(volumebar)">Conditional</animation>
+            </control>
+
+            <!-- Weather + clock right -->
+            <control type="group">
+                <include>WeatherClockInfoRightCompact</include>
+                <include>animation_fade_visible</include>
+                <visible>![Window.IsActive(volumebar) | Control.IsVisible(881) | Control.IsVisible(77551)]</visible>
+                <visible>[![Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.Contains(Skin.String(general_header),-weathclock)] | [[Window.IsActive(Home) | $EXP[IsBingieHubsActive] | $EXP[IsBingieCategoriesActive]] + String.Contains(Skin.String(home_header),-weathclock)]</visible>
+            </control>
+            
+        </control>
+
+    </include>
+	
+    <include name="HeaderTitle">
+	
+        <control type="group">
+            <control type="label">
+                <posx>60</posx>
+                <posy>0</posy>
+                <width min="80" max="1400">auto</width>
+                <height>100</height>
+                <font>Bold45</font>
+                <align>left</align>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <label>$VAR[value_header]</label>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+             <control type="label">
+                <posy>75</posy>
+                <posx>60</posx>
+                <width min="0" max="1400">auto</width>
+                <height>50</height>
+                <label>$VAR[value_subheader]</label>
+                <font>Reg28</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+        </control>
+
+    </include>
+        
+	<include name="ClearLogo">
+		<!--clearlogo top right-->
+		<control type="image" id="881">
+			<right>60</right>
+			<top>10</top>
+			<width>335</width>
+			<height>130</height>
+			<fadetime>600</fadetime>
+			<aspectratio align="right" aligny="center">keep</aspectratio>
+			<texture background="true">$VAR[ListItemClearLogo]</texture>
+			<visible>!String.IsEmpty(Control.GetLabel(881)) + Skin.String(ClearLogoLocation, topright)</visible>
+            <visible>!Window.IsActive(notification) + !Window.IsActive(extendedprogressdialog) + !Control.IsVisible(88888)</visible>
+			<animation type="Conditional" condition="Window.IsActive(volumebar)">
+                <effect type="slide" start="0,0" end="-120,0" time="400" tween="cubic" easing="inout" delay="0" />
+            </animation>
+		</control>
+		
+		<!--clearlogo top left-->
+		<control type="image" id="882">
+			<left>60</left>
+			<top>10</top>
+			<width>335</width>
+			<height>130</height>
+			<fadetime>600</fadetime>
+			<aspectratio align="left" aligny="center">keep</aspectratio>
+			<texture background="true">$VAR[ListItemClearLogo]</texture>
+			<visible>!String.IsEmpty(Control.GetLabel(882)) + Skin.String(ClearLogoLocation, topleft)</visible>
+            <visible>!Window.IsActive(notification) + !Window.IsActive(extendedprogressdialog) + !Control.IsVisible(88888)</visible>
+		</control>
+		
+		<!--clearlogo top center-->
+		<control type="image" id="883">
+			<left>792</left>
+			<top>10</top>
+			<width>335</width>
+			<height>130</height>
+			<fadetime>600</fadetime>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<texture background="true">$VAR[ListItemClearLogo]</texture>
+            <visible>!Window.IsActive(notification) + !Window.IsActive(extendedprogressdialog) + !Control.IsVisible(88888)</visible>
+            <visible>![Skin.String(View514_DisplayInfo,small) + Control.IsVisible(514)] + ![Control.IsVisible(514) + Skin.String(View514_DisplayInfo,small_delayed) + System.IdleTime(3)]</visible>
+            <visible>![Skin.String(View513_DisplayInfo,small) + Control.IsVisible(513)] + ![Control.IsVisible(513) + Skin.String(View513_DisplayInfo,small_delayed) + System.IdleTime(3)]</visible>
+			<visible>!String.IsEmpty(Control.GetLabel(883)) + Skin.String(ClearLogoLocation, topcenter)</visible>
+		</control>		
+		
+	</include>
+	
+	<include name="TimeInfo">
+        <control type="group">
+            <!--Time-->
+            <control type="label">
+                <right>60</right>
+                <posy>0</posy>
+                <width>600</width>
+                <height>100</height>
+                <align>right</align>
+                <info>System.Time()</info>
+                <font>Bold55</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+            <!--Date-->
+            <control type="label">
+                <right>60</right>
+                <align>right</align>
+                <posy>75</posy>
+                <width>800</width>
+                <height>50</height>
+                <info>System.Date()</info>
+                <font>Reg30</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+        </control>
+	</include>
+    
+    <include name="SquareSubmenuHeader">
+        <!--Time-->
+        <control type="label" id="14446">
+            <right>60</right>
+            <posy>0</posy>
+            <width>600</width>
+            <height>100</height>
+            <align>right</align>
+            <info>Container(4446).ListItem.Label</info>
+            <font>Bold55</font>
+            <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+            <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            <visible>!String.IsEmpty(Control.GetLabel(14446)) + Control.HasFocus(4446)</visible>
+            <include>animation_fade_visible</include>
+        </control>
+	</include>
+    <include name="SquareSubmenuHeaderCompact">
+        <!--Time-->
+        <control type="label" id="14446">
+            <right>60</right>
+            <posy>0</posy>
+            <width>600</width>
+            <height>100</height>
+            <align>right</align>
+            <info>Container(4446).ListItem.Label</info>
+            <font>Bold30</font>
+            <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+            <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            <visible>!String.IsEmpty(Control.GetLabel(14446)) + Control.HasFocus(4446)</visible>
+            <include>animation_fade_visible</include>
+        </control>
+	</include>
+    
+    <include name="TimeInfoCompact">
+        <control type="group">
+            <control type="label">
+                <right>60</right>
+                <top>12</top>
+                <align>right</align>
+                <width>300</width>
+                <info>System.Time</info>
+                <font>Bold30</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+            <control type="label">
+                <right>60</right>
+                <top>42</top>
+                <align>right</align>
+                <width>500</width>
+                <info>System.Date</info>
+                <font>Reg26</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+        </control>
+    </include>
+    
+	<include name="ProfileInfo">
+		<control type="group" id="891">
+			<defaultcontrol>890</defaultcontrol>
+			<posy>15</posy>
+            <width>150</width>
+            <height>110</height>
+			<control type="image">
+				<texture diffuse="home/home_matte2.png">colors/color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+				<visible>!Control.HasFocus(890)</visible>	
+			</control>
+			<control type="image">
+				<texture diffuse="home/home_matte2.png">colors/color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(ButtonFocusColor)]</colordiffuse>
+				<visible>Control.HasFocus(890)</visible>	
+			</control>
+			<control type="image" id="888">	
+				<bordersize>8</bordersize>
+                <height>75%</height>
+				<texture fallback="common/profil/avatar.png">$INFO[System.ProfileThumb]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+				<visible>!Control.HasFocus(890)</visible>	
+			</control>
+			<control type="image" id="889">
+				<bordersize>8</bordersize>
+                <height>75%</height>
+				<texture fallback="common/profil/avatar.png">$INFO[System.ProfileThumb]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+				<visible>Control.HasFocus(890)</visible>			
+			</control>
+			<control type="button" id="890">
+				<ondown>900</ondown>
+				<width>100%</width>
+				<height>100%</height>
+				<texturefocus/>
+				<texturenofocus/>
+				<onclick>System.LogOff</onclick>
+			</control>
+			<control type="label">
+				<!--Profile name-->
+				<left>4%</left>
+                <width>92%</width>
+				<bottom>0</bottom>
+                <height>25%</height>
+				<label>$VAR[ProfileLabel]</label>
+				<align>center</align>
+                <aligny>center</aligny>
+				<font>Reg22</font>
+				<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+			</control>
+		</control>
+	</include>
+    
+    <include name="ProfileInfoCompact">
+        <control type="radiobutton" id="890">
+            <right>30</right>
+            <top>20</top>
+            <ondown>9000</ondown>
+            <onleft>5555</onleft>
+            <width>600</width>
+            <height>60</height>
+            <radiowidth>60</radiowidth>
+            <radioheight>60</radioheight>
+            <align>right</align>
+            <aligny>center</aligny>
+            <font>Reg26</font>
+            <label>$VAR[ProfileLabel]</label>
+            <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+            <focusedcolor>$INFO[Skin.String(MainMenuFocusTextColor)]</focusedcolor>
+            <textureradioonfocus colordiffuse="$INFO[Skin.String(MainMenuFocusTextColor)]">common/profil/avatar.png</textureradioonfocus>
+            <textureradioonnofocus colordiffuse="$INFO[Skin.String(HeaderTextColor)]">common/profil/avatar.png</textureradioonnofocus>
+            <textureradioofffocus colordiffuse="$INFO[Skin.String(MainMenuFocusTextColor)]">common/profil/avatar.png</textureradioofffocus>
+            <textureradiooffnofocus colordiffuse="$INFO[Skin.String(HeaderTextColor)]">common/profil/avatar.png</textureradiooffnofocus>
+            <textoffsetx>70</textoffsetx>
+            <radioposx>0</radioposx>
+            <pulseonselect>false</pulseonselect>
+            <texturefocus/>
+            <texturenofocus/>
+            <onclick>System.LogOff</onclick>
+            <selected>Control.HasFocus(890)</selected>
+        </control>
+    </include>
+    
+	<include name="WeatherInfoLeft">
+        <!-- weather info -->
+        <control type="group" id="667711">
+            <posx>40</posx>
+            <posy>10</posy>
+            <width>350</width>
+            <height>300</height>
+            <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path)</visible>
+            <!--Weather Today-->
+            <control type="multiimage">
+                <!--Icon-->
+                <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
+                <width>136</width>
+                <height>136</height>
+				<posy>-6</posy>
+				<posx>-4</posx>
+                <aspectratio align="left" aligny="bottom">keep</aspectratio>
+                <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode))</visible>
+            </control>
+            <control type="label">
+                <!--Temp-->
+                <width>160</width>
+                <height>40</height>
+                <posx>137</posx>
+                <posy>24</posy>
+                <font>Bold55</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <align>left</align>
+                <label>$INFO[Window(Weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits]</label>
+				<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+            <control type="label">
+                <!--Temp-->
+                <width>400</width>
+                <height>40</height>
+                <posx>137</posx>
+                <posy>69</posy>
+                <font>Reg30</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+                <align>left</align>
+                <label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+            </control>
+        </control>
+    </include>
+    
+    <include name="WeatherInfoRight">
+        <!-- weather info -->
+        <control type="group" id="667711">
+            <right>40</right>
+            <posy>0</posy>
+            <width>350</width>
+            <height>300</height>
+            <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path)</visible>
+            <!--Weather Today-->
+            <control type="multiimage">
+                <!--Icon-->
+                <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
+                <width>136</width>
+                <height>136</height>
+                <right>-6</right>
+                <posy>0</posy>
+                <aspectratio align="right" aligny="bottom">keep</aspectratio>
+            </control>
+            <control type="label">
+                <!--Temp-->
+                <width>160</width>
+                <height>40</height>
+                <right>139</right>
+                <posy>30</posy>
+                <font>Bold55</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <align>right</align>
+                <label>$INFO[Window(Weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits]</label>
+				<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+            <control type="label">
+                <!--Temp-->
+                <width>400</width>
+                <height>40</height>
+                <right>139</right>
+                <posy>75</posy>
+                <font>Reg30</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+				<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+                <align>right</align>
+                <label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+            </control>
+        </control>
+    </include>
+    
+    <include name="WeatherInfoCompactRight">
+        <control type="group">
+            <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path)</visible>
+            <control type="multiimage">
+                <right>43</right>
+                <top>10</top>
+                <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
+                <width>92</width>
+                <height>92</height>
+                <aspectratio>keep</aspectratio>
+                <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path)</visible> 
+            </control>
+            <!-- current temp -->
+            <control type="label">
+                <right>145</right>
+                <top>11</top>
+                <align>right</align>
+                <width>500</width>
+                <label>[B]$INFO[Window(Weather).Property(Current.Temperature)]  $INFO[System.TemperatureUnits][/B]</label>
+                <font>Reg30</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+            <!-- weather conditions -->
+            <control type="label">
+                <right>145</right>
+                <top>42</top>
+                <align>right</align>
+                <width>400</width>
+                <label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+                <font>Reg26</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+        </control>
+    </include>
+	
+	<include name="WeatherInfoCompactLeft">
+        <control type="group">
+            <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path)</visible>
+            <control type="multiimage">
+                <left>45</left>
+                <top>10</top>
+                <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
+                <width>92</width>
+                <height>92</height>
+                <aspectratio>keep</aspectratio>
+                <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path)</visible> 
+            </control>
+            <!-- current temp -->
+            <control type="label">
+                <left>145</left>
+                <top>11</top>
+                <align>left</align>
+                <width>500</width>
+                <label>[B]$INFO[Window(Weather).Property(Current.Temperature)]  $INFO[System.TemperatureUnits][/B]</label>
+                <font>Reg30</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+            <!-- weather conditions -->
+            <control type="label">
+                <left>145</left>
+                <top>42</top>
+                <align>left</align>
+                <width>400</width>
+                <label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+                <font>Reg26</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+        </control>
+    </include>
+    
+    <include name="WeatherClockInfoRightCompact">
+        <control type="group">
+            <control type="multiimage">
+                <right>43</right>
+                <top>10</top>
+                <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
+                <width>92</width>
+                <height>92</height>
+                <aspectratio>keep</aspectratio>
+            </control>
+            <!-- time + date -->
+            <control type="label">
+                <right>145</right>
+                <top>12</top>
+                <align>right</align>
+                <width>550</width>
+                <label>[B]$INFO[System.Time][/B]</label>
+                <font>Bold30</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+            <!-- weather conditions -->
+            <control type="label">
+                <right>145</right>
+                <top>42</top>
+                <align>right</align>
+                <width>600</width>
+                <label>$INFO[Window(Weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits] $INFO[Window(Weather).Property(Current.Condition)]</label>
+                <font>Reg26</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+        </control>
+    </include>
+    
+    <include name="WeatherClockInfoRight">
+        <control type="group">
+            <control type="grouplist">
+                <!--Time Grouplist Line 1-->
+                <right>184</right>
+                <posy>0</posy>
+                <width>600</width>
+                <height>100</height>
+                <align>right</align>
+                <itemgap>4</itemgap>
+                <orientation>horizontal</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+                <control type="label">
+                    <!--Time-->
+                    <width min="0" max="300">auto</width>
+                    <height>100</height>
+                    <info>System.Time(hh:mm)</info>
+                    <font>Bold55</font>
+                    <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+                </control>
+                <control type="label">
+                    <!--AM-->
+                    <visible>String.EndsWith(system.time,AM)</visible>
+                    <width min="0" max="150">auto</width>
+                    <height>100</height>
+                    <label>378</label>
+                    <font>Bold55</font>
+                    <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+                </control>
+                <control type="label">
+                    <!--PM-->
+                    <visible>String.EndsWith(system.time,PM)</visible>
+                    <width min="0" max="150">auto</width>
+                    <height>100</height>
+                    <label>379</label>
+                    <font>Bold55</font>
+                    <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+                </control>
+            </control>
+            <control type="label">
+                <!--weather info-->
+                <right>185</right>
+                <posy>70</posy>
+                <width>600</width>
+                <height>50</height>
+                <align>right</align>
+                <label>$INFO[Window(Weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits] $INFO[Window(Weather).Property(Current.Condition)]</label>
+                <font>Reg30</font>
+                <textcolor>$INFO[Skin.String(HeaderTextColor)]</textcolor>
+                <shadowcolor>$INFO[Skin.String(HeaderTextShadowColor)]</shadowcolor>
+            </control>
+        </control>
+        <!--Weather Today-->
+        <control type="multiimage">
+            <!--Icon-->
+            <imagepath>$INFO[Skin.String(WeatherIconPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$INFO[Skin.String(WeatherIconPack.ext)]</imagepath>
+            <width>136</width>
+            <height>136</height>
+            <right>34</right>
+            <posy>0</posy>
+            <aspectratio align="right" aligny="bottom">keep</aspectratio>
+            <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + Skin.String(WeatherIconPack.path)</visible>
+        </control>  
+	</include>
+    
+    <include name="HeaderLogo">
+        <!-- Kodi Logo image -->
+        <control type="image">
+            <posx>35</posx>
+            <posy>-34</posy>
+            <height>196</height>
+            <width></width>
+            <aspectratio align="left">keep</aspectratio>
+            <colordiffuse>$INFO[Skin.String(HeaderTextColor)]</colordiffuse>
+            <texture>bingie_logo.png</texture>
+            <visible>String.IsEmpty(Control.GetLabel(198754))</visible>
+            <visible>![Skin.HasSetting(CompactHeader)]</visible>
+        </control>
+		<control type="image">
+            <posx>43</posx>
+            <posy>-13</posy>
+            <height>132</height>
+            <width></width>
+            <aspectratio align="left">keep</aspectratio>
+            <colordiffuse>$INFO[Skin.String(HeaderTextColor)]</colordiffuse>
+            <texture>home/netflix_logo.png</texture>
+            <visible>String.IsEmpty(Control.GetLabel(198754))</visible>
+            <visible>![!Skin.HasSetting(CompactHeader)]</visible>
+        </control>   
+    </include>
+    
+</includes>

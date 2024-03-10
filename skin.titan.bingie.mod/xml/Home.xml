@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<window>
+    <defaultcontrol always="true">1000</defaultcontrol>
+    <menucontrol>900</menucontrol>
+
+    <!-- Defaults -->
+    <include>DefaultSkinSettings</include>
+    <include condition="String.IsEqual(Skin.String(HomeLayout),bingie)">DefaultSkinHubs</include>
+    
+	<!-- BINGIE -->
+    <onload condition="!String.IsEmpty(Skin.String(CustomSearchTerm))">Skin.Reset(CustomSearchTerm)</onload>
+    <onload condition="String.IsEqual(Skin.String(HomeLayout),bingie)">SetProperty(bingieviews,1,Home)</onload>
+    <onload>Skin.SetString(TMDbHelper.MonitorContainer,99950)</onload>
+	
+	<!-- Build Menu -->
+    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=900&amp;group=mainmenu|powermenu)</onload>
+    <onload condition="String.IsEmpty(Window(Home).Property(widgetstyle))">SetProperty(widgetstyle,$INFO[Skin.String(widgetstyle)])</onload>
+
+    <!-- First Run -->
+    <onload condition="$EXP[IsFirstRun]">ReplaceWindow($VAR[StartUpWindow])</onload>
+    <onunload>SetProperty(SectionBackground,$ESCINFO[Control.GetLabel(99004)])</onunload>
+    <onunload condition="System.HasAlarm(preview_delay)">CancelAlarm(preview_delay,silent)</onunload>
+    <onunload>ClearProperty(submenu,Home)</onunload>
+    <onunload>ClearProperty(ShowWidget,Home)</onunload>
+    <onunload>ClearProperty(ShowViewSubMenu,Home)</onunload>
+    <onunload>ClearProperty(bingieviews,Home)</onunload>
+    <include condition="Skin.String(widgets_rotate) + !String.IsEqual(Skin.String(widgets_rotate),disabled)">WidgetsAutoRotateUnload</include>
+    <include condition="String.IsEqual(Skin.String(HomeLayout),bingie)">BingieViews_WindowOpen_Fade</include>
+
+	<controls>
+		<include>Defs_TMDbHelper_Loader</include>
+		<!-- Global Background -->
+        <include>GlobalBackground</include>
+        <control type="button" id="1000">
+            <include>HiddenObject</include>
+            <onfocus condition="String.IsEqual(Skin.String(HomeLayout),bingie) + !Skin.HasSetting(AutoFocusHome) + String.IsEmpty(Window(Home).Property(LastFocusWidget))">SetFocus(77777)</onfocus>
+            <onfocus condition="String.IsEqual(Skin.String(HomeLayout),bingie) + Skin.HasSetting(AutoFocusHome) + String.IsEmpty(Window(Home).Property(LastFocusWidget))">SetFocus($VAR[DefaultMenuFocus])</onfocus>
+            <onfocus condition="String.IsEmpty(Window(Home).Property(HomeFirstLoadDone))">SetProperty(HomeFirstLoadDone,1)</onfocus>
+            <include content="WidgetsAutoRotate" condition="!String.IsEmpty(Skin.String(widgets_rotate_delay)) + !String.IsEqual(Skin.String(widgets_rotate),disabled) + String.IsEqual(Skin.String(HomeLayout),bingie)">
+                <param name="interval" value="$INFO[Skin.String(widgets_rotate_delay)]" />
+            </include>
+            <onleft>900</onleft>
+            <onright>900</onright>
+            <onback>900</onback>
+        </control>
+
+        <!-- Preload Weather Conditions -->
+        <control type="label">
+            <label>$INFO[Weather.Conditions]</label>
+            <include>HiddenObject</include>
+        </control>
+
+        <!-- Preload submenu for count calculations -->
+        <include condition="!Skin.HasSetting(DisableAllSubmenus)">hiddenSubmenu</include>
+
+		<!-- NowPlaying Background -->
+		<include>NowPlayingBackground</include>           
+	
+		<!-- Home Screen -->
+        <include condition="String.IsEqual(Skin.String(HomeLayout),bingie)">HomeBingie</include>
+
+		<!-- Debug -->
+        <include condition="Skin.HasSetting(DebugGrid) | Skin.HasSetting(DebugInfo)">DebugInfo</include>
+	</controls>
+</window>

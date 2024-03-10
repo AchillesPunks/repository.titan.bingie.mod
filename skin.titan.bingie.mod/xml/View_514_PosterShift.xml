@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    <include name="ShiftPosterThumbs">
+        <control type="group">
+            <posx>-45</posx>
+            <posy>95</posy>
+            <width>385</width>
+            <height>545</height>
+            <control type="image">
+                <aspectratio scalediffuse="true" aligny="center" align="center">stretch</aspectratio>
+                <texture background="true" diffuse="diffuse/poster.png" fallback="DefaultVideo.png">$VAR[PosterThumbList]</texture>
+                <include condition="!Skin.HasSetting(EmbyCovertArtEnabled)">poster_shadow</include>
+                <bordersize>20</bordersize>
+				<visible>!String.IsEmpty(ListItem.Art(poster)) | !String.IsEmpty(ListItem.Art(tvshow.poster))</visible>
+            </control>
+			<control type="image">
+                <aspectratio scalediffuse="false" aligny="center" align="center">scale</aspectratio>
+                <texture background="false" diffuse="diffuse/poster.png" fallback="DefaultVideo.png">$VAR[PosterThumbList]</texture>
+                <include condition="!Skin.HasSetting(EmbyCovertArtEnabled)">poster_shadow</include>
+                <bordersize>20</bordersize>
+				<visible>String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster))</visible>
+            </control>
+
+        </control>
+        <control type="image">
+            <posx>-25</posx>
+            <posy>620</posy>
+            <width>345</width>
+            <height>505</height>
+            <aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
+            <texture background="true" flipy="true" diffuse="diffuse/poster_reflect.png" fallback="DefaultVideo.png">$VAR[PosterThumbList]</texture>
+            <animation effect="fade" start="100" end="30" time="160">Focus</animation>
+            <animation effect="fade" start="30" end="100" time="160">UnFocus</animation>
+			<visible>!String.IsEmpty(ListItem.Art(poster)) | !String.IsEmpty(ListItem.Art(tvshow.poster))</visible>
+        </control>
+		<control type="image">
+            <posx>-25</posx>
+            <posy>620</posy>
+            <width>345</width>
+            <height>505</height>
+            <aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
+            <texture background="true" flipy="true" diffuse="diffuse/poster_reflect.png" fallback="DefaultVideo.png">$VAR[PosterThumbList]</texture>
+            <animation effect="fade" start="100" end="30" time="160">Focus</animation>
+            <animation effect="fade" start="30" end="100" time="160">UnFocus</animation>
+			<visible>String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster))</visible>
+        </control>
+		<control type="group">
+			<!--Watched Overlay-->
+			<right>-5</right>
+			<top>115</top>
+			<include>WatchedIndicatorNormal</include>
+		</control>
+	</include>
+
+	<include name="View_514_PosterShift">
+	
+		<control type="group">
+			<visible>Control.IsVisible(514)</visible>
+			<include>animation_view_change</include>
+
+	<!-- Fanart Image Added to View-->
+            <control type="multiimage">
+				<visible>!Skin.HasSetting(View514_DisableFanArt)</visible>
+                <include>FullscreenDimensions</include>
+                <texture>diffuse/panel2.png</texture>
+			    <colordiffuse>33ffffff</colordiffuse>
+				<imagepath background="true">$VAR[backgroundVar]</imagepath>
+                <aspectratio>scale</aspectratio>
+                <fadetime>350</fadetime>
+                <include>fanartSpeed</include>
+                <randomize>true</randomize>
+                <loop>yes</loop>
+	<!-- Background Animation -->
+                <animation effect="zoom" start="110" end="130" center="auto" time="12000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(BackgroundAnimation)">Conditional</animation>
+                <animation effect="slide" start="-10,-10" end="10,10" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(BackgroundAnimation)">Conditional</animation>
+			 </control>							
+            
+            <!-- movie details small -->
+			<control type="group" id="88883">
+				<include>MovieDetailsTop2</include>
+                <visible>Control.IsVisible(514)</visible>
+                <visible>Skin.String(View514_DisplayInfo,small) | [Skin.String(View514_DisplayInfo,small_delayed) + System.IdleTime(3)]</visible>
+				<animation effect="slide" start="0,-350" end="0" time="350" tween="cubic" easing="inout">Visible</animation>
+			</control>
+            
+			<control type="group">
+				<visible>!Window.IsActive(addoninformation)</visible>
+                
+                <control type="image">
+                    <!--cdart image-->
+                    <width>396</width>
+                    <height>396</height>
+                    <posx>763</posx>
+					<bottom>501</bottom>
+                    <texture background="true" diffuse="diffuse/cdmask_new.png" fallback="defaultcovers/cd_big.png">$VAR[DiscArtImage]</texture>
+                    <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+                    <animation effect="slide" start="0,200" end="0" tween="cubic" easing="inout" time="1200" delay="800">Visible</animation>
+                    <animation effect="fade" start="0" end="100" delay="800" time="800" pulse="false">Visible</animation>
+                    <animation effect="rotate" end="-360" center="auto" time="20000" loop="true" reversible="false" condition="Skin.HasSetting(AnimateDiscArt)">Conditional</animation>
+                    <visible>Skin.HasSetting(View514_ShowCDart) + Control.HasFocus(514) + !Control.IsVisible(88883) + !Skin.HasSetting(PosterShiftViewShowInfo) + !String.StartsWith(ListItem.Art(thumb),Default) + !Container.IsScrolling + !Container.OnScrollNext + !Container.OnScrollPrevious + $EXP[IsMovieDBType] | Control.HasFocus(514) + !Container.IsScrolling + !Container.OnScrollNext + !Container.OnScrollPrevious + Skin.HasSetting(View514_ShowCDart) + Skin.HasSetting(EnableFakeDiscArt)</visible>
+                </control>
+                
+				<control type="fixedlist" id="514">					
+					<posx>-130</posx>
+					<bottom>60</bottom>
+					<width>2100</width>
+					<height>750</height>
+					<onup>9000</onup>
+					<ondown condition="Skin.HasSetting(EnableQuickJump)">7000</ondown>
+                <ondown condition="!Skin.HasSetting(EnableQuickJump)">60</ondown>
+					<orientation>horizontal</orientation>
+					<viewtype label="31441">bigwrap</viewtype>
+                    <include content="View_Forced">
+                        <param name="viewtype" value="$LOCALIZE[31441]" />
+                    </include>
+					<pagecontrol>60</pagecontrol>
+					<preloaditems>2</preloaditems>
+					<scrolltime tween="quadratic">200</scrolltime>
+					<focusposition>3</focusposition>
+                    <itemlayout width="315" height="750">
+						<include>ShiftPosterThumbs</include>
+					</itemlayout>
+					<focusedlayout width="315" height="750">
+						<control type="group">
+							<animation effect="zoom" center="auto" start="100" end="120" time="160" tween="quadratic">Focus</animation>
+							<animation effect="zoom" center="auto" start="120" end="100" time="160" tween="quadratic">Unfocus</animation>
+							<include>ShiftPosterThumbs</include>
+						</control>
+					</focusedlayout>
+				</control>
+                
+                <!--horizontal Scrollbar-->
+                <control type="scrollbar" id="60">
+                    <visible>Control.IsVisible(514) + Integer.IsGreater(Container.NumItems,0)</visible>
+                    <left>60</left>
+                    <bottom>4</bottom>
+                    <width>1800</width>
+                    <height>15</height>
+                    <onup>513</onup>
+                    <onleft>60</onleft>
+                    <onright>60</onright>
+                    <orientation>horizontal</orientation>
+                    <animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)] + !Control.IsVisible(6002)">Conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)] | Control.IsVisible(6002)">Conditional</animation>
+                </control>						
+			</control>    
+		</control>	
+	</include>
+</includes>

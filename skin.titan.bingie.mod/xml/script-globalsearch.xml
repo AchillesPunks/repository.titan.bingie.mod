@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<views>50,51</views>
+	<animation effect="fade" time="400">WindowOpen</animation>
+	<animation effect="fade" time="400">WindowClose</animation>
+	<controls>
+		<include>Defs_TMDbHelper_Loader</include>
+		<!-- Hidden Top250 -->
+		<control type="label" id="1719">
+			<width>1</width>
+			<height>1</height>
+			<left>-1920</left>
+			<visible>!String.IsEmpty(ListItem.Top250) | !String.IsEmpty(Container(99950).ListItem.Property(Top250))</visible>				
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<texture background="true" colordiffuse="40FFFFFF">$INFO[Container.ListItem.Art(fanart)]</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<animation effect="fade" time="400">Visible</animation>
+			<animation effect="fade" time="400">Hidden</animation>
+		</control>
+		<control type="grouplist">
+				<visible>!Control.IsVisible(999)</visible>				
+                <top>10</top>
+                <left>138</left>
+                <usecontrolcoords>true</usecontrolcoords>
+                <orientation>vertical</orientation>
+
+                <!-- clearlogo title -->
+                <control type="image" id="987767">
+                    <left>0</left>
+					<height>190</height>
+                    <width>490</width>
+                    <align>left</align>
+                    <top>0</top>
+                    <fadetime>350</fadetime>
+                    <aspectratio align="left" aligny="center">keep</aspectratio>
+                    <texture background="true" fallback="colors/color_transparent.png">$VAR[BingieInfoClearlogo]</texture>
+                </control>
+				
+				<!-- Blank image for gap -->
+				<control type="image">
+					<visible>String.EndsWith(Control.GetLabel(887767),color_transparent.png)</visible>
+					<visible>yes</visible>
+					<top>0</top>
+					<left>0</left>
+					<width>650</width>
+					<height>0</height>
+				</control>
+				
+                <!-- text title -->
+                <control type="textbox">
+                    <visible>String.EndsWith(Control.GetLabel(987767),color_transparent.png)</visible>
+                    <top>-194</top>
+					<left>0</left>
+                    <width max="650">auto</width>
+                    <height>185</height>
+                    <font>Title</font> 
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <textcolor>$INFO[Skin.String(BingieLabelTextColor)]</textcolor>
+                    <label>$VAR[BingieInfoLabel]</label>
+					<autoscroll delay="4000" time="2000" repeat="6000">true</autoscroll>
+                </control>
+				
+				<control type="group">
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+					<top>-2</top>
+					<width>1000</width>
+					<height>40</height>
+					<include>GlobalSearchtRowDetails</include>
+				</control>
+		</control>
+		
+		<control type="group">
+			<visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)]</visible>		
+			<control type="group">			
+				<top>266</top>
+				<animation effect="fade" start="100" end="50" time="150" condition="!Control.HasFocus(9000) + !Control.HasFocus(990)">Conditional</animation>
+				<control type="grouplist">					
+					<visible>!Control.IsVisible(999)</visible>
+					<left>139</left>
+					<top>80</top>
+					<width>550</width>
+					<height>0</height>
+					<align>center</align>
+					<itemgap>0</itemgap>
+					<orientation>vertical</orientation>
+					<control type="group">
+					<top>0</top>
+					<control type="image">
+						<visible>Control.HasFocus(990)</visible>
+						<width>550</width>
+						<height>65</height>
+						<texture border="10" background="true" colordiffuse="$INFO[Skin.String(ViewDetailsBorderFocusColor)]">$INFO[Skin.String(thumbsborder_focused),bingie/border/default_button_fo_,.png]</texture>
+					</control>
+					<control type="label">
+						<visible>Control.HasFocus(990)</visible>
+						<left>20</left>
+						<width>550</width>
+						<height>65</height>
+						<aligny>center</aligny>
+						<font>Plots</font>
+						<label>320053</label>
+						<textcolor>$INFO[Skin.String(BingieButtonFocusTextColor)]</textcolor>
+					</control>
+					<control type="label">
+						<visible>!Control.HasFocus(990)</visible>
+						<left>20</left>
+						<width>550</width>
+						<height>65</height>
+						<aligny>center</aligny>
+						<font>Plots</font>
+						<label>320053</label>
+						<textcolor>$INFO[Skin.String(BingieButtonTextColor)]</textcolor>
+					</control>
+					</control>
+					<control type="label" id="991">
+						<width>0</width>
+						<height>0</height>
+						<textcolor>00ffffff</textcolor>
+					</control>
+				</control>
+				<control type="button" id="990">
+					<left>122</left>
+					<top>0</top>
+					<width>500</width>
+					<height>120</height>
+					<label>32299</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font14</font>
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					<onup>noop</onup>
+					<ondown>SetFocus(9000)</ondown>
+					<onleft>500</onleft>
+					<onright>500</onright>
+				</control>
+			</control>
+			<control type="group">
+				<animation effect="fade" start="100" end="50" time="150" condition="!Control.HasFocus(9000) + !Control.HasFocus(990)">Conditional</animation>
+				<top>170</top>
+				<control type="list" id="9000">
+					<left>139</left>
+					<top>241</top>
+					<width>550</width>
+					<height>590</height>
+					<onup>990</onup>
+					<ondown>9000</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<itemlayout height="65" width="550">
+						<control type="label">
+							<left>20</left>
+							<top>0</top>
+							<height>65</height>
+							<width>550</width>
+							<aligny>center</aligny>
+							<font>Plots</font>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>$INFO[Skin.String(BingieButtonTextColor)]</textcolor>
+						</control>
+						<control type="label">
+							<right>20</right>
+							<top>0</top>
+							<height>65</height>
+							<width>550</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>Plots</font>
+							<label>$INFO[ListItem.Label2]</label>
+							<textcolor>$INFO[Skin.String(BingieButtonTextColor)]</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout height="65" width="550" condition="Control.HasFocus(9000)">
+						<control type="image">
+							<visible>Control.HasFocus(9000) | Control.HasFocus(50)</visible>
+							<width>550</width>
+							<height>65</height>
+							<texture border="10" background="true" colordiffuse="$INFO[Skin.String(ViewDetailsBorderFocusColor)]">$INFO[Skin.String(thumbsborder_focused),bingie/border/default_button_fo_,.png]</texture>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<top>0</top>
+							<height>65</height>
+							<width>550</width>
+							<aligny>center</aligny>
+							<font>Plots</font>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>$INFO[Skin.String(BingieButtonFocusTextColor)]</textcolor>
+						</control>
+						<control type="label">
+							<right>20</right>
+							<top>0</top>
+							<height>65</height>
+							<width>550</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>Plots</font>
+							<label>$INFO[ListItem.Label2]</label>
+							<textcolor>$INFO[Skin.String(BingieButtonFocusTextColor)]</textcolor>
+						</control>
+					</focusedlayout>
+					<focusedlayout height="65" width="550" condition="!Control.HasFocus(9000)">
+						<control type="image">
+							<visible>Control.HasFocus(9000) | Control.HasFocus(50)</visible>
+							<width>550</width>
+							<height>65</height>
+							<texture border="10" background="true" colordiffuse="$INFO[Skin.String(ViewDetailsBorderFocusColor)]">$INFO[Skin.String(thumbsborder_focused),bingie/border/default_button_fo_,.png]</texture>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<top>0</top>
+							<height>65</height>
+							<width>550</width>
+							<aligny>center</aligny>
+							<font>Plots</font>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>$INFO[Skin.String(BingieButtonTextColor)]</textcolor>
+						</control>
+						<control type="label">
+							<right>20</right>
+							<top>0</top>
+							<height>65</height>
+							<width>550</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>Plots</font>
+							<label>$INFO[ListItem.Label2]</label>
+							<textcolor>$INFO[Skin.String(BingieButtonTextColor)]</textcolor>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="label">
+				<visible>!Control.IsVisible(999)</visible>
+				<top>37</top>
+				<left>827</left>
+				<label>$INFO[Window.Property(GlobalSearch.SearchString),$LOCALIZE[320095] &quot;,&quot;]</label>
+				<width>1040</width>
+				<height>40</height>
+				<font>Bold38</font>
+				<textcolor>$INFO[Skin.String(SideBladeTextColor)]</textcolor>
+			</control>
+			<control type="panel" id="50">
+				<top>90</top>
+				<posx>820</posx>
+                <height>1000</height>
+                <width>1100</width>
+				<orientation>vertical</orientation>
+				<focusposition>1</focusposition>
+				<pagecontrol>60</pagecontrol>
+				<onleft>9000</onleft>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<onback>527</onback>
+                <preloaditems>2</preloaditems>
+                <include>ScrollTime</include>
+				<itemlayout height="370" width="264" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(actors) | Container.Content(directors)">
+						<control type="group">
+							<width>264</width>
+							<height>370</height>
+							<include>PosterPanelBingieLayout</include>
+						</control>
+				</itemlayout>
+				<itemlayout height="204" width="352" condition="Container.Content(episodes) | Container.Content(musicvideos)">
+						<control type="group">
+							<width>352</width>
+							<height>204</height>
+							<include>SquarePosterPanelLayout</include>
+						</control>
+				</itemlayout>
+				<itemlayout height="352" width="352" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(livetv)">
+						<control type="group">
+							<width>352</width>
+							<height>352</height>
+							<include>SquarePosterPanelLayout</include>
+						</control>
+				</itemlayout>
+				<focusedlayout height="370" width="264" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(actors) | Container.Content(directors)">
+                        <control type="group">
+							<width>264</width>
+							<height>370</height>
+							<include>PosterPanelBingieLayoutFocus</include>
+							<include>Top250Indicator2</include>
+						</control>
+				</focusedlayout>
+				<focusedlayout height="204" width="352" condition="Container.Content(episodes) | Container.Content(musicvideos)">
+                        <control type="group">
+							<width>352</width>
+							<height>204</height>
+							<include>SquarePosterPanelLayoutFocus</include>
+						</control>
+				</focusedlayout>
+				<focusedlayout height="352" width="352" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(livetv)">
+                        <control type="group">
+							<width>352</width>
+							<height>352</height>
+							<include>SquarePosterPanelLayoutFocus</include>
+						</control>
+				</focusedlayout>				
+			</control>
+			<control type="label" id="999">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>1080</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Reg42</font>
+				<label>$LOCALIZE[284]</label>
+			</control>
+		</control>
+		<!-- Snow Effect -->
+        <control type="group">
+            <include condition="String.IsEqual(Skin.String(season_greetings),snow_animation)">snow</include>
+        </control>
+		<!-- Halloween Effect -->
+        <control type="group">
+            <include condition="String.IsEqual(Skin.String(season_greetings),halloween_animation)">pumpkin</include>
+        </control>
+	</controls>
+</window>
