@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BINGIE -->
+<window type="dialog" id="1160">
+    <visible>!String.IsEmpty(Window(Home).Property(TrailerPlaying)) + !Player.HasVideo</visible>
+    <onload>AlarmClock(ClearTrailer,ClearProperty(TrailerPlaying,Home),00:10,silent)</onload>
+    <onunload condition="System.HasAlarm(ClearTrailer)">CancelAlarm(ClearTrailer,true)</onunload>
+    <controls />
+</window>

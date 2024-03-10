@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<includes>
+  <include name="View_59_BigPanelDetails">	
+    <control type="group">
+      <visible>Control.IsVisible(59)</visible>
+      <include>animation_view_change</include>
+	  
+	  <!-- Fanart Image Added to View-->
+            <control type="multiimage">
+				<visible>!Skin.HasSetting(View59_DisableFanArt)</visible>
+                <include>FullscreenDimensions</include>
+                <texture>diffuse/panel2.png</texture>
+			    <colordiffuse>33ffffff</colordiffuse>
+				<imagepath background="true">$VAR[backgroundVar]</imagepath>
+                <aspectratio>scale</aspectratio>
+                <fadetime>350</fadetime>
+                <include>fanartSpeed</include>
+                <randomize>true</randomize>
+                <loop>yes</loop>
+                <!-- Background Animation -->
+                <animation effect="zoom" start="110" end="130" center="auto" time="12000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(BackgroundAnimation)">Conditional</animation>
+                <animation effect="slide" start="-10,-10" end="10,10" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(BackgroundAnimation)">Conditional</animation>
+            </control>
+	  <!-- details -->
+      <control type="group">
+          <animation effect="slide" end="0,-50" time="0" condition="true">Conditional</animation>
+		  <animation effect="slide" end="7" time="0" condition="Skin.HasSetting(View59_ShowInfoRight)">Conditional</animation>
+          <include>MovieDetailsLeft</include>
+      </control>
+	 
+      <control type="panel" id="59">
+        <animation effect="slide" end="-630" time="0" condition="Skin.HasSetting(View59_ShowInfoRight)">Conditional</animation>
+        <viewtype label="31428">mediainfo</viewtype>
+          <include content="View_Forced">
+              <param name="viewtype" value="$LOCALIZE[31428]" />
+          </include>
+        <!-- Right Group Panel -->
+		<right>-7</right>
+        <bottom>101</bottom>
+        <height>824</height>
+        <width>1245</width>
+        <orientation>vertical</orientation>
+        <itemgap>0</itemgap>
+        <onleft>9000</onleft>
+		<onleft>CancelAlarm(preview_delay,silent)</onleft>
+		<onleft condition="$EXP[IsPlayingUnrecognizedContent] + Skin.HasSetting(DetailsAutoTrailer) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TrailerPlaying))] + !String.IsEqual(Window(Home).Property(TrailerPlaying),fullscreen)">PlayerControl(Stop)</onleft>
+		<onback>CancelAlarm(preview_delay,silent)</onback>
+		<onback condition="$EXP[IsPlayingUnrecognizedContent] + Skin.HasSetting(DetailsAutoTrailer) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TrailerPlaying))] + !String.IsEqual(Window(Home).Property(TrailerPlaying),fullscreen)">PlayerControl(Stop)</onback>
+        <onright condition="Skin.HasSetting(EnableQuickJump)">6000</onright>
+        <onright condition="!Skin.HasSetting(EnableQuickJump)">60</onright>
+        <onup>59</onup>
+        <ondown>59</ondown>
+        <preloaditems>4</preloaditems>
+        <pagecontrol>60</pagecontrol>
+          <!-- Poster Panel Layout -->
+		  <itemlayout height="412" width="302">
+          <control type="group">
+            <width>278</width>
+            <height>388</height>
+            <include>PosterPanelLayout</include>
+        <control type="group">
+            <!--Watched Overlay-->
+            <right>8</right>
+            <top>8</top>
+            <include>WatchedIndicatorNormal</include>
+        </control>
+          </control>
+        </itemlayout>
+        <!-- Poster Main Panel Layout -->
+		<focusedlayout height="412" width="302">
+          <control type="group">
+            <width>278</width>
+            <height>388</height>
+            <include>PosterPanelLayoutFocus</include>
+        <control type="group">
+            <!--Watched Overlay-->
+            <right>8</right>
+            <top>8</top>
+            <include>WatchedIndicatorNormal</include>
+        </control>
+              <include condition="Skin.HasSetting(DetailsAutoTrailer)">LibraryAutoTrailerStopButton</include>
+						<include content="LibraryAutoTrailerStartButton" condition="Skin.HasSetting(DetailsAutoTrailer)">
+							<param name="interval" value="$INFO[Skin.String(details_auto_trailer_interval)]" />
+						</include>
+          </control>
+        </focusedlayout>
+      </control>
+	  
+		<!--vertical Scollbar-->
+		<control type="scrollbar" id="60">
+			<visible>Control.IsVisible(59) + Integer.IsGreater(Container.NumItems,0)</visible>
+			<right>15</right>
+			<bottom>129</bottom>
+			<height>784</height>
+			<onup>60</onup>
+			<ondown>6000</ondown>
+			<onleft>59</onleft>
+			<animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)] + !Control.IsVisible(6002)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)] | Control.IsVisible(6002)">Conditional</animation>
+		</control>
+     </control>
+  </include>
+</includes>

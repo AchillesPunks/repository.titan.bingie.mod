@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<includes>
+    <include name="View_508_SinglePoster">
+        <!--View 508-->
+        <control type="group">
+            <visible>Control.IsVisible(508)</visible>
+            <include>animation_view_change</include>
+			<!-- Fanart Image Added to View-->
+            <control type="multiimage">
+				<visible>!Skin.HasSetting(View508_DisableFanArt)</visible>
+                <include>FullscreenDimensions</include>
+                <texture>diffuse/panel2.png</texture>
+			    <colordiffuse>33ffffff</colordiffuse>
+				<imagepath background="true">$VAR[backgroundVar]</imagepath>
+                <aspectratio>scale</aspectratio>
+                <fadetime>350</fadetime>
+                <include>fanartSpeed</include>
+                <randomize>true</randomize>
+                <loop>yes</loop>
+			<!-- Background Animation -->
+                <animation effect="zoom" start="110" end="130" center="auto" time="12000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(BackgroundAnimation)">Conditional</animation>
+                <animation effect="slide" start="-10,-10" end="10,10" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(BackgroundAnimation)">Conditional</animation>
+            </control>
+					
+			<!--Info-->
+			<control type="grouplist">
+			    <height>222</height>
+			    <bottom>148</bottom>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+                <visible>Integer.IsGreater(Container.NumItems,0)</visible>
+				<posx>50</posx>
+				<posy>10</posy>
+				<control type="label">
+					<height>33</height>
+					<width>1100</width>
+					<font>Bold30</font>
+					<textcolor>$INFO[Skin.String(ViewDetailsHighlightTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(ViewDetailsHighlightTextShadowColor)]</shadowcolor>
+					<label>[UPPERCASE]$VAR[mediatitle][/UPPERCASE]</label>
+				</control>
+					<control type="label">
+					  <height>40</height>
+					  <width>1100</width>
+					  <font>Reg31</font>
+					  <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+					  <shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					  <label>$VAR[Details]</label>
+				</control>
+			   
+				<control type="textbox">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1493</width>
+					<height>145</height>
+					<label>$VAR[Plots]</label>
+					<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<align>justify</align>
+					<font>Light28</font>
+					<visible>!Skin.HasSetting(View508_ShowCDart)</visible>
+				</control>
+				<control type="textbox">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1392</width>
+					<height>145</height>
+					<label>$VAR[Plots]</label>
+					<textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+					<shadowcolor>$INFO[Skin.String(ViewDetailsTextShadowColor)]</shadowcolor>
+					<align>justify</align>
+					<font>Light28</font>
+					<visible>Skin.HasSetting(View508_ShowCDart)</visible>
+				</control>
+			</control>
+            
+            <!--cdart image-->
+            <control type="image">
+                <right>52</right>
+                <bottom>205</bottom>
+                <width>274</width>
+                <height>274</height>
+                <texture background="true" diffuse="diffuse/cdmask_medium_new.png" fallback="defaultcovers/cd_medium.png">$VAR[DiscArtImage]</texture>
+                <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+                <animation effect="slide" start="0,0" end="-114,0" tween="cubic" easing="inout" time="1200" delay="1800">Visible</animation>
+                <animation effect="fade" start="0" end="100" delay="1200" time="800" pulse="false">Visible</animation>
+                <animation effect="rotate" end="-360" center="auto" time="20000" loop="true" reversible="false" condition="Skin.HasSetting(AnimateDiscArt)">Conditional</animation>
+                <visible>Skin.HasSetting(View508_ShowCDart) + Control.HasFocus(508) + !String.StartsWith(ListItem.Art(thumb),Default) + !Container.IsScrolling + !Container.OnScrollNext + !Container.OnScrollPrevious + $EXP[IsMovieDBType] |Control.HasFocus(508) + !Container.IsScrolling + !Container.OnScrollNext + !Container.OnScrollPrevious + Skin.HasSetting(View508_ShowCDart) + Skin.HasSetting(EnableFakeDiscArt)</visible>
+                <visible>Integer.IsGreater(Container.NumItems,0)</visible>
+            </control>
+			
+			<!-- ID="508" -->
+            <control type="panel" id="508">
+			<bottom>13%</bottom>
+				<viewtype label="31435">posterwrap</viewtype>
+				<include content="View_Forced">
+					<param name="viewtype" value="$LOCALIZE[31435]" />
+				</include>
+                <right>43</right>
+                <bottom>0</bottom>
+                <width>292</width>
+                <height>404</height>
+                <onup>9000</onup>
+                <ondown condition="Skin.HasSetting(EnableQuickJump)">7000</ondown>
+                <ondown condition="!Skin.HasSetting(EnableQuickJump)">60</ondown>
+                <onleft>508</onleft>
+                <onright>508</onright>
+                <scrolltime tween="Cubic" easing="inout">500</scrolltime>
+                <focusposition>0</focusposition>
+                <orientation>horizontal</orientation>
+                <preloaditems>2</preloaditems>
+				<itemlayout height="404" width="292">
+					 <control type="group">
+                        <width>292</width>
+                        <height>404</height>
+                        <include>PosterPanelLayout</include>
+						<control type="group">
+			<!--Watched Overlay-->
+			<right>8</right>
+			<top>8</top>
+			<include>WatchedIndicatorNormal</include>
+		</control>
+                    </control>
+				</itemlayout>
+				<focusedlayout height="404" width="292">
+                     <control type="group">
+                        <width>292</width>
+                        <height>404</height>
+                        <include>PosterPanelLayout</include>
+						<control type="group">
+			<!--Watched Overlay-->
+			<right>8</right>
+			<top>8</top>
+			<include>WatchedIndicatorNormal</include>
+		</control>
+                    </control>
+				</focusedlayout>
+            </control>
+        </control>
+     </include>	 
+</includes>
