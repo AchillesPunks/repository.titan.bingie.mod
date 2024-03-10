@@ -1,5 +1,0 @@
-<includes>
-	<variable name="CustomBackgroundSetting">
-		<value>$INFO[Skin.String(WeatherFanArtPack.path)]$INFO[Window(Weather).Property(Current.fanartCode)]$INFO[Skin.String(WeatherFanArtPack.ext)]</value>
-	</variable>
-</includes>
