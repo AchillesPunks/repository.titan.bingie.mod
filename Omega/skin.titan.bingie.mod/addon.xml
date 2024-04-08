@@ -21,8 +21,8 @@
 		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Titan BINGIE MOD... The new Titan skin for Kodi Nexus.</summary>
-		<description>Titan is back for Kodi Nexus with the new NETFLIX layout!</description>
+		<summary lang="en_GB">Titan BINGIE MOD... The new Titan skin for Kodi Omega.</summary>
+		<description>Titan is back for Kodi Omega with the new NETFLIX layout!</description>
 		<platform>all</platform>
 		<license>GPL v2.0</license>
 		<forum>https://forum.kodi.tv/showthread.php?tid=355993</forum>
