@@ -1,24 +1,30 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <addons>
     <!-- REPOS -->
-	<addon id="repository.titan.bingie.mod" name="Titan BINGIE MOD Repository" provider-name="AchillesPunks, Matke" version="2.0.0">
-		<extension name="titan bingie mod repository" point="xbmc.addon.repository">
-			<dir>	
-				<info compressed="false">https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/matrix/addons.xml</info>
-				<checksum>https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/matrix/addons.xml.md5</checksum>
-				<datadir zip="true">https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/matrix/</datadir>
-			</dir>
-		</extension>
-		<extension point="xbmc.addon.metadata">
-			<summary lang="en">Home of Titan BINGIE MOD</summary>
-			<description lang="en">Titan BINGIE MOD repository</description>
-			<platform>all</platform>
-			<assets>
-				<icon>icon.png</icon>
-				<fanart>fanart.jpg</fanart>
-			</assets>
-		</extension>
-	</addon>
+	<addon id="repository.titan.bingie.mod" name="Titan BINGIE MOD Repository" provider-name="AchillesPunks, Matke" version="2.0.1">
+	<extension point="xbmc.addon.repository" name="Titan BINGIE MOD Repository">
+		<dir minversion="20.0.0" maxversion="20.9.0">
+			<info>https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/nexus/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/nexus/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/nexus/</datadir>
+		</dir>
+		<dir minversion="20.9.1">
+			<info>https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/omega/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/omega/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/omega/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Titan BINGIE MOD Repository</summary>
+        <description>A repository for Titan BINGIE MOD skin.</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+	</extension>
+</addon>
 	
    <addon id="repository.marcelveldt" version="1.0.3" name="Marcelveldt's BETA repository" provider-name="marcelveldt, finkleandeinhorn">
 	<requires>
