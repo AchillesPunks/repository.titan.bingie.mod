@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="resource.images.moviegenreicons.bingie" name="Movie Genre Icons - BINGIE" version="1.0.0" provider-name="cartman.dos">
+	<extension point="kodi.resource.images" compile="true" type="moviegenreicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Movies and TV Shows Genre Icons for Titan BINGIE</summary>
+		<description lang="en">BINGIE Style Genre Bricks</description>
+		<platform>all</platform>
+		<email></email>
+		<license>GPL v3.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=334820</forum>
+		<website></website>
+		<source>https://github.com/cartmandos/resource.images.moviegenreicons.bingie/</source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
