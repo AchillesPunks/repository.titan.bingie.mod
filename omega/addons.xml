@@ -6,11 +6,6 @@
 		<requires>
 			<import addon="xbmc.addon" version="12.0.0"/>
 		</requires>
-		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/</datadir>
-		</dir>
 		<dir minversion="20.0.0" maxversion="20.9.0">
 			<info compressed="false">https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/nexus/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/nexus/addons.xml.md5</checksum>
