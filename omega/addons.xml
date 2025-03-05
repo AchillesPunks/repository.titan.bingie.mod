@@ -563,6 +563,37 @@ v0.28.0 (2020-02-08)
 	</extension>
 </addon>
 
+<addon id="script.bingie.info" name="Bingie Info" version="2.1.1" provider-name="AchillesPunks, sualfred">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.9.1"/>
+        <import addon="script.module.arrow" version="0.10.0"/>
+        <import addon="script.module.simplecache" version="2.0.2" />
+        <import addon="script.module.routing" version="0.2.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="plugin.py">
+      <provides>video</provides>
+    </extension>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Embuary Info Script for Titan Bingie Mod</summary>
+        <summary lang="de_DE">Embuary Info Script for Titan Bingie Mod</summary>
+        <description lang="en_GB">Helper script to provide The Movie DB informations for persons, shows and movies. Works best with a skin integration.</description>
+        <description lang="de_DE">Helfer Script das Abfragen von The Movie DB informationen für Personen, Serien und Filme zu ermöglichen. Funktioniert am besten mit einer Skin Integration.</description>
+        <platform>all</platform>
+        <license>Apache-2.0</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=346034</forum>
+        <source>https://github.com/sualfred/script.embuary.info</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
 <!-- SCREENSAVER -->
 <addon id="screensaver.titan.bingie.mod" name="TBM Screensaver" version="1.0.0" provider-name="drinfernoo, matke">
     <requires>
@@ -869,6 +900,34 @@ v1.30.0
 		<source>https://github.com/im85288/resource.images.languageflags.colour</source>
 		<assets>
 			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<!-- CONTEXT MENU -->
+<addon id="context.bingie.mod.info" name="Bingie Info - Open dialog" version="2.0.0" provider-name="AchillesPunks, sualfred">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.bingie.info" version="2.1.1"/>
+	</requires>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="addon.py">
+				<label>$ADDON[context.embuary.info 32000]</label>
+				<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director)</visible>
+			</item>
+		</menu>
+	</extension>
+	<extension point="kodi.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en_GB">Open Embuary Info dialog from context menu</summary>
+		<description lang="en_GB">Open Embuary Info dialog from context menu. Needs script.embuary.info installed and activated. Available for movies, tv shows and actors.</description>
+		<license>GPL-2.0-or-later</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=346034</forum>
+		<source>https://github.com/AchillesPunks/context.bingie.mod.info.git</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
 </addon>	
