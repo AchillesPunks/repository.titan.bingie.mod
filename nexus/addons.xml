@@ -563,7 +563,7 @@ v0.28.0 (2020-02-08)
 	</extension>
 </addon>
 
-<addon id="script.bingie.info" name="Bingie Info" version="2.1.1" provider-name="AchillesPunks, sualfred">
+<addon id="script.bingiemod.info" name="Bingiemod Info" version="2.2.0" provider-name="sualfred, AchillesPunks">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.9.1"/>
@@ -579,8 +579,8 @@ v0.28.0 (2020-02-08)
     </extension>
     <extension point="xbmc.service" library="service.py" />
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">Embuary Info Script for Titan Bingie Mod</summary>
-        <summary lang="de_DE">Embuary Info Script for Titan Bingie Mod</summary>
+        <summary lang="en_GB">Bingiemod Info Script</summary>
+        <summary lang="de_DE">Bingiemod Info Script</summary>
         <description lang="en_GB">Helper script to provide The Movie DB informations for persons, shows and movies. Works best with a skin integration.</description>
         <description lang="de_DE">Helfer Script das Abfragen von The Movie DB informationen für Personen, Serien und Filme zu ermöglichen. Funktioniert am besten mit einer Skin Integration.</description>
         <platform>all</platform>
@@ -905,10 +905,10 @@ v1.30.0
 </addon>
 
 <!-- CONTEXT MENU -->
-<addon id="context.bingie.mod.info" name="Bingie Info - Open dialog" version="2.0.0" provider-name="AchillesPunks, sualfred">
+<addon id="context.bingiemod.info" name="Bingiemod Info - Open dialog" version="2.0.0" provider-name="sualfred">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="script.bingie.info" version="2.1.1"/>
+		<import addon="script.embuary.info" version="2.0.0"/>
 	</requires>
 	<extension point="kodi.context.item">
 		<menu id="kodi.core.main">
@@ -920,15 +920,15 @@ v1.30.0
 	</extension>
 	<extension point="kodi.addon.metadata">
 		<platform>all</platform>
-		<summary lang="en_GB">Open Embuary Info dialog from context menu</summary>
-		<description lang="en_GB">Open Embuary Info dialog from context menu. Needs script.embuary.info installed and activated. Available for movies, tv shows and actors.</description>
+		<summary lang="en_GB">Open Bingiemod Info dialog from context menu</summary>
+		<description lang="en_GB">Open Bingiemod Info dialog from context menu. Needs script.bingiemod.info installed and activated. Available for movies, tv shows and actors.</description>
 		<license>GPL-2.0-or-later</license>
 		<forum>https://forum.kodi.tv/showthread.php?tid=346034</forum>
-		<source>https://github.com/AchillesPunks/context.bingie.mod.info.git</source>
+		<source>https://github.com/sualfred/context.embuary.info</source>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
-</addon>	
+</addon>
 </addons>
