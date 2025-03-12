@@ -15,8 +15,8 @@
     </extension>
     <extension point="xbmc.service" library="service.py" />
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">Bingiemod Info Script</summary>
-        <summary lang="de_DE">Bingiemod Info Script</summary>
+        <summary lang="en_GB">Bingiemod Info Script for Titan Bingie Mod</summary>
+        <summary lang="de_DE">Bingiemod Info Script for Titan Bingie Mod</summary>
         <description lang="en_GB">Helper script to provide The Movie DB informations for persons, shows and movies. Works best with a skin integration.</description>
         <description lang="de_DE">Helfer Script das Abfragen von The Movie DB informationen für Personen, Serien und Filme zu ermöglichen. Funktioniert am besten mit einer Skin Integration.</description>
         <platform>all</platform>
