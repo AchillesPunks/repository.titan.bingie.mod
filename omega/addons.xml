@@ -905,10 +905,10 @@ v1.30.0
 </addon>
 
 <!-- CONTEXT MENU -->
-<addon id="context.bingiemod.info" name="Bingiemod Info - Open dialog" version="2.0.0" provider-name="sualfred">
+<addon id="context.embuary.info" name="Bingiemod Info - Open dialog" version="2.0.0" provider-name="sualfred">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="script.embuary.info" version="2.0.0"/>
+		<import addon="script.bingiemod.info" version="2.2.0"/>
 	</requires>
 	<extension point="kodi.context.item">
 		<menu id="kodi.core.main">
@@ -921,7 +921,7 @@ v1.30.0
 	<extension point="kodi.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en_GB">Open Bingiemod Info dialog from context menu</summary>
-		<description lang="en_GB">Open Bingiemod Info dialog from context menu. Needs script.bingiemod.info installed and activated. Available for movies, tv shows and actors.</description>
+		<description lang="en_GB">Open Bingiemod Info dialog from context menu. Needs script.embuary.info installed and activated. Available for movies, tv shows and actors.</description>
 		<license>GPL-2.0-or-later</license>
 		<forum>https://forum.kodi.tv/showthread.php?tid=346034</forum>
 		<source>https://github.com/sualfred/context.embuary.info</source>
