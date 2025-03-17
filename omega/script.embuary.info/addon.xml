@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.bingiemod.info" name="Bingiemod Info" version="2.2.0" provider-name="sualfred, AchillesPunks">
+<addon id="script.embuary.info" name="Bingiemod Info" version="2.2.0" provider-name="sualfred, AchillesPunks">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.9.1"/>

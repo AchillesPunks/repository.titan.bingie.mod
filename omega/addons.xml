@@ -563,7 +563,7 @@ v0.28.0 (2020-02-08)
 	</extension>
 </addon>
 
-<addon id="script.bingiemod.info" name="Bingiemod Info" version="2.2.0" provider-name="sualfred, AchillesPunks">
+<addon id="script.embuary.info" name="Bingiemod Info" version="2.2.0" provider-name="sualfred, AchillesPunks">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.9.1"/>
@@ -908,7 +908,7 @@ v1.30.0
 <addon id="context.embuary.info" name="Bingiemod Info - Open dialog" version="2.0.0" provider-name="sualfred">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="script.bingiemod.info" version="2.2.0"/>
+		<import addon="script.embuary.info" version="2.0.0"/>
 	</requires>
 	<extension point="kodi.context.item">
 		<menu id="kodi.core.main">
@@ -921,7 +921,7 @@ v1.30.0
 	<extension point="kodi.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en_GB">Open Bingiemod Info dialog from context menu</summary>
-		<description lang="en_GB">Open Bingiemod Info dialog from context menu. Needs script.embuary.info installed and activated. Available for movies, tv shows and actors.</description>
+		<description lang="en_GB">Open Bingiemod Info dialog from context menu. Needs Bingiemod Info installed and activated. Available for movies, tv shows and actors.</description>
 		<license>GPL-2.0-or-later</license>
 		<forum>https://forum.kodi.tv/showthread.php?tid=346034</forum>
 		<source>https://github.com/sualfred/context.embuary.info</source>
