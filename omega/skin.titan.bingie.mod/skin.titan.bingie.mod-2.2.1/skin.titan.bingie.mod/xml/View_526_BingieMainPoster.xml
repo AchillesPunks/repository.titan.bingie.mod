@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<includes>
+    <include name="View_526_Bingie_Main_Poster">
+        <control type="group">
+            <include>FullscreenDimensions</include>
+            <visible>Control.IsVisible(526)</visible>
+            <include>animation_view_change</include>
+
+            <include content="Bingie_Main_Spotlight_Section">
+                <param name="id" value="526" />
+            </include>
+            
+			<!-- scrollbar -->
+            <control type="group">
+                <control type="scrollbar" id="60">
+                    <visible>Control.IsVisible(526) + Integer.IsGreater(Container.NumItems,0) + !Skin.HasSetting(View_526_HorizontalNavigation)</visible>
+                    <top>619</top>
+                    <width>8</width>
+                    <right>3</right>
+                    <bottom>15</bottom>
+                    <onleft>526</onleft>
+                    <orientation>vertical</orientation>
+                    <animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+                </control>
+                <control type="scrollbar" id="60">
+                    <visible>Control.IsVisible(526) + Integer.IsGreater(Container.NumItems,0) + Skin.HasSetting(View_526_HorizontalNavigation)</visible>
+                    <include condition="!Skin.HasSetting(EnhancedHome_Circular)" content="left">
+                        <param name="left" value="140" />
+                    </include>
+                    <left>70</left>
+                    <width>1650</width>
+                    <height>8</height>
+                    <bottom>2</bottom>
+                    <onup>526</onup>
+                    <orientation>horizontal</orientation>
+                    <animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Skin.HasSetting(EnableTouchSupport) | Container.Scrolling | Skin.HasSetting(alwaysShowScrollbars)]">Conditional</animation>
+                </control>
+            </control>
+			
+			
+			
+            <!-- Poster View as Group 526 -->
+            <control type="group">
+                <left>131</left>
+                <!-- <top>600</top> -->                      <!-- Default Setting -->
+                <!-- <top>735</top> -->
+                <top>710</top>
+                <width>1660</width>
+                <!-- Content Header -->
+                <control type="label">
+                    <width>100%</width>
+                    <height>40</height>
+					<posx>7</posx>
+					<top>-29</top>
+                    <font>Bold31</font>
+                    <align>left</align>
+                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+                    <label>$VAR[BingieMainContentHeader] $INFO[Window(Home).Property(Movies.Count),(,)]</label>
+                    <visible>!Skin.HasSetting(DisableMediaCount) + Integer.IsGreater(Container(526).NumItems,0)</visible>
+					<visible>String.IsEqual(Container.FolderPath, videodb://movies/titles/)</visible>
+                </control>
+				 <control type="label">
+                    <width>100%</width>
+                    <height>40</height>
+					<posx>7</posx>
+					<top>-29</top>
+                    <font>Bold31</font>
+                    <align>left</align>
+                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+                    <label>$VAR[BingieMainContentHeader] $INFO[Window(Home).Property(TVshows.Count),(,)]</label>
+                    <visible>!Skin.HasSetting(DisableMediaCount) + Integer.IsGreater(Container(526).NumItems,0)</visible>
+					<visible>String.IsEqual(Container.FolderPath, videodb://tvshows/titles/)</visible>
+                </control>
+
+                <include condition="!Skin.HasSetting(View526_UseFixedLayout) | !Skin.HasSetting(View_526_HorizontalNavigation)" content="Bingie_Main_Poster_View">
+                    <param name="containerType" value="panel" />
+                </include>
+                <include condition="Skin.HasSetting(View526_UseFixedLayout) + Skin.HasSetting(View_526_HorizontalNavigation)" content="Bingie_Main_Poster_View">
+                    <param name="containerType" value="fixedlist" />
+                </include>
+               
+			   <!-- Poster Frame Position -->
+			   <include content="Bingie_Main_View_Fixed_Frame">
+                    <include>Bounce_Up</include>
+                    <param name="visibility" value="!Skin.HasSetting(View526_DisableFixedBingieFrame)" />
+                    <param name="containerid" value="526" />
+                    <param name="top" value="11" />
+                    <param name="width" value="240" />
+                    <param name="height" value="330" />
+                    <texture background="true" border="12">$INFO[Skin.String(thumbsborder_focused),bingie/border/poster_fo_,.png]</texture>
+					<bordersize>2</bordersize>
+                    <param name="xAxisAnim" value="238" />
+                    <param name="isHorizontal" value="Skin.HasSetting(View_526_HorizontalNavigation)" />
+                    <param name="yAxisAnim" value="340" />
+                </include>
+            </control>         
+        </control>
+    </include>
+
+    <!-- Poster Position -->
+    <include name="Bingie_Main_Poster_View">
+        <control type="$PARAM[containerType]" id="526">
+            <viewtype label="31027">poster</viewtype>
+            <include content="View_Forced">
+                <param name="viewtype" value="$LOCALIZE[31027]" />
+            </include>
+            <top>11</top>
+            <height>469</height>
+            <width>1666</width>
+            <itemgap>0</itemgap>
+            <include condition="Skin.HasSetting(View_526_HorizontalNavigation)">navigation_horizontal</include>
+            <orientation>vertical</orientation>
+            <include>ScrollTime</include>
+            <preloaditems>4</preloaditems>
+            <pagecontrol>60</pagecontrol>
+            <onright condition="!Skin.HasSetting(View_526_HorizontalNavigation) + Skin.HasSetting(EnableQuickJump) + Control.IsVisible(6002)">6000</onright>
+            <onright condition="!Skin.HasSetting(View_526_HorizontalNavigation) + Skin.HasSetting(EnableQuickJump) + !Control.IsVisible(6002)">noop</onright>
+            <onright condition="!Skin.HasSetting(View_526_HorizontalNavigation) + !Skin.HasSetting(EnableQuickJump)">60</onright>
+            <onright condition="Skin.HasSetting(View_526_HorizontalNavigation)">526</onright>
+            <onleft condition="!Skin.HasSetting(KioskMode.Enabled)">9000</onleft>
+            <onleft condition="Skin.HasSetting(KioskMode.Enabled)">back</onleft>
+            <onup condition="!Skin.HasSetting(View_526_HorizontalNavigation)">526</onup>
+            <!-- play trailer onup -->
+            <onup condition="Skin.HasSetting(View_526_HorizontalNavigation) + Skin.HasSetting(PlayTrailerOnUp) + [Container.Content(movies) | Container.Content(tvshows)]">SetProperty(BounceUp,1,Home)</onup>
+            <onup condition="Skin.HasSetting(View_526_HorizontalNavigation) + Skin.HasSetting(PlayTrailerOnUp) + !String.IsEmpty(ListItem.Trailer) + [String.IsEqual(Skin.String(AutoYoutubeTrailer),true) | !String.Contains(ListItem.Trailer,plugin)]">
+            PlayMedia($ESCINFO[ListItem.Trailer],1)</onup>
+            <onup condition="Skin.HasSetting(View_526_HorizontalNavigation) + Skin.HasSetting(PlayTrailerOnUp) + String.IsEmpty(ListItem.Trailer) + String.IsEqual(ListItem.DBType,movie) + String.IsEqual(Skin.String(AutoYoutubeTrailer),true)">
+			RunScript(script.bingie.helper,action=playtrailer,title=$INFO[ListItem.Title]$INFO[ListItem.Year])</onup>
+            <onup condition="Skin.HasSetting(View_526_HorizontalNavigation) + Skin.HasSetting(PlayTrailerOnUp) + String.IsEmpty(ListItem.Trailer) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)] + String.IsEqual(Skin.String(AutoYoutubeTrailer),true)">
+            RunScript(script.bingie.helper,action=playtrailer,title=$VAR[TVShowTitle]$INFO[ListItem.Year],tvshow=true,youtube=$INFO[Skin.String(AutoYoutubeTrailer)])</onup>
+            <ondown condition="Skin.HasSetting(View_526_HorizontalNavigation) + Skin.HasSetting(EnableQuickJump) + Control.IsVisible(7002)">7000</ondown>
+            <ondown condition="Skin.HasSetting(View_526_HorizontalNavigation) + Skin.HasSetting(EnableQuickJump) + !Control.IsVisible(7002)">noop</ondown>
+            <ondown condition="Skin.HasSetting(View_526_HorizontalNavigation) + !Skin.HasSetting(EnableQuickJump)">60</ondown>
+            <ondown condition="!Skin.HasSetting(View_526_HorizontalNavigation)">526</ondown>
+			<onleft>CancelAlarm(preview_delay,silent)</onleft>
+			<onleft condition="$EXP[IsPlayingUnrecognizedContent] + Skin.HasSetting(DetailsAutoTrailer) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TrailerPlaying))] + !String.IsEqual(Window(Home).Property(TrailerPlaying),fullscreen)">PlayerControl(Stop)</onleft>
+			<onback>CancelAlarm(preview_delay,silent)</onback>
+			<onback condition="[$EXP[IsPlayingUnrecognizedContent] + Skin.HasSetting(DetailsAutoTrailer) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TrailerPlaying))] + !String.IsEqual(Window(Home).Property(TrailerPlaying),fullscreen)] | 
+			[$EXP[IsPlayingUnrecognizedContent] + Skin.HasSetting(PlayTrailerOnUp) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TrailerPlaying))] + !String.IsEqual(Window(Home).Property(TrailerPlaying),fullscreen)]">PlayerControl(Stop)</onback>
+            <itemlayout height="328" width="238">
+                <control type="group">
+                    <width>240</width>
+                    <height>330</height>
+                    <include>PosterPanelBingieLayout</include>
+                </control>
+            </itemlayout>
+            <focusedlayout height="328" width="238">
+                <control type="group">
+                    <width>240</width>
+                    <height>330</height>
+                    <control type="image">
+                        <visible>Skin.HasSetting(View526_DisableFixedBingieFrame)</visible>
+                        <include>PosterThumbFO_DefsBingie</include>
+                        <include>thumbsborder_focused</include>
+                    </control>
+                    <include>PosterThumbBingieLayout</include>
+                    <include condition="!Window.IsActive(Home)">PosterTagOverlayBingie</include>
+                    <control type="group">
+                        <include condition="Skin.HasSetting(CaseOverlays)">PosterCaseOverlayBingie</include>
+                    </control>
+                    <control type="group">
+                        <!--Watched Overlay-->
+                        <right>8</right>
+                        <top>8</top>
+                        <include>WatchedIndicatorNormal</include>
+                        <animation type="Conditional" condition="Skin.HasTheme(classic)">
+                            <effect type="slide" end="3,-3" time="0"  />
+                        </animation>
+                    </control>
+                    <include condition="Skin.HasSetting(DetailsAutoTrailer)">LibraryAutoTrailerStopButton</include>
+						<include content="LibraryAutoTrailerStartButton" condition="Skin.HasSetting(DetailsAutoTrailer)">
+							<param name="interval" value="$INFO[Skin.String(details_auto_trailer_interval)]" />
+						</include>
+                    <animation effect="zoom" end="103,103" center="auto" time="100" condition="Skin.HasSetting(View526_DisableFixedBingieFrame) + Skin.HasSetting(View526_EnableZoomEffect)">focus</animation>
+                    <include>Bounce_Up</include>
+                </control>
+				<!--Top 250 1-->
+				<control type="image">
+				<visible>!Container.Content(episodes) + !Container.Content(seasons) + !String.IsEmpty(Control.GetLabel(8231)) + !Skin.HasSetting(DisableTop250Indicator) + !Skin.HasSetting(View526_DisableFixedBingieFrame) + !Skin.HasSetting(View526_EnableZoomEffect) | 
+				!Container.Content(episodes) + !Container.Content(seasons) + !String.IsEmpty(Control.GetLabel(8231)) + !Skin.HasSetting(DisableTop250Indicator) + Skin.HasSetting(View526_DisableFixedBingieFrame) + !Skin.HasSetting(View526_EnableZoomEffect) | 
+				!Container.Content(episodes) + !Container.Content(seasons) + !String.IsEmpty(Control.GetLabel(8231)) + !Skin.HasSetting(DisableTop250Indicator) + !Skin.HasSetting(View526_DisableFixedBingieFrame) + Skin.HasSetting(View526_EnableZoomEffect)
+				</visible>
+				<posy>8</posy>
+				<left>8</left>
+                <height>60</height>
+                <width>50</width>
+				<aspectratio>keep</aspectratio>
+                <texture>bingie/top250p.png</texture>
+		        </control>
+				<!--Top 250 2-->
+				<control type="image">
+				<visible>!Container.Content(episodes) + !Container.Content(seasons) + !String.IsEmpty(Control.GetLabel(8231)) + !Skin.HasSetting(DisableTop250Indicator) + Skin.HasSetting(View526_DisableFixedBingieFrame) + Skin.HasSetting(View526_EnableZoomEffect)</visible>
+				<posy>3</posy>
+				<left>5</left>
+                <height>60</height>
+                <width>50</width>
+				<aspectratio>keep</aspectratio>
+                <texture>bingie/top250p.png</texture>
+		        </control>
+            </focusedlayout>
+        </control>
+    </include>
+</includes>

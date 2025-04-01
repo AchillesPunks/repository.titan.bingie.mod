@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<includes>
+    <include name="View_523_Bingie_Main_Landscape">
+        <control type="group">
+            <include>FullscreenDimensions</include>
+            <visible>Control.IsVisible(523)</visible>
+            <include>animation_view_change</include>
+
+            <include content="Bingie_Main_Spotlight_Section">
+                <param name="id" value="523" />
+            </include>
+
+            <!-- View 523 -->
+            <control type="group">
+				<visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
+				<include>Animation_Right_Home</include>
+                <left>131</left>
+                <top>660</top>
+                <width>1660</width>
+                <!-- Content Header -->
+                <control type="label">
+                    <width>100%</width>
+                    <height>40</height>
+					<posx>7</posx>
+					<top>11</top>
+                    <font>Bold31</font>
+                    <align>left</align>
+                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+                    <label>$VAR[BingieMainContentHeader] $INFO[Window(Home).Property(TVshows.Count),(,)]</label>
+                    <visible>!Skin.HasSetting(DisableMediaCount) + Integer.IsGreater(Container(523).NumItems,0)</visible>
+					<visible>String.IsEqual(Container.FolderPath, videodb://tvshows/titles/)</visible>
+                </control>
+				<control type="label">
+                    <width>100%</width>
+                    <height>40</height>
+					<posx>7</posx>
+					<top>11</top>
+                    <font>Bold31</font>
+                    <align>left</align>
+                    <textcolor>$INFO[Skin.String(ViewDetailsTextColor)]</textcolor>
+                    <label>$VAR[BingieMainContentHeader] $INFO[Window(Home).Property(Movies.Count),(,)]</label>
+                    <visible>!Skin.HasSetting(DisableMediaCount) + Integer.IsGreater(Container(523).NumItems,0)</visible>
+					<visible>String.IsEqual(Container.FolderPath, videodb://movies/titles/)</visible>
+                </control>
+
+                <include content="Bingie_Main_Landscape_View">
+                    <param name="containerType" value="panel" />
+                </include>
+            </control>
+			
+		   <!-- scrollbar -->
+            <control type="group">
+                <control type="scrollbar" id="60">
+					<texturesliderbackground border="5" colordiffuse="$INFO[Skin.String(ScrollbarBackgroundColor)]">scrollbar/texturesliderbar_small.png</texturesliderbackground>
+					<texturesliderbar colordiffuse="$INFO[Skin.String(ScrollbarUnfocusedColor)]" border="5">scrollbar/texturesliderbar_small.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="$INFO[Skin.String(ScrollbarFocusedColor)]" border="5">scrollbar/texturesliderbar_small.png</texturesliderbarfocus>
+					<textureslidernib colordiffuse="$INFO[Skin.String(ScrollbarUnfocusedColor)]">scrollbar/texturesliderbar_nib.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$INFO[Skin.String(ScrollbarFocusedColor)]">scrollbar/texturesliderbar_nib.png</textureslidernibfocus>
+                    <visible>Control.IsVisible(523) + Integer.IsGreater(Container.NumItems,0)</visible>
+                    <width>10</width>
+					<height>461</height>
+                    <right>0</right>
+                    <bottom>0</bottom>
+                    <onleft>523</onleft>
+                    <orientation>vertical</orientation>
+                    <animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)]">Conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)]">Conditional</animation>
+                </control>
+            </control>
+        </control>
+    </include>
+
+    <!-- Container -->
+    <include name="Bingie_Main_Landscape_View">
+        <control type="$PARAM[containerType]" id="523">
+            <viewtype label="31018">panel</viewtype>
+            <include content="View_Forced">
+                <param name="viewtype" value="$LOCALIZE[31018]" />
+            </include>
+            <focusedposition>0</focusedposition>
+            <top>51</top>
+            <width>1668</width>
+            <height>470</height>
+            <orientation>vertical</orientation>
+            <itemgap>0</itemgap>
+            <preloaditems>4</preloaditems>
+            <pagecontrol>60</pagecontrol>
+            <include>ScrollTime</include>
+            <onright condition="Skin.HasSetting(EnableQuickJump) + Control.IsVisible(6002)">6000</onright>
+            <onright condition="Skin.HasSetting(EnableQuickJump) + !Control.IsVisible(6002)">noop</onright>
+            <onright condition="!Skin.HasSetting(EnableQuickJump)">60</onright>
+			<onleft>9000</onleft>
+            <onup>523</onup>
+            <ondown>523</ondown>
+			<onleft>CancelAlarm(preview_delay,silent)</onleft>
+			<onleft condition="$EXP[IsPlayingUnrecognizedContent] + Skin.HasSetting(DetailsAutoTrailer) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TrailerPlaying))] + !String.IsEqual(Window(Home).Property(TrailerPlaying),fullscreen)">PlayerControl(Stop)</onleft>
+			<onback>CancelAlarm(preview_delay,silent)</onback>
+			<onback condition="$EXP[IsPlayingUnrecognizedContent] + Skin.HasSetting(DetailsAutoTrailer) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TrailerPlaying))] + !String.IsEqual(Window(Home).Property(TrailerPlaying),fullscreen)">PlayerControl(Stop)</onback>
+            <itemlayout height="193" width="333">
+                <control type="group">
+                    <width>335</width>
+                    <height>195</height>
+                    <include>ThumbsViewItemBingieLayout</include>
+					<control type="image">
+						<!-- fallback logo image -->
+						<width>333</width>
+						<height>195</height>
+						<bottom>-43</bottom>
+						<left>0</left>
+						<bordersize>51</bordersize>
+						<texture background="true">$VAR[ClearLogoFallback]</texture>
+						<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
+						<visible>String.IsEmpty(Listitem.Art(landscape)) + String.IsEmpty(ListItem.Property(landscape)) + !String.IsEqual(ListItem.DBTYPE,episode) + !String.IsEqual(ListItem.Property(DBTYPE),episode) + !Container.Content(episodes) + !String.IsEqual(ListItem.DBTYPE,season) + !String.IsEqual(ListItem.Property(DBTYPE),season)</visible>
+						<visible>String.IsEmpty(ListItem.Property(defaultID))</visible>
+						<visible>Skin.HasSetting(ShowClearLogoOnLandscape)</visible>
+					</control>
+                </control>
+            </itemlayout>
+            <focusedlayout height="193" width="333">
+                <control type="group">
+                    <width>335</width>
+                    <height>195</height>
+                    <control type="image">
+                        <!--Panel Normal-->
+                        <texture background="true">home/home_matte3.png</texture>
+                        <colordiffuse>$INFO[Skin.String(ViewDetailsBorderFocusColor)]</colordiffuse>
+                        <include>thumbsborder_focused</include>
+                    </control>
+                    <include>ThumbsViewItemBingieLayout</include>
+					<control type="image">
+						<!-- fallback logo image -->
+						<width>333</width>
+						<height>195</height>
+						<bottom>-43</bottom>
+						<left>0</left>
+						<bordersize>51</bordersize>
+						<texture background="true">$VAR[ClearLogoFallback]</texture>
+						<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
+						<visible>String.IsEmpty(Listitem.Art(landscape)) + String.IsEmpty(ListItem.Property(landscape)) + !String.IsEqual(ListItem.DBTYPE,episode) + !String.IsEqual(ListItem.Property(DBTYPE),episode) + !Container.Content(episodes) + !String.IsEqual(ListItem.DBTYPE,season) + !String.IsEqual(ListItem.Property(DBTYPE),season)</visible>
+						<visible>String.IsEmpty(ListItem.Property(defaultID))</visible>
+						<visible>Skin.HasSetting(ShowClearLogoOnLandscape)</visible>
+					</control>
+                    <include condition="Skin.HasSetting(DetailsAutoTrailer)">LibraryAutoTrailerStopButton</include>
+						<include content="LibraryAutoTrailerStartButton" condition="Skin.HasSetting(DetailsAutoTrailer)">
+							<param name="interval" value="$INFO[Skin.String(details_auto_trailer_interval)]" />
+						</include>
+                    <animation effect="zoom" end="103,103" center="auto" time="100" condition="Skin.HasSetting(View523_DisableFixedBingieFrame) + Skin.HasSetting(View523_EnableZoomEffect)">focus</animation>
+                </control>
+				<!--Top 250 1-->
+				<control type="image">
+				<visible>!Container.Content(episodes) + !Container.Content(seasons) + !String.IsEmpty(Control.GetLabel(8231)) + !Skin.HasSetting(DisableTop250Indicator) + !Skin.HasSetting(View523_DisableFixedBingieFrame) + !Skin.HasSetting(View523_EnableZoomEffect) | 
+				!Container.Content(episodes) + !Container.Content(seasons) + !String.IsEmpty(Control.GetLabel(8231)) + !Skin.HasSetting(DisableTop250Indicator) + Skin.HasSetting(View523_DisableFixedBingieFrame) + !Skin.HasSetting(View523_EnableZoomEffect) | 
+				!Container.Content(episodes) + !Container.Content(seasons) + !String.IsEmpty(Control.GetLabel(8231)) + !Skin.HasSetting(DisableTop250Indicator) + !Skin.HasSetting(View523_DisableFixedBingieFrame) + Skin.HasSetting(View523_EnableZoomEffect)
+				</visible>
+				<posy>8</posy>
+				<left>8</left>
+                <height>60</height>
+                <width>50</width>
+				<aspectratio>keep</aspectratio>
+                <texture>bingie/top250p.png</texture>
+		        </control>
+				<!--Top 250 2-->
+				<control type="image">
+				<visible>!Container.Content(episodes) + !Container.Content(seasons) + !String.IsEmpty(Control.GetLabel(8231)) + !Skin.HasSetting(DisableTop250Indicator) + Skin.HasSetting(View523_DisableFixedBingieFrame) + Skin.HasSetting(View523_EnableZoomEffect)</visible>
+				<posy>5</posy>
+				<left>3</left>
+                <height>60</height>
+                <width>50</width>
+				<aspectratio>keep</aspectratio>
+                <texture>bingie/top250p.png</texture>
+		        </control>
+            </focusedlayout>
+        </control>
+    </include>
+</includes>

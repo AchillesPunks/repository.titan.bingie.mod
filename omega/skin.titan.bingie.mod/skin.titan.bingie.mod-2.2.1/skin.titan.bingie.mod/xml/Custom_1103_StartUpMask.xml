@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BINGIE -->
+<window type="dialog" id="1103">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<zorder>999</zorder>
+	<onload condition="!String.IsEqual(Skin.String(splash_screen),netflix_default) + !String.IsEqual(Skin.String(splash_screen),netflix_alternative) + !String.IsEqual(Skin.String(splash_screen),netflix_extended) + !String.IsEqual(Skin.String(splash_screen),none)">PlayMedia($INFO[Skin.String(SplashAnimationResolution),special://skin/extras/media/netflix_intro_2_,.mp4],1)</onload>
+	<onload condition="String.IsEqual(Skin.String(splash_screen),netflix_default)">PlayMedia($INFO[Skin.String(SplashAnimationResolution),special://skin/extras/media/netflix_intro_2_,.mp4],1)</onload>
+	<onload condition="String.IsEqual(Skin.String(splash_screen),netflix_alternative)">PlayMedia($INFO[Skin.String(SplashAnimationResolution),special://skin/extras/media/netflix_intro_,.mp4],1)</onload>
+	<onload condition="String.IsEqual(Skin.String(splash_screen),netflix_extended)">PlayMedia($INFO[mediaPath,special://skin/extras/media/netflix_intro_extended_1080p.mp4],1)</onload>
+    <!-- Video/Image On-Screen Time -->
+	<onload condition="!String.IsEqual(Skin.String(splash_screen),netflix_default) + !String.IsEqual(Skin.String(splash_screen),netflix_alternative) + !String.IsEqual(Skin.String(splash_screen),netflix_extended) + !String.IsEqual(Skin.String(splash_screen),none)">AlarmClock(startup,ClearProperty(StartupMask,home),00:10,silent)</onload>
+	<onload condition="String.IsEqual(Skin.String(splash_screen),netflix_default)">AlarmClock(startup,ClearProperty(StartupMask,home),00:10,silent)</onload>
+	<onload condition="String.IsEqual(Skin.String(splash_screen),netflix_alternative)">AlarmClock(startup,ClearProperty(StartupMask,home),00:09,silent)</onload>
+	<onload condition="String.IsEqual(Skin.String(splash_screen),netflix_extended)">AlarmClock(startup,ClearProperty(StartupMask,home),00:22,silent)</onload>
+	<onload condition="String.IsEqual(Skin.String(splash_screen),none)">AlarmClock(startup,ClearProperty(StartupMask,home),00:05,silent)</onload>
+
+	<onunload condition="Skin.HasSetting(EnableNetflixIcons) + String.IsEqual(Skin.String(HomeLayout),bingie) + Skin.HasSetting(EnableWelcomeMsg) + !String.IsEqual(Window(Home).Property(WelcomeMsg),System.ProfileName)">Notification(,$VAR[WelcomeNotificationMsg],3000,$INFO[Skin.String(user_picture),userpictures/startup/defaultuser_,.png])</onunload>
+	<onunload condition="!Skin.HasSetting(EnableNetflixIcons) + String.IsEqual(Skin.String(HomeLayout),bingie) + Skin.HasSetting(EnableWelcomeMsg) + !String.IsEqual(Window(Home).Property(WelcomeMsg),System.ProfileName)">Notification(,$VAR[WelcomeNotificationMsg],3000,$INFO[System.ProfileThumb])</onunload>
+	<onunload condition="String.IsEqual(Skin.String(HomeLayout),bingie) + Skin.HasSetting(EnableWelcomeMsg)">AlarmClock(welcomedone,SetProperty(WelcomeMsg, $INFO[System.ProfileName],Home),00:01,silent)</onunload>
+	
+	<visible>!String.IsEmpty(Window(Home).Property(StartupMask))</visible>	
+	<controls>
+        <!-- image -->
+        <control type="image">
+		    <visible>!Player.HasVideo</visible>
+			<visible>String.IsEqual(Skin.String(splash_screen),none) | String.IsEqual(Skin.String(splash_screen),netflix_alternative) | String.IsEqual(Skin.String(splash_screen),netflix_extended)</visible>
+			<animation effect="fade" end="0" time="300">WindowClose</animation>
+            <include>FullscreenDimensions</include>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$VAR[SplashImage]</texture>
+			<fadetime>300</fadetime>
+        </control>
+		<!-- block input button -->
+		<control type="button" id="10">
+			<include>HiddenObject</include>
+			<include content="ButtonMovementAction">
+				<param name="action" value="noop" />
+			</include>
+		</control>
+		<!-- intro -->
+		<control type="group">
+			<visible>Player.HasVideo</visible>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture>colors/color_black.png</texture>
+			</control>
+			<control type="videowindow">
+				<include>FullscreenDimensions</include>
+			</control>
+		</control>
+		<!-- busy spinner -->
+		<include content="Busy_Spinner">
+			<param name="centerleft" value="50%" />
+			<param name="centertop" value="85%"/>
+			<param name="visibility" value="System.HasAlarm(startup) + [!Player.HasVideo | [Player.HasVideo + Integer.IsLess(Player.TimeRemaining(ss),0)]] + [String.IsEqual(Skin.String(splash_screen),none) | String.IsEqual(Skin.String(splash_screen),netflix_alternative) | String.IsEqual(Skin.String(splash_screen),netflix_extended)]"/>
+			<param name="size" value="80"/>
+		</include>
+		<!-- busy spinner -->
+		<include content="Busy_Spinner">
+			<param name="centerleft" value="50%" />
+			<param name="centertop" value="85%"/>
+			<param name="visibility" value="System.HasAlarm(startup) + [Player.HasVideo + !Integer.IsLess(Player.TimeRemaining(ss),4)] + String.IsEqual(Skin.String(splash_screen),netflix_default)"/>
+			<param name="size" value="80"/>
+		</include>
+		<!-- busy spinner -->
+		<include content="Busy_Spinner">
+			<param name="centerleft" value="50%" />
+			<param name="centertop" value="85%"/>
+			<param name="visibility" value="System.HasAlarm(startup) + [Player.HasVideo + !Integer.IsLess(Player.TimeRemaining(ss),4)] + !String.IsEqual(Skin.String(splash_screen),netflix_default) + !String.IsEqual(Skin.String(splash_screen),netflix_alternative) + !String.IsEqual(Skin.String(splash_screen),netflix_extended) + !String.IsEqual(Skin.String(splash_screen),none)"/>
+			<param name="size" value="80"/>
+		</include>
+		<!-- Snow Effect -->
+		<control type="group">
+			<include condition="String.IsEqual(Skin.String(season_greetings),snow_animation)">snow</include>
+		</control>
+		<!-- Halloween Effect -->
+		<control type="group">
+			<include condition="String.IsEqual(Skin.String(season_greetings),halloween_animation)">pumpkin</include>
+		</control>
+	</controls>
+</window>

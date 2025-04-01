@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<window>
+    <controls>
+		<control type="group">			
+			<visible>![String.IsEqual(Skin.String(HomeLayout),bingie) + [Skin.HasSetting(BingieAutoTrailer) | Skin.HasSetting(SpotLightTrailers)] + [$EXP[IsBingieViewsActive] | $EXP[IsBingieCategoriesActive]]]</visible>
+            <visible>![Skin.HasSetting(DetailsAutoTrailer) + Window.IsVisible(Videos) + [String.IsEqual(System.CurrentControlID,523) | String.IsEqual(System.CurrentControlID,526)]]</visible>
+            <visible>!Window.IsVisible(startup)</visible>
+			<include condition="Skin.HasSetting(SpinnerDimScreen)">DialogOverlayExtraBusy</include>
+		</control>	
+        <control type="group">
+            <visible>![String.IsEqual(Skin.String(HomeLayout),bingie) + [Skin.HasSetting(BingieAutoTrailer) | Skin.HasSetting(SpotLightTrailers)] + [$EXP[IsBingieViewsActive] | $EXP[IsBingieCategoriesActive]]]</visible>
+            <visible>![Skin.HasSetting(DetailsAutoTrailer) + Window.IsVisible(Videos) + [String.IsEqual(System.CurrentControlID,523) | String.IsEqual(System.CurrentControlID,526)]]</visible>
+            <visible>!Window.IsVisible(startup)</visible>
+            <include>Busy_Spinner</include>
+        </control>
+    </controls>
+</window>

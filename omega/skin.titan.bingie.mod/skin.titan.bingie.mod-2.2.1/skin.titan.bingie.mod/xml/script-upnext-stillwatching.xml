@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<window>
+	<defaultcontrol always="true">3012</defaultcontrol>
+	<zorder>1</zorder>
+	<controls>
+	<include>animation_fade_visible_hidden</include>
+		<!-- background -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>100%</width>
+			<height>100%</height>
+			<texture>diffuse/panel2.png</texture>
+			<colordiffuse>$INFO[Skin.String(GeneralPanelsColor)]</colordiffuse>
+		</control>
+		<!-- Still watching dialog -->
+		<control type="group">
+			<posy>500</posy>
+			<width>100%</width>
+			<height>300</height>
+			<control type="group">
+				<!-- Still There ? -->
+				<control type="label">
+					<align>center</align>
+					<width>100%</width>
+					<height>50</height>
+					<font>Bold46</font>
+					<textcolor>$INFO[Skin.String(BingieOSDLabelTextColor)]</textcolor>
+					<label>$ADDON[service.upnext 30024]</label>
+				</control>
+				<!-- Buttons -->
+				<control type="grouplist">
+					<top>75</top>
+					<orientation>horizontal</orientation>
+					<height>65</height>
+					<width>100%</width>
+					<align>center</align>
+					<!-- Continue Watching -->
+					<control type="button" id="3012">
+						<width>500</width>
+						<height>65</height>
+						<align>center</align>
+						<onright>3013</onright>
+						<textoffsetx>10</textoffsetx>
+						<label>[CAPITALIZE]$LOCALIZE[31535][/CAPITALIZE]</label>
+						<aligny>center</aligny>
+						<font>Reg34</font>
+						<textcolor>$INFO[Skin.String(BingieButtonTextColor)]</textcolor>
+						<focusedcolor>$INFO[Skin.String(BingieButtonFocusTextColor)]</focusedcolor>
+						<texturefocus colordiffuse="$INFO[Skin.String(ViewDetailsBorderFocusColor)]" border="10">bingie/border/default_button_fo_4.png</texturefocus>
+						<texturenofocus/>
+					</control>
+					<!-- Cancel -->
+					<control type="button" id="3013">
+						<width>500</width>
+						<height>65</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<onleft>3012</onleft>
+						<label>222</label>
+						<font>Reg34</font>
+						<textcolor>$INFO[Skin.String(BingieButtonTextColor)]</textcolor>
+						<focusedcolor>$INFO[Skin.String(BingieButtonFocusTextColor)]</focusedcolor>
+						<texturefocus colordiffuse="$INFO[Skin.String(ViewDetailsBorderFocusColor)]" border="10">bingie/border/default_button_fo_4.png</texturefocus>
+						<texturenofocus/>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

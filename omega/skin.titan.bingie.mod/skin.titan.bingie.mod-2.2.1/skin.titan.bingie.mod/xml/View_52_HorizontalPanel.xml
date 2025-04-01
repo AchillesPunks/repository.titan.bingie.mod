@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+<!-- Poster Row Group Layout -->
+	<include name="View52_layout">
+            <posx>62</posx>
+            <bottom>16%</bottom>
+            <width>1820</width>
+            <height>345</height>
+            <onup>9000</onup>
+            <ondown condition="Skin.HasSetting(EnableQuickJump)">7000</ondown>
+                <ondown condition="!Skin.HasSetting(EnableQuickJump)">60</ondown>
+            <onleft>52</onleft>
+            <onright>52</onright>
+            <pagecontrol>60</pagecontrol>
+            <viewtype label="31445">bigwrap</viewtype>
+        <include content="View_Forced">
+            <param name="viewtype" value="$LOCALIZE[31445]" />
+        </include>
+            <scrolltime tween="quadratic">200</scrolltime>
+            <focusposition>3</focusposition>
+            <preloaditems>2</preloaditems>
+            <orientation>horizontal</orientation>
+            <preloaditems>2</preloaditems>
+            <itemlayout height="345" width="259">
+            <!-- Poster UnFocus Layout -->
+			<control type="group">
+                <width>242</width>
+                <height>342</height>
+                <include>PosterPanelLayout</include>
+				<control type="group">
+            <!--Watched Overlay-->
+            <right>8</right>
+            <top>8</top>
+            <include>WatchedIndicatorNormal</include>
+        </control>
+            </control>
+        </itemlayout>
+        <!-- Poster Focus Layout - Poster Zoom -->
+		<focusedlayout height="345" width="259">
+            <control type="group">
+                <width>242</width>
+                <height>342</height>
+                <animation effect="zoom" center="auto" start="100" end="138" time="600" tween="quadratic" condition="Skin.HasSetting(View52_EnableZoomEffect)">Focus</animation>
+                <animation effect="zoom" center="auto" start="138" end="100" time="400" tween="quadratic" condition="Skin.HasSetting(View52_EnableZoomEffect)">Unfocus</animation>
+                <include>PosterPanelLayoutFocus</include>
+				<control type="group">
+            <!--Watched Overlay-->
+            <right>8</right>
+            <top>8</top>
+            <include>WatchedIndicatorNormal</include>
+        </control>
+          </control>
+        </focusedlayout>
+</include>
+
+	<include name="View52_layout_fixed">
+		<control type="wraplist" id="52">
+			<include>View52_layout</include>
+		</control>
+	</include>
+	
+	<include name="View52_layout_normal">
+		<control type="panel" id="52">
+			<include>View52_layout</include>
+		</control>
+	</include>
+	
+	
+	<!-- Panel No Info -->
+    <include name="View_52_HorizontalPanel">
+		<control type="group">
+            <visible>Control.IsVisible(52)</visible>
+            <include>animation_view_change</include>
+			
+			<!-- Fanart Image Added to View-->
+            <control type="multiimage">
+				<visible>!Skin.HasSetting(View52_DisableFanArt)</visible>
+                <include>FullscreenDimensions</include>
+                <texture>diffuse/panel2.png</texture>
+			    <colordiffuse>33ffffff</colordiffuse>
+				<imagepath background="true">$VAR[backgroundVar]</imagepath>
+                <aspectratio>scale</aspectratio>
+                <fadetime>350</fadetime>
+                <include>fanartSpeed</include>
+                <randomize>true</randomize>
+                <loop>yes</loop>
+             <!-- Background Animation -->
+                <animation effect="zoom" start="110" end="130" center="auto" time="12000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(BackgroundAnimation)">Conditional</animation>
+                <animation effect="slide" start="-10,-10" end="10,10" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(BackgroundAnimation)">Conditional</animation>
+			 </control>
+			
+			<!-- Movie Details -->
+			<control type="group">
+				<visible>Skin.HasSetting(PanelViewShowInfo)</visible>
+				<include>MovieDetailsTop</include>
+			</control>
+            
+			<!-- View 52 -->
+			<include condition="Skin.HasSetting(View52_UseFixedLayout)">View52_layout_fixed</include>
+			<include condition="!Skin.HasSetting(View52_UseFixedLayout)">View52_layout_normal</include>
+            
+            <!--Horizontal Scrollbar-->
+			<control type="group">
+				<control type="scrollbar" id="60">
+					<visible>Control.IsVisible(52) + Integer.IsGreater(Container.NumItems,0)</visible>
+					<left>70</left>
+					<bottom>0</bottom>
+					<width>1780</width>
+					<height>15</height>
+					<onup>52</onup>
+					<onleft>60</onleft>
+					<onright>60</onright>
+					<orientation>horizontal</orientation>
+					<animation effect="fade" start="0" end="100" time="400" condition="[Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)] + !Control.IsVisible(6002)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)] | Control.IsVisible(6002)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

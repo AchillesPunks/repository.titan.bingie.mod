@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<overrides>
+	<doNotShareMenu />
+	<groupings>
+		<!-- smart shortcuts -->
+		<shortcut label="31531" type="32010">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>
+
+		<!-- common items -->
+		<node label="32029">
+			<shortcut label="32022" grouping="32029" icon="shortcuts/antenna.png" condition="PVR.HasTVChannels">ActivateWindow(TVChannels)</shortcut>
+			<shortcut label="137" grouping="32029" icon="shortcuts/search.png">ActivateWindow(1109,return)</shortcut>
+			<shortcut label="10000" grouping="32029" icon="shortcuts/home.png" condition="String.IsEqual(Skin.String(HomeLayout),bingie)">ActivateWindow(home,return)</shortcut>
+			<shortcut label="320027" grouping="32029" icon="shortcuts/something.png" condition="String.IsEqual(Skin.String(HomeLayout),bingie)">ActivateWindow(1118,return)</shortcut>
+			<shortcut label="31866" grouping="32029" icon="shortcuts/new.png" condition="String.IsEqual(Skin.String(HomeLayout),bingie)">ActivateWindow(1112,return)</shortcut>
+			<shortcut label="31864" grouping="32029" icon="shortcuts/tv.png" condition="String.IsEqual(Skin.String(HomeLayout),bingie)">ActivateWindow(1110,return)</shortcut>
+			<shortcut label="31865" grouping="32029" icon="shortcuts/clapperboard.png" condition="String.IsEqual(Skin.String(HomeLayout),bingie)">ActivateWindow(1111,return)</shortcut>
+			<shortcut label="31025" grouping="32029" icon="shortcuts/categories.png" condition="String.IsEqual(Skin.String(HomeLayout),bingie)">ActivateWindow(1119,return)</shortcut>
+			<shortcut label="31534" grouping="32029" icon="shortcuts/mylist.png" condition="String.IsEqual(Skin.String(HomeLayout),bingie)">ActivateWindow(1114,return)</shortcut>
+			<shortcut label="31252" grouping="32029" icon="shortcuts/widget.png" condition="String.IsEqual(Skin.String(HomeLayout),bingie)">ActivateWindow(1113,return)</shortcut>
+			<shortcut label="31383" grouping="32029" icon="shortcuts/widget.png" condition="String.IsEqual(Skin.String(HomeLayout),bingie)">ActivateWindow(1115,return)</shortcut>
+			<shortcut label="31069" grouping="32029" icon="shortcuts/antenna.png" condition="String.IsEqual(Skin.String(HomeLayout),bingie)">ActivateWindow(1116,return)</shortcut>
+			<shortcut label="342" grouping="32029" icon="$INFO[Window(Home).Property(SkinHelper.AllMoviesBackground)]">ActivateWindow(Videos,videodb://movies/titles/,return)</shortcut>
+			<shortcut label="20343" grouping="32029" icon="$INFO[Window(Home).Property(SkinHelper.AllTvShowsBackground)]">ActivateWindow(Videos,videodb://tvshows/titles/,return)</shortcut>
+			<shortcut label="2" grouping="32029" icon="shortcuts/music.png" thumb="$INFO[Window(Home).Property(SkinHelper.AllMusicBackground)]" condition="Library.HasContent(music)">ActivateWindow(Music,musicdb://albums/,return)</shortcut>
+			<shortcut label="20389" grouping="32029" icon="$INFO[Window(Home).Property(SkinHelper.AllMusicVideosBackground)]" condition="Library.HasContent(musicvideos)">ActivateWindow(Videos,videodb://musicvideos/titles/,return)</shortcut>
+			<shortcut label="12600" grouping="32029" icon="$INFO[Skin.String(WeatherFanArtPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherFanArtExtension]">ActivateWindow(Weather)</shortcut>
+			<shortcut label="10002" grouping="32029" icon="$INFO[Window(Home).Property(SkinHelper.PicturesBackground)]">ActivateWindow(pictures,return)</shortcut>
+			<shortcut label="10025" grouping="32029" icon="resource://resource.images.skinicons.wide/videos.png">ActivateWindow(Videos,return)</shortcut>
+			<shortcut label="10821" grouping="32029" icon="resource://resource.images.skinicons.wide/games.png">ActivateWindow(Games,return)</shortcut>
+			<shortcut label="10004" grouping="32029" icon="resource://resource.images.skinicons.wide/settings.png">ActivateWindow(Settings)</shortcut>
+			<shortcut label="1037" grouping="32029" icon="resource://resource.images.skinicons.wide/videoaddons.png">ActivateWindow(Videos,addons://sources/video/,return)</shortcut>
+			<shortcut label="19163" grouping="32029" icon="resource://resource.images.skinicons.wide/tvrecordings.png" condition="PVR.HasTVChannels">ActivateWindow(TVRecordings,return)</shortcut>
+			<shortcut label="19021" grouping="32029" icon="resource://resource.images.skinicons.wide/radio.png">ActivateWindow(radiochannels,return)</shortcut>
+			<shortcut label="7" grouping="32029" icon="resource://resource.images.skinicons.wide/filemanager.png">ActivateWindow(filemanager)</shortcut>
+			<shortcut label="10040" grouping="32029" icon="resource://resource.images.skinicons.wide/addons.png">ActivateWindow(Programs,Addons,return)</shortcut>
+			<shortcut label="20244" grouping="32029" icon="resource://resource.images.skinicons.wide/programs.png" condition="System.Platform.Android">ActivateWindow(10001,androidapp://sources/apps/,return)</shortcut>
+			<shortcut label="10134" grouping="32029" icon="resource://resource.images.skinicons.wide/favourites.png">ActivateWindow(favourites)</shortcut>
+			<shortcut label="31062" grouping="32029" type="youtube" icon="resource://resource.images.skinicons.wide/youtube.png" condition="System.HasAddon(plugin.video.youtube)">ActivateWindow(Videos,plugin://plugin.video.youtube,return)</shortcut>
+			<shortcut label="32032" type="playdvd" grouping="32029" icon="resource://resource.images.skinicons.wide/videos.png">PlayDVD()</shortcut>
+		</node>
+
+		<!-- video library-->
+		<node label="32030" condition="Library.HasContent(video)">
+			<shortcut label="19140" grouping="1211" type="1211">ActivateWindow(1108,return)</shortcut>
+			<shortcut label="20381" type="32010">||BROWSE||script.skin.helper.widgets</shortcut>
+			<content>video</content>
+			<node label="32040">
+				<content>playlist-video</content>
+			</node>
+			<node label="32010">
+				<shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,addons://sources/video/,return)</shortcut>
+				<content>addon-video</content>
+			</node>
+			<node label="32075">
+				<content>videosources</content>
+				<content>upnp-video</content>
+			</node>
+		</node>
+		
+		<!-- music -->
+		<node label="32031" condition="Library.HasContent(music)">
+			<shortcut label="2" grouping="32029" icon="resource://resource.images.skinicons.wide/music_6.png">ActivateWindow(10502,musicdb://,return)</shortcut>
+			<shortcut label="19021" grouping="32029" icon="resource://resource.images.skinicons.wide/radio.png">ActivateWindow(radiochannels,return)</shortcut>
+            <shortcut label="19140" grouping="1211" type="1211">ActivateWindow(1107,return)</shortcut>
+			<shortcut label="589" grouping="1211" type="1211">PlayerControl(Partymode(music))</shortcut>
+            <content>music</content>
+			<node label="32040">
+				<content>playlist-audio</content>
+			</node>
+			<node label="32011">
+				<shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(10502,Addons,return)</shortcut>
+				<content>addon-audio</content>
+			</node>
+			<node label="32075">
+				<content>musicsources</content>
+				<content>upnp-music</content>
+			</node>
+		</node>
+		
+		<!-- Live TV -->
+		<node label="32017" condition="PVR.HasTVChannels">
+			<shortcut label="32022" grouping="32029" icon="resource://resource.images.skinicons.wide/livetv.png" condition="PVR.HasTVChannels">ActivateWindow(TVGuide)</shortcut>
+			<shortcut label="19163" grouping="32029" icon="resource://resource.images.skinicons.wide/tvrecordings.png" condition="PVR.HasTVChannels">ActivateWindow(TVRecordings,return)</shortcut>
+			<shortcut label="19021" grouping="32029" icon="resource://resource.images.skinicons.wide/radio.png" condition="PVR.HasTVChannels">ActivateWindow(radiochannels,return)</shortcut>
+			<node label="32017" condition="PVR.HasTVChannels">
+				<content>pvr</content>
+				<node label="19023">
+					<content>pvr-tv</content>
+				</node>
+			</node>
+			<node label="32087" condition="PVR.HasRadioChannels">
+				<content>radio</content>
+				<node label="19024">
+					<content>pvr-radio</content>
+				</node>
+			</node>
+		</node>
+		
+		<!-- pictures -->
+		<node label="32020">
+			<shortcut label="10002" grouping="32029" icon="$INFO[Window(Home).Property(SkinHelper.PicturesBackground)]">ActivateWindow(pictures,return)</shortcut>
+			<content>picturesources</content>
+		</node>
+		
+        <!-- addons -->
+        <node label="32007">
+			<node label="32009">
+				<shortcut label="10001" type="32021" icon="resource://resource.images.skinicons.wide/programs.png">ActivateWindow(Programs,addons://sources/executable/,return)</shortcut>
+                <shortcut label="20244" grouping="32029" icon="resource://resource.images.skinicons.wide/programs.png" condition="System.Platform.Android">ActivateWindow(Programs,androidapp://sources/apps/,return)</shortcut>
+				<content>addon-program</content>
+			</node>
+            <shortcut label="20244" type="32029" condition="System.Platform.Android">||BROWSE||androidapp://sources/apps/</shortcut>
+			<node label="32010">
+				<shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,addons://sources/video/,return)</shortcut>
+				<content>addon-video</content>
+			</node>
+			<node label="32011">
+				<shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(10502,addons://sources/audio/,return)</shortcut>
+				<content>addon-audio</content>
+			</node>
+			<node label="32012">
+				<shortcut label="1039" type="32020" icon="DefaultAddonPicture.png">ActivateWindow(Pictures,Addons,return)</shortcut>
+				<content>addon-image</content>
+			</node>
+		</node>
+
+		<!-- favourites-->	
+		<node label="32006">
+			<shortcut label="10134" grouping="32029" icon="resource://resource.images.skinicons.wide/favourites.png">ActivateWindow(favourites)</shortcut>
+			<content>favourite</content>
+		</node>
+		
+		<!-- settings -->
+		<node label="10004" condition="!String.IsEqual(Skin.String(HomeLayout),bingie)">
+			<shortcut label="7" grouping="32029" icon="resource://resource.images.skinicons.wide/filemanager.png">ActivateWindow(filemanager)</shortcut>
+            <shortcut label="130" grouping="32029" icon="resource://resource.images.skinbackgrounds.titanium/systeminfo.jpg">ActivateWindow(systeminfo)</shortcut>
+			<content>settings</content>
+		</node>
+		
+		<!-- xbmc commands -->
+		<node label="32054">
+			<shortcut label="31565" grouping="32029" condition="String.IsEmpty(Window(Home).Property(powermenu))">submenu</shortcut>
+			<shortcut label="20077" icon="common/skin-settings.png">ActivateWindow(SkinSettings)</shortcut>
+			<shortcut label="10004" icon="common/settings1.png">ActivateWindow(Settings)</shortcut>
+			<shortcut label="20126" icon="common/lock.png">System.LogOff</shortcut>
+            <shortcut label="31714" icon="common/reload-skin.png">ReloadSkin</shortcut>
+			<shortcut label="13012" icon="common/exit1.png">Quit</shortcut>
+			<shortcut label="13015" icon="common/shutdown1.png">Shutdown</shortcut>
+			<shortcut label="13013" icon="common/reboot1.png">Reset</shortcut>
+			<shortcut label="13010" icon="common/hybernate.png">Hibernate</shortcut>
+			<shortcut label="20045" icon="common/mastermode.png">Mastermode</shortcut>
+			<shortcut label="13016" icon="common/shutdown1.png">Powerdown</shortcut>
+			<shortcut label="13011" icon="common/sleep.png">Suspend</shortcut>
+			<shortcut label="600" icon="common/rip-cd.png">RipCD</shortcut>
+			<shortcut label="360" icon="common/screensaver.png">ActivateScreensaver</shortcut>
+			<shortcut label="13014" icon="common/minimize.png">Minimize</shortcut>
+			<shortcut label="32046" icon="common/update-video.png">UpdateLibrary(video)</shortcut>
+			<shortcut label="32047" icon="common/update-audio.png">UpdateLibrary(music)</shortcut>
+			<shortcut label="32055" icon="common/clean-video.png">CleanLibrary(video)</shortcut>
+			<shortcut label="32056" icon="common/clean-audio.png">CleanLibrary(music)</shortcut>
+			<shortcut label="20150" icon="common/shutdown-timer.png">AlarmClock(shutdowntimer,Shutdown())</shortcut>
+			<shortcut label="20151" icon="common/cancel-timer.png">CancelAlarm(shutdowntimer)</shortcut>
+			<shortcut label="14092" icon="common/toggle-debug.png">Skin.ToggleDebug</shortcut>
+            <shortcut label="24034" icon="common/check-updates.png">UpdateAddonRepos</shortcut>
+            <shortcut label="14111" icon="common/toggle-debug.png">ActivateWindow(eventlog)</shortcut>
+		</node>
+	</groupings>
+    
+    <widget-groupings>
+        <!-- script.skin.helper.service default widgets -->
+        <shortcut label="$LOCALIZE[31799]" type="32010" condition="System.HasAddon(script.skin.helper.service) + Window.IsActive(script-skinshortcuts.xml)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=scriptwidgets,smartshortcuts,extendedinfo,librarydataprovider,smartishwidgets,favourites,static</shortcut>
+        <shortcut label="$LOCALIZE[31799]" type="32010" condition="System.HasAddon(script.skin.helper.service) + !Window.IsActive(script-skinshortcuts.xml)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=scriptwidgets,smartshortcuts,extendedinfo,librarydataprovider,smartishwidgets,favourites</shortcut>
+
+		<content>widgets</content>
+		<node label="32030">
+			<content>video</content>
+			<node label="32040">
+				<content>playlist-video</content>
+			</node>
+			<node label="32010">
+				<content>addon-video</content>
+			</node>
+			<node label="32075">
+				<content>videosources</content>
+			</node>
+		</node>
+		<node label="32031">
+			<content>music</content>
+			<node label="32040">
+				<content>playlist-audio</content>
+			</node>
+			<node label="32011">
+				<content>addon-audio</content>
+			</node>
+			<node label="32075">
+				<content>musicsources</content>
+			</node>
+		</node>
+		<node label="32020">
+			<content>picturesources</content>
+		</node>
+		<node label="32007">
+			<node label="32010">
+				<content>addon-video</content>
+			</node>
+			<node label="32011">
+				<content>addon-audio</content>
+			</node>
+			<node label="32012">
+				<content>addon-image</content>
+			</node>
+            <node label="32009">
+				<content>addon-program-plugin</content>
+			</node>
+			<shortcut label="10001" type="32021" icon="defaultaddonprogram.png" widget="addon" widgetType="program" widgetTarget="programs">addons://sources/executable</shortcut>
+			<shortcut label="1037" type="32014" icon="defaultaddonvideo.png" widget="addon" widgetType="video" widgetTarget="video">addons://sources/video</shortcut>
+			<shortcut label="1038" type="32019" icon="defaultaddonmusic.png" widget="addon" widgetType="music" widgetTarget="music">addons://sources/audio</shortcut>
+			<shortcut label="1039" type="32020" icon="defaultaddonpicture.png" widget="addon" widgetType="picture" widgetTarget="pictures">addons://sources/image</shortcut>
+		</node>
+	</widget-groupings>
+    
+	<!-- default backgrounds -->
+	<backgrounddefault defaultID="movies">$INFO[Window(Home).Property(SkinHelper.AllMoviesBackground)]</backgrounddefault>
+	<propertydefault defaultID="movies" property="backgroundName">$ADDON[script.skin.helper.service 32039]</propertydefault>
+	<backgrounddefault defaultID="tvshows">$INFO[Window(Home).Property(SkinHelper.AllTvShowsBackground)]</backgrounddefault>
+	<propertydefault defaultID="tvshows" property="backgroundName">$ADDON[script.skin.helper.service 32043]</propertydefault>
+	<backgrounddefault defaultID="new">$INFO[Window(Home).Property(SkinHelper.RecentVideosBackground)]</backgrounddefault>
+	<propertydefault defaultID="new" property="backgroundName">$LOCALIZE[31837]</propertydefault>
+	<backgrounddefault defaultID="music">$INFO[Window(Home).Property(SkinHelper.AllMusicBackground)]</backgrounddefault>
+	<propertydefault defaultID="music" property="backgroundName">$ADDON[script.skin.helper.service 32048]</propertydefault>
+	<backgrounddefault defaultID="musicvideos">$INFO[Window(Home).Property(SkinHelper.AllMusicVideosBackground)]</backgrounddefault>
+	<propertydefault defaultID="musicvideos" property="backgroundName">$ADDON[script.skin.helper.service 32047]</propertydefault>
+	<backgrounddefault defaultID="pictures">$INFO[Window(Home).Property(SkinHelper.PicturesBackground)]</backgrounddefault>
+	<propertydefault defaultID="pictures" property="backgroundName">$ADDON[script.skin.helper.service 32046]</propertydefault>
+	<backgrounddefault defaultID="videos">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</backgrounddefault>
+	<propertydefault defaultID="videos" property="backgroundName">$ADDON[script.skin.helper.service 32038]</propertydefault>
+	<backgrounddefault defaultID="weather">$INFO[Skin.String(WeatherFanArtPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherFanArtExtension]</backgrounddefault>
+	<backgrounddefault defaultID="livetv">$INFO[Window(Home).Property(SkinHelper.PvrBackground)]</backgrounddefault>
+	<propertydefault defaultID="livetv" property="backgroundName">571</propertydefault>
+	<backgrounddefault defaultID="plugin.video.youtube">resource://resource.images.skinbackgrounds.titanium/hover_extensions.jpg</backgrounddefault>
+	<propertydefault defaultID="plugin.video.youtube" property="backgroundName">571</propertydefault>
+	<backgrounddefault defaultID="10040">resource://resource.images.skinbackgrounds.titanium/programs.jpg</backgrounddefault>
+	<propertydefault defaultID="10040" property="backgroundName">571</propertydefault>
+	<backgrounddefault defaultID="settings">resource://resource.images.skinbackgrounds.titanium/systeminfo.jpg</backgrounddefault>
+	<propertydefault defaultID="settings" property="backgroundName">571</propertydefault>
+
+	
+	<!-- widgets -->
+	<widget label="31531" type="32010" condition="Window.IsActive(script-skinshortcuts.xml)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</widget>
+    <widget label="$INFO[System.AddonTitle(plugin.service.gto)]" name="$INFO[System.AddonTitle(plugin.service.gto)]" condition="System.HasAddon(plugin.service.gto)" type="pvr" target="pvr" path="plugin://plugin.service.gto?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]">gto</widget>
+	<widget label="$LOCALIZE[31025]" name="$LOCALIZE[31025]" type="static" target="static" path="$INCLUDE[CategoriesWidget]">categories</widget>
+	<widget label="$LOCALIZE[31534]" name="$LOCALIZE[31534]" type="video" target="videos" path="$INCLUDE[MyListWidget]">mylist</widget>
+
+	<!-- default widgets -->
+	<widgetdefaultnode defaultID="musicvideos" group="mainmenu" label="$LOCALIZE[20390]" type="musicvideos" path="videodb://recentlyaddedmusicvideos/" target="videos">recentmusicvideos</widgetdefaultnode>
+	<widgetdefaultnode defaultID="weather" group="mainmenu" label="$LOCALIZE[8]" type="static" path="$INCLUDE[WeatherWidget]" target="static">weather</widgetdefaultnode>
+
+    <!-- home widgets --> <!-- Updated Continue Watching to Show Movies & TV Inprogress -->
+	<propertydefault defaultID="10000" property="widget">continuewatching</propertydefault>
+	<propertydefault defaultID="10000" property="widgetTarget">videos</propertydefault>
+	<propertydefault defaultID="10000" property="widgetType">video</propertydefault>
+	<propertydefault defaultID="10000" property="widgetPath">plugin://script.skin.helper.widgets/?action=inprogressshowsandmovies&amp;mediatype=media&amp;limit=25&amp;reload=$INFO[Window(Home).Property(widgetreload)]</propertydefault>
+	<propertydefault defaultID="10000" property="widgetName">$LOCALIZE[31535] $VAR[ForCurrentProfileNameLabel]</propertydefault>
+
+	<propertydefault defaultID="10000" property="widget.1">recentshowsandmovies</propertydefault>
+	<propertydefault defaultID="10000" property="widgetTarget.1">videos</propertydefault>
+	<propertydefault defaultID="10000" property="widgetType.1">video</propertydefault>
+	<propertydefault defaultID="10000" property="widgetPath.1">plugin://script.skin.helper.widgets/?action=recentshowsandmovies&amp;mediatype=media&amp;limit=25&amp;reload=$INFO[Window(Home).Property(widgetreload)]</propertydefault>
+	<propertydefault defaultID="10000" property="widgetName.1">$LOCALIZE[31127]</propertydefault>
+
+	<propertydefault defaultID="10000" property="widget.2">bingeworthyshows</propertydefault>
+	<propertydefault defaultID="10000" property="widgetTarget.2">videos</propertydefault>
+	<propertydefault defaultID="10000" property="widgetType.2">tvshows</propertydefault>
+	<propertydefault defaultID="10000" property="widgetPath.2">special://skin/playlists/bingeworthyshows.xsp</propertydefault>
+	<propertydefault defaultID="10000" property="widgetName.2">$LOCALIZE[31079]</propertydefault>
+
+	<propertydefault defaultID="10000" property="widget.3">watchagainshowsandmovies</propertydefault>
+	<propertydefault defaultID="10000" property="widgetTarget.3">videos</propertydefault>
+	<propertydefault defaultID="10000" property="widgetType.3">video</propertydefault>
+	<propertydefault defaultID="10000" property="widgetPath.3">plugin://script.skin.helper.widgets/?action=watchagainshowsandmovies&amp;mediatype=media&amp;limit=25&amp;reload=$INFO[Window(Home).Property(widgetreload)]</propertydefault>
+	<propertydefault defaultID="10000" property="widgetName.3">$LOCALIZE[31080]</propertydefault>
+
+	<propertydefault defaultID="10000" property="widget.4">criticallyacclaimedmovies</propertydefault>
+	<propertydefault defaultID="10000" property="widgetTarget.4">videos</propertydefault>
+	<propertydefault defaultID="10000" property="widgetType.4">movies</propertydefault>
+	<propertydefault defaultID="10000" property="widgetPath.4">special://skin/playlists/criticallyacclaimedmovies.xsp</propertydefault>
+	<propertydefault defaultID="10000" property="widgetName.4">$LOCALIZE[31532]</propertydefault>
+
+	<propertydefault defaultID="10000" property="widget.5">similarshowsandmovies</propertydefault>
+	<propertydefault defaultID="10000" property="widgetTarget.5">videos</propertydefault>
+	<propertydefault defaultID="10000" property="widgetType.5">video</propertydefault>
+	<propertydefault defaultID="10000" property="widgetPath.5">plugin://script.skin.helper.widgets/?action=similarshowsandmovies&amp;mediatype=media&amp;limit=25&amp;reload=$INFO[Window(Home).Property(widgetreload)]</propertydefault>
+	<propertydefault defaultID="10000" property="widgetName.5">$ADDON[script.skin.helper.widgets 32022]</propertydefault>
+
+	<propertydefault defaultID="10000" property="widget.6">mylist</propertydefault>
+	<propertydefault defaultID="10000" property="widgetTarget.6">videos</propertydefault>
+	<propertydefault defaultID="10000" property="widgetType.6">video</propertydefault>
+	<propertydefault defaultID="10000" property="widgetPath.6">$INCLUDE[MyListWidget]</propertydefault>
+	<propertydefault defaultID="10000" property="widgetName.6">$LOCALIZE[31534]</propertydefault>
+
+	<propertydefault defaultID="10000" property="widget.7">forgenre</propertydefault>
+	<propertydefault defaultID="10000" property="widgetTarget.7">videos</propertydefault>
+	<propertydefault defaultID="10000" property="widgetType.7">video</propertydefault>
+	<propertydefault defaultID="10000" property="widgetPath.7">plugin://script.skin.helper.widgets/?action=forgenre&amp;mediatype=media&amp;limit=25&amp;reload=$INFO[Window(Home).Property(widgetreload)]</propertydefault>
+	<propertydefault defaultID="10000" property="widgetName.7">$LOCALIZE[515]</propertydefault>
+
+    <widgetRename>False</widgetRename> 
+
+
+	<!-- Action Overrides -->
+	<!-- SubMenu-->
+	<override action="submenu">
+		<condition>true</condition>
+		<action>SetFocus(4444,0)</action>
+	</override>
+
+	<!-- MainMenu -->
+	<!-- On Window Transition -> Do action and flush widget props -->
+	<override action="globaloverride" group="mainmenu">
+		<condition>[String.IsEmpty(Container(4445).NumItems) | Integer.IsEqual(Container(4445).NumItems,0)] | String.IsEqual(Skin.String(HomeLayout),bingie)</condition>
+		<action>::ACTION::</action>
+		<action>SetProperty(flushWidgetProps,1,Home)</action>
+	</override>
+	<!-- If Clicked Currently Loaded Shortcut -> Close Menu and Refocus Widgets -->
+	<override action="globaloverride" group="mainmenu">
+		<condition>String.IsEqual(Skin.String(HomeLayout),bingie) + $EXP[IsKnownMenuEntryPath]</condition>
+		<action>ClearProperty(ShowViewSubMenu,Home)</action>
+		<action>SetFocus($VAR[MenuEntryOverrideFocus])</action>
+	</override>
+	<!-- Stop Trailer on Menu Window Navigation -->
+    <groupoverride group="mainmenu" condition="String.IsEqual(Skin.String(HomeLayout),bingie) + $EXP[IsPlayingUnrecognizedContent]">PlayerControl(Stop)</groupoverride>
+
+	<!-- Power Menu -->
+	<groupoverride group="powermenu" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
+
+	<!-- TV Shows / Movies Default Action -->
+	<override action="ActivateWindow(1110,return)" group="mainmenu">
+		<condition>!String.IsEqual(Skin.String(HomeLayout),bingie)</condition>
+		<action>ReplaceWindow(Videos,videodb://tvshows/titles/)</action>
+	</override>
+	<override action="ActivateWindow(1111,return)" group="mainmenu">
+		<condition>!String.IsEqual(Skin.String(HomeLayout),bingie)</condition>
+		<action>ReplaceWindow(Videos,videodb://movies/titles/)</action>
+	</override>
+	<override action="ActivateWindow(1116,return)" group="mainmenu">
+		<condition>!String.IsEqual(Skin.String(HomeLayout),bingie)</condition>
+		<action>ReplaceWindow(TVChannels)</action>
+	</override>
+
+	<!-- Search Enging Toggle -->
+	<override action="ActivateWindow(1109,return)" group="mainmenu">
+		<condition>Skin.HasSetting(UseGlobalSearch) + System.HasAddon(script.globalsearch)</condition>
+		<action>ReplaceWindow(home)</action>
+		<action>RunAddon(script.globalsearch)</action>
+	</override>
+	<override action="ActivateWindow(1109,return)" group="mainmenu">
+		<condition>Skin.HasSetting(UseGlobalSearch) + !System.HasAddon(script.globalsearch)</condition>
+		<action>ReplaceWindow(home)</action>
+		<action>RunPlugin(plugin://script.globalsearch)</action>
+	</override>
+</overrides>
+
+

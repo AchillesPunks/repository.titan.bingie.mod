@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<onload>ClearProperty(ShowViewSubMenu,Home)</onload>
+	<onunload>ClearProperty(ShowViewSubMenu,Home)</onunload>
+	
+	<defaultcontrol always="true">5000</defaultcontrol>
+    <controls>
+			<!-- Background -->
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<colordiffuse>4dffffff</colordiffuse>
+				<texture>special://skin/extras/media/background.jpg</texture>
+				<animation effect="fade" time="600">Visible</animation>
+				<animation effect="fade" time="600">Hidden</animation>
+				<visible>String.IsEmpty(ListItem.Art(tvshow.fanart))</visible>
+				<visible>Skin.HasSetting(ShowNAFanartBackground)</visible>
+			</control>
+				<control type="image">
+					<include>FullscreenDimensions</include>
+					<aspectratio>scale</aspectratio>
+					<colordiffuse>31ffffff</colordiffuse>
+					<texture background="true">$INFO[ListItem.Art(tvshow.fanart)]</texture>
+					<fadetime>600</fadetime>
+					<animation effect="fade" time="600">Visible</animation>
+					<animation effect="fade" time="600">Hidden</animation>
+					<visible>!String.IsEmpty(ListItem.Art(tvshow.fanart))</visible>
+					<visible>Skin.HasSetting(ShowNAFanartBackground)</visible>
+				</control>
+		<!--NowPlaying-->
+		<include>NowPlayingModern</include>
+         <!--Header-->
+        <include>Header</include>
+		<control type="group">
+			<include>animation_window_open_close</include>			
+			<!-- weekdays -->
+			<control type="list" id="5000">
+				<posx>69</posx>
+				<bottom>144</bottom>
+				<width>410</width>
+				<height>631</height>
+				<onleft>9000</onleft>
+				<onright condition="Container(5000).HasFocus(1)">200</onright>
+				<onright condition="Container(5000).HasFocus(2)">201</onright>
+				<onright condition="Container(5000).HasFocus(3)">202</onright>
+				<onright condition="Container(5000).HasFocus(4)">203</onright>
+				<onright condition="Container(5000).HasFocus(5)">204</onright>
+				<onright condition="Container(5000).HasFocus(6)">205</onright>
+				<onright condition="Container(5000).HasFocus(7)">206</onright>
+				<onup>5000</onup>
+				<ondown>5000</ondown>
+				<pagecontrol/>
+				<scrolltime tween="quadratic">300</scrolltime>
+				<itemlayout height="90" width="400">
+					<control type="label">
+						<width>400</width>
+						<height>90</height>
+						<font>Bold30</font>
+						<textoffsetx>20</textoffsetx>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<width>400</width>
+						<height>90</height>
+						<font>Reg26</font>
+						<textoffsetx>20</textoffsetx>
+						<align>right</align>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextColor)]</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+					<control type="image">
+						 <width>100%</width>
+						 <height>1</height>
+						 <bottom>0</bottom>
+						 <texture colordiffuse="$INFO[Skin.String(ViewDetailsListItemTextColor)]">diffuse/panel2.png</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="90" width="400">
+					<control type="image">
+						 <width>400</width>
+						 <height>89</height>
+						 <texture border="10" colordiffuse="$INFO[Skin.String(ViewDetailsFocusColor)]">diffuse/panel.png</texture>
+						 <aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						 <width>100%</width>
+						 <height>1</height>
+						 <bottom>0</bottom>
+						 <texture colordiffuse="$INFO[Skin.String(ViewDetailsListItemTextColor)]">diffuse/panel2.png</texture>
+					</control>
+					<control type="label">
+						<width>400</width>
+						<height>90</height>
+						<font>Bold30</font>
+						<textoffsetx>20</textoffsetx>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextFocusColor)]</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<width>400</width>
+						<height>90</height>
+						<font>Reg26</font>
+						<textoffsetx>20</textoffsetx>
+						<align>right</align>
+						<textcolor>$INFO[Skin.String(ViewDetailsListItemTextFocusColor)]</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>			
+				<content>
+					<item id="1">
+						<label>$INFO[Window(Home).Property(NextAired.203.Weekday)]</label>
+						<label2>$INFO[Container(200).NumItems]</label2>
+						<icon/>
+					</item>
+					<item id="2">
+						<label>$INFO[Window(Home).Property(NextAired.201.Weekday)]</label>
+						<label2>$INFO[Container(201).NumItems]</label2>
+						<icon/>
+					</item>
+					<item id="3">
+						<label>$INFO[Window(Home).Property(NextAired.202.Weekday)]</label>
+						<label2>$INFO[Container(202).NumItems]</label2>
+						<icon/>
+					</item>
+					<item id="4">
+						<label>$INFO[Window(Home).Property(NextAired.203.Weekday)]</label>
+						<label2>$INFO[Container(203).NumItems]</label2>
+						<icon/>
+					</item>
+					<item id="5">
+						<label>$INFO[Window(Home).Property(NextAired.204.Weekday)]</label>
+						<label2>$INFO[Container(204).NumItems]</label2>
+						<icon/>
+					</item>
+					<item id="6">
+						<label>$INFO[Window(Home).Property(NextAired.205.Weekday)]</label>
+						<label2>$INFO[Container(205).NumItems]</label2>
+						<icon/>
+					</item>
+					<item id="7">
+						<label>$INFO[Window(Home).Property(NextAired.206.Weekday)]</label>
+						<label2>$INFO[Container(206).NumItems]</label2>
+						<icon/>
+					</item>
+				</content>
+			</control>
+			<control type="group" id="9001">
+				<bottom>145</bottom>
+				<posx>529</posx>
+                <height>630</height>
+				<control type="scrollbar" id="60">
+					<left>0</left>
+					<posy>670</posy>
+					<width>1316</width>
+					<height>15</height>
+					<onup condition="Container(5000).HasFocus(1)">200</onup>
+					<onup condition="Container(5000).HasFocus(2)">201</onup>
+					<onup condition="Container(5000).HasFocus(3)">202</onup>
+					<onup condition="Container(5000).HasFocus(4)">203</onup>
+					<onup condition="Container(5000).HasFocus(5)">204</onup>
+					<onup condition="Container(5000).HasFocus(6)">205</onup>
+					<onup condition="Container(5000).HasFocus(7)">206</onup>
+					<onleft>5000</onleft>
+					<showonepage>false</showonepage>
+					<orientation>horizontal</orientation>
+					<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="![Control.HasFocus(60) | Container.Scrolling | String.IsEqual(Skin.String(scrollbar_visibility),always_show)]">Conditional</animation>
+				</control>
+				<control type="panel" id="200">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(1)] | Control.HasFocus(200) | [Container(5000).HasFocus(1) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>200</onright>
+					<include>TVNextAiredListCommonLayout</include>				
+				</control>
+				<control type="panel" id="201">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(2)] | Control.HasFocus(201) | [Container(5000).HasFocus(2) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>201</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="202">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(3)] | Control.HasFocus(202) | [Container(5000).HasFocus(3) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>202</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="203">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(4)] | Control.HasFocus(203) | [Container(5000).HasFocus(4) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>203</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="204">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(5)] | Control.HasFocus(204) | [Container(5000).HasFocus(5) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>204</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="205">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(6)] | Control.HasFocus(205) | [Container(5000).HasFocus(6) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>205</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="206">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(7)] | Control.HasFocus(206) | [Container(5000).HasFocus(7) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>206</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+			</control>
+		</control>
+		
+		<!--Footer-->
+		<control type="group">
+			<include>animation_window_open_close</include>
+			 <include>animation_fade_visible_hidden</include>
+			<include condition="!Skin.HasSetting(EnableFooterBar)">Footer</include>
+		</control>
+		
+		<!--clear logo -->
+		<include condition="Skin.String(ClearLogoLocation)">ClearLogo</include>
+		
+		
+		<!--Sub Menu-->
+        <control type="group">
+            <include condition="Skin.HasSetting(smallContextMenu)">SideBladeClassic</include>
+			<include condition="!Skin.HasSetting(smallContextMenu)">SideBladeModern</include>
+            <!--Grouplist 9000-->
+            <control type="grouplist" id="9000">
+                <posx>21</posx>
+                <posy>190</posy>
+                <width>458</width>
+                <height>750</height>
+                <itemgap>3</itemgap>
+                <onleft>5000</onleft>
+                <onright>5000</onright>
+				<onright>ClearProperty(ShowViewSubMenu,Home)</onright>
+				<onleft>ClearProperty(ShowViewSubMenu,Home)</onleft>
+				<onback>ClearProperty(ShowViewSubMenu,Home)</onback>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <orientation>vertical</orientation>
+				<control type="button" id="8">
+                    <description>Settings</description>
+				    <include>SideBladeMenuButton</include>
+                    <label>5</label>
+                </control>
+				
+				
+				<control type="radiobutton" id="1004">
+                    <!--Show Fanart Background-->
+                    <include>SideBladeMenuButton</include>
+                    <label>31155</label>
+                    <onclick>Skin.ToggleSetting(ShowNAFanartBackground)</onclick>
+                    <selected>Skin.HasSetting(ShowNAFanartBackground)</selected>
+					<visible>!Control.IsVisible(507)</visible>
+                </control>
+
+            </control>
+        </control>
+
+
+	</controls>
+</window>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<window>
+	<defaultcontrol/>
+    <controls>
+         <!--fallback background -->
+        <control type="group">
+			<include>GlobalBackground</include>
+            <visible>!Control.IsVisible(3333) | String.IsEmpty(Control.GetLabel(3333))</visible>
+		</control>
+         <include>NowPlayingBackground</include>
+         
+         <!-- lyrics overlay -->
+         <control type="group">
+            <visible>!Skin.HasSetting(DisableLyricsOverlay) + Window.IsActive(script-cu-lrclyrics-main.xml)</visible>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>100%</width>
+                <height>100%</height>
+                <texture>special://home/addons/resource.images.backgroundoverlays.basic/resources/Surround.png</texture>
+                <colordiffuse>$INFO[Skin.String(LyricsOverlayColor)]</colordiffuse>
+            </control>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>100%</width>
+                <height>100%</height>
+                <texture>special://home/addons/resource.images.backgroundoverlays.basic/resources/Spot.png</texture>
+                <colordiffuse>$INFO[Skin.String(LyricsOverlayColor)]</colordiffuse>
+            </control>
+        </control>
+
+        <control type="group">
+            <include>HideOsdConditions</include>
+			<include condition="!Skin.HasSetting(UseSlimOSDPanel)">OSDPanelModern</include>
+			<include condition="Skin.HasSetting(UseSlimOSDPanel)">OSDPanelModernSlimMusic</include>
+			<visible>[Skin.HasSetting(AlwaysShowMusicInfo) | Player.ShowInfo | Window.IsActive(MusicOSD)]</visible>
+            <animation effect="slide" end="0,-42" time="0" condition="Skin.HasSetting(enableArtistBio)">Conditional</animation>
+			<animation effect="slide" start="0,400" end="0,0" tween="cubic" easing="out" delay="300" time="250" reversible="false">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,400" tween="cubic" easing="out" delay="300" time="250" reversible="false">Hidden</animation>
+		</control>
+		
+		<!--clearlogo top right-->
+		<control type="image">
+			<right>40</right>
+			<top>20</top>
+			<width>550</width>
+			<height>180</height>
+			<fadetime>900</fadetime>
+			<aspectratio align="right" aligny="top">keep</aspectratio>
+			<texture background="true">$VAR[MusicPlayerClearLogo]</texture>
+            <visible>Skin.String(MusicArtistLogo,enabled) | [Skin.String(MusicArtistLogo,osd) + [Player.ShowInfo | Window.IsActive(MusicOSD)]]</visible>
+            <include>animation_fade_visible_hidden_delayed</include>
+		</control>
+        
+        <control type="group">
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">WindowClose</animation>
+			<animation effect="fade" time="500">Visible</animation>
+			<animation effect="fade" time="500">Hidden</animation>
+			<visible>Player.HasAudio + !Window.IsActive(script-cu-lrclyrics-main.xml)</visible>
+			<visible>Skin.HasSetting(MusicOSDScrollingTitles)</visible>
+            <animation effect="slide" start="0" end="0,342" delay="300" time="250" condition="![Skin.HasSetting(AlwaysShowMusicInfo) | Player.ShowInfo | Window.IsActive(MusicOSD)] + [Skin.HasSetting(enableArtistBio) | !Skin.HasSetting(UseSlimOSDPanel)]">Conditional</animation>
+			<animation effect="slide" start="0" end="0,84" delay="300" time="250" condition="!Skin.HasSetting(enableArtistBio) | Skin.HasSetting(UseSlimOSDPanel)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,300" delay="300" time="250" condition="![Skin.HasSetting(AlwaysShowMusicInfo) | Player.ShowInfo | Window.IsActive(MusicOSD)] + [!Skin.HasSetting(enableArtistBio) | Skin.HasSetting(UseSlimOSDPanel)]">Conditional</animation>			
+			<control type="label">
+                <description>Now Playing</description>
+                <left>0</left>
+                <top>550</top>
+                <width>1920</width>
+                <height>100</height>
+                <label>$INFO[MusicPlayer.Artist,, • ]$INFO[MusicPlayer.Title,, • ]$INFO[MusicPlayer.Artist,, • ]$INFO[MusicPlayer.Title,, • ]$INFO[MusicPlayer.Artist,, • ]$INFO[MusicPlayer.Title,, • ]</label>
+                <scroll>true</scroll>
+                <font>Light200</font>
+                <pauseatend>0</pauseatend>
+                <textcolor>80ffffff</textcolor>
+                <align>left</align>
+            </control>
+        </control>
+
+    </controls>
+</window>

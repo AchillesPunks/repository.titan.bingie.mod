@@ -1,0 +1,189 @@
+<!-- Enable Streaming Services Filter -->
+		<control type="radiobutton" id="2010">
+		
+<!-- Play Movie/Open Seasons Instead Open Dialog Video Info -->	
+        <control type="radiobutton" id="2011">
+
+<!-- Auto Hide Plot on System Idle -->	
+        <control type="radiobutton" id="2012">			
+
+<!-- Disable Static Slim Menu -->    
+		<control type="radiobutton" id="2013">		
+		
+<!-- Enable Netflix Logo on Bingie Home and Settings -->
+        <control type="radiobutton" id="2014">
+
+<!-- Disable profile on menu -->    
+		<control type="radiobutton" id="2015">
+		
+<!-- Enable Auto Play Trailer Only for Highlight Widget -->	
+        <control type="radiobutton" id="2016">		
+
+<!-- Enable Fixed Frame in Home & Hubs (Moving Frame) -->
+        <control type="radiobutton" id="2017">
+
+<!-- Enable Audio Icons -->
+        <control type="radiobutton" id="2018">
+		
+<!-- Enable US Icons -->
+        <control type="radiobutton" id="2019">		
+
+<!-- Enable UK Icons -->
+        <control type="radiobutton" id="2020">
+		
+<!-- Footer Bar Visibilit -->
+        <control type="button" id="2021">			
+					
+<!-- Choose Netflix User Profile Icon -->	
+        <control type="button" id="2022">
+		
+<!-- Enable Animated Discart on Supported OSD -->
+        <control type="radiobutton" id="2023">
+
+<!-- Enable Finish Time, Current Time, & Total Duration for OSD Playback -->
+        <control type="radiobutton" id="2024">
+
+<!-- Show ClearArt instead of Clearlogo on Pause -->
+		<control type="radiobutton" id="2025">
+            
+<!-- Show Clearart instead of ClearLogo on Infopane -->
+		<control type="radiobutton" id="2026">
+            
+<!-- Enable Seek/Jump Indicator -->
+		<control type="radiobutton" id="2027">	
+
+<!-- Disable Top250 Sublabel on home and bingie views -->
+		<control type="radiobutton" id="2028">
+		
+<!-- Enable Circular Navigation-->
+        <control type="radiobutton" id="2029">
+
+<!-- Disable Sub Label on Home Spotlight -->
+		<control type="radiobutton" id="2030">
+
+<!-- Fake Codec info on Details Row (if no codec info is present)-->
+		<control type="radiobutton" id="2031">
+            
+<!-- TV Show Status on Details Row Home & Bingie Views-->
+		<control type="radiobutton" id="2032">
+		
+<!-- Enable Audio Codecs ATMOS only-->
+		<control type="radiobutton" id="2033">
+
+<!-- Season Greetings  -->
+		<control type="label" id="2034">
+
+<!-- Disable Spotlight Slide Animation-->	
+		<control type="radiobutton" id="2035">
+
+<!-- RT/IMDB/TVDB Ratings on Details Row -->
+        <control type="radiobutton" id="2036">
+
+<!-- Prefer Colored Sub Label on Home Spotlight -->	
+		<control type="radiobutton" id="2037">
+
+<!-- Prefer Colored Top250 Sublabel on Spotlight Details Row -->	
+		<control type="radiobutton" id="2038">
+		
+<!-- Ratings to Show on Home -->
+        <control type="button" id="2039">			
+
+<!-- Prefer White Footer -->
+		<control type="radiobutton" id="2040">
+		
+<!-- Replace Cast and Crew List with Cast and Crew Images -->
+        <control type="radiobutton" id="2041">		
+		
+<!-- White RT/IMDB/TVDB ratings on details row -->
+        <control type="radiobutton" id="2042">
+		
+<!-- Disable cast thumbnails in details -->
+        <control type="radiobutton" id="2043">			
+		
+<!-- Disable Total Media Count In Bingie Library Views  -->	
+		<control type="radiobutton" id="2044">
+
+<!-- Disable Continue Watching Movie Percentage -->
+        <control type="radiobutton" id="2045">
+
+<!-- Enable Plot on Pause -->
+        <control type="radiobutton" id="2046">
+
+<!-- Prefer White Top 250 Sub Label on Home Spotlight  -->
+        <control type="radiobutton" id="2047">
+
+<!-- Categories List -->
+        <control type="radiobutton" id="2048">
+		
+<!-- Enable Top 250 on Posters -->
+        <control type="radiobutton" id="2049">
+		
+<!-- Prefer White Details Icons -->
+        <control type="radiobutton" id="2050">
+		
+<!-- Disable Top 250 Label from Info Dialog -->
+        <control type="radiobutton" id="2051">
+		
+<!-- Prefer White Top250 Sublabel on Vido Info -->
+        <control type="radiobutton" id="2052">
+		
+<!-- Enable Netflix User Icons -->
+        <control type="radiobutton" id="2053">
+		
+<!-- Fixed US MPAA Panel Size -->
+        <control type="radiobutton" id="2054">
+		
+<!-- Replace Credits & More with Extended info -->
+        <control type="radiobutton" id="2055">	
+
+<!-- Number of Roles -->
+        <control type="button" id="2056">		
+		
+<!-- Extra Fanart -->
+        <control type="radiobutton" id="2057">
+		
+<!-- TMDB Search Options -->
+        <control type="button" id="2058">		
+		
+<!-- Netflix Pause -->
+        <control type="radiobutton" id="2059">
+
+<!-- Replace Choose Artwork with Artwork Beef -->
+        <control type="radiobutton" id="2060">			
+
+<!-- Enable Fallback Logo Image on Thumbs -->
+        <control type="radiobutton" id="2061">
+		
+<!-- Enable Ratings in Views -->
+        <control type="radiobutton" id="2062">
+		
+<!-- Enable Ratings on Home and Bingie Views -->
+        <control type="radiobutton" id="2063">
+		
+<!-- Enable Studio Logo On Home and Bingie Views -->
+        <control type="radiobutton" id="2064">
+		
+<!-- Replace Add to My List with Add/Remove Trakt Watchlist -->
+        <control type="radiobutton" id="2065">			
+		
+<!-- Splash Screen -->
+        <control type="button" id="2066">		
+		
+<!-- Show Fanart Thumb in Bingie Seasons -->
+        <control type="radiobutton" id="2067">
+
+<!-- Disable Dummy Spotlight Widget -->	
+        <control type="radiobutton" id="2068">
+
+<!-- Search Types -->
+        <control type="button" id="2069">			
+		
+<!-- Lists Filter -->
+        <control type="button" id="2070">	
+
+<!-- Disable Collection -->
+        <control type="radiobutton" id="2071">  
+
+<!-- Enable Air Date -->	
+        <control type="radiobutton" id="2072">  
+		

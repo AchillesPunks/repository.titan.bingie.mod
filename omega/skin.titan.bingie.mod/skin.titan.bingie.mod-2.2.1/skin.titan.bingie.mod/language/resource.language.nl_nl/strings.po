@@ -1,0 +1,3877 @@
+# Kodi Media Center language file
+# Addon Name: Titan Bingie Mod
+# Addon id: skin.titan.bingie.mod
+# Addon Provider: AchillesPunks, HugoL, Matke
+msgid ""
+msgstr ""
+"Project-Id-Version: KODI Skins\n"
+"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Translator: QAELIX\n"
+"Language-Team: Dutch (the Netherlands) (https://localazy.com/p/bingie-mod-titan-dutch-translation)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#31729"
+msgid "%s pixels"
+msgstr "%s pixels"
+
+msgctxt "#31289"
+msgid "10 Day Forecast"
+msgstr "10 daagse voorspelling"
+
+msgctxt "#31286"
+msgid "36 Hour Forecast"
+msgstr "36-uur voorspelling"
+
+msgctxt "#31501"
+msgid "Action"
+msgstr "Actie"
+
+msgctxt "#320101"
+msgid "Action & Adventure"
+msgstr "Actie & Avontuur"
+
+msgctxt "#31536"
+msgid "Action & Crime Movies"
+msgstr "Actie & Misdaad Films"
+
+msgctxt "#31164"
+msgid "Action & Crime Series"
+msgstr "Actie & Misdaad Series"
+
+msgctxt "#320216"
+msgid "Add/Remove Watchlist"
+msgstr "Controlelijst toevoegen/verwijderen"
+
+msgctxt "#31869"
+msgid "Add to My List"
+msgstr "Toevoegen aan Mijn Lijst"
+
+msgctxt "#31392"
+msgid "Add video files to library now"
+msgstr "Videobestanden nu toevoegen aan bibliotheek"
+
+msgctxt "#31205"
+msgid "Addon not installed - please install this addon first"
+msgstr "Addon niet geïnstalleerd - installeer eerst deze addon"
+
+msgctxt "#320024"
+msgid "Adults Only Panel Color"
+msgstr "Volwassen-content Paneel Kleur"
+
+msgctxt "#31270"
+msgid "Advanced Settings"
+msgstr "Geavanceerde instellingen"
+
+msgctxt "#31162"
+msgid "Adventure & Fantasy Movies"
+msgstr "Avontuur & Fantasie Films"
+
+msgctxt "#31163"
+msgid "Adventure & Fantasy Series"
+msgstr "Avontuur & Fantasie Series"
+
+msgctxt "#320197"
+msgid "Age"
+msgstr "Leeftijd"
+
+msgctxt "#320150"
+msgid "Air date"
+msgstr "Uitzenddatum"
+
+msgctxt "#320135"
+msgid "Airing Today TV Shows"
+msgstr "Vandaag uitgezonden TV-series"
+
+msgctxt "#31213"
+msgid "Airs"
+msgstr "Uitgezonden op"
+
+msgctxt "#31593"
+msgid "Album titles related to"
+msgstr "Albumtitels gerelateerd aan"
+
+msgctxt "#31600"
+msgid "Align labels on posters/thumbs in center"
+msgstr "Labels op posters uitlijnen in het midden"
+
+msgctxt "#31050"
+msgid "All Movies"
+msgstr "Alle Films"
+
+msgctxt "#31051"
+msgid "All TV Shows"
+msgstr "Alle TV-series"
+
+msgctxt "#31730"
+msgid "All widgets"
+msgstr "Alle widgets"
+
+msgctxt "#31796"
+msgid "Allow Youtube lookup for trailer if no trailer exists"
+msgstr "YouTube lookup toestaan voor trailer als er geen trailer bestaat"
+
+msgctxt "#31847"
+msgid "Alphabet Letters Pop-Up & Navigation"
+msgstr "Alfabetletters Pop-Up & Navigatie"
+
+msgctxt "#31396"
+msgid "Alright, let's do it"
+msgstr "Oké, laten we het doen"
+
+msgctxt "#31764"
+msgid "Always hide"
+msgstr "Altijd verbergen"
+
+msgctxt "#31179"
+msgid "Always open fullscreen music playback"
+msgstr "Altijd muziek afspelen in volledig scherm"
+
+msgctxt "#31356"
+msgid "Always show tags"
+msgstr "Altijd tags tonen"
+
+msgctxt "#31951"
+msgid "Always visible"
+msgstr "Altijd zichtbaar"
+
+msgctxt "#31156"
+msgid "Amazon Original Series"
+msgstr "Amazon originele serie"
+
+msgctxt "#31201"
+msgid "Animate Disc-art"
+msgstr "Schijfkunst animeren"
+
+msgctxt "#31617"
+msgid "Animate music background"
+msgstr "Animeer muziekachtergrond"
+
+msgctxt "#320111"
+msgid "Animations"
+msgstr "Animaties"
+
+msgctxt "#31046"
+msgid "Anime"
+msgstr "Anime"
+
+msgctxt "#31081"
+msgid "Artists named"
+msgstr "Genoemde kunstenaars"
+
+msgctxt "#31054"
+msgid "Artwork"
+msgstr "Kunstwerk"
+
+msgctxt "#31785"
+msgid "Audio Process Information"
+msgstr "Informatie over audioproces"
+
+msgctxt "#31885"
+msgid "Auto-Trailer Interval"
+msgstr "Automatische Trailer interval"
+
+msgctxt "#320229"
+msgid "Auto Hide Plot when System is Idle"
+msgstr "Automatisch plot verbergen wanneer het systeem inactief is"
+
+msgctxt "#31798"
+msgid "Auto Play Trailers for Spotlight Widget"
+msgstr "Trailers automatisch afspelen in de Schijnwerper Widget"
+
+msgctxt "#31883"
+msgid "Auto Play Trailers in Home & Hubs"
+msgstr "Trailers automatisch afspelen in Thuisbasis & Hubs"
+
+msgctxt "#31672"
+msgid "Auto Rotate Widgets"
+msgstr "Widgets automatisch draaien"
+
+msgctxt "#31629"
+msgid "Auto close OSD (0 to disable auto close)"
+msgstr "OSD automatisch sluiten (0 om automatisch sluiten uit te schakelen)"
+
+msgctxt "#31301"
+msgid "Auto focus the first unwatched episode in lists"
+msgstr "Automatisch focussen op de eerste onbekeken aflevering in lijsten"
+
+msgctxt "#31113"
+msgid "Auto show the submenu"
+msgstr "Het submenu automatisch weergeven"
+
+msgctxt "#31793"
+msgid "Autoplay trailer"
+msgstr "Trailer automatisch afspelen"
+
+msgctxt "#31976"
+msgid "Awards"
+msgstr "Prijzen"
+
+msgctxt "#31654"
+msgid "Back..."
+msgstr "Terug..."
+
+msgctxt "#31852"
+msgid "Background Image"
+msgstr "Achtergrond afbeelding"
+
+msgctxt "#31574"
+msgid "Background color diffuse"
+msgstr "Achtergrondkleur diffuus"
+
+msgctxt "#31470"
+msgid "Background overlay texture"
+msgstr "Achtergrond overlay textuur"
+
+msgctxt "#31151"
+msgid "Background overlay texture color"
+msgstr "Achtergrond overlay textuurkleur"
+
+msgctxt "#31022"
+msgid "Background settings"
+msgstr "Achtergrondinstellingen"
+
+msgctxt "#31271"
+msgid "Backup and restore"
+msgstr "Back-up maken en herstellen"
+
+msgctxt "#31272"
+msgid "Backup the skin settings"
+msgstr "Een back-up maken van de thema-instellingen"
+
+msgctxt "#31055"
+msgid "Banner"
+msgstr "Banner"
+
+msgctxt "#31425"
+msgid "Banner Plex"
+msgstr "Banner Plex"
+
+msgctxt "#31424"
+msgid "Banner list"
+msgstr "Bannerlijst"
+
+msgctxt "#31967"
+msgid "Basic"
+msgstr "Basis"
+
+msgctxt "#31543"
+msgid "Because you watched"
+msgstr "Omdat je keek naar"
+
+msgctxt "#31444"
+msgid "Big List"
+msgstr "Grote Lijst"
+
+msgctxt "#31426"
+msgid "Big Panel"
+msgstr "Groot Paneel"
+
+msgctxt "#31666"
+msgid "Big Panel Wall"
+msgstr "Groot Paneel wand"
+
+msgctxt "#31428"
+msgid "Big Panel details"
+msgstr "Groot Paneel details"
+
+msgctxt "#31643"
+msgid "Big list 2"
+msgstr "Grote Lijst 2"
+
+msgctxt "#31079"
+msgid "Bingeworthy TV Shows"
+msgstr "Bingewaardige TV-series"
+
+msgctxt "#31827"
+msgid "Bingie Episodes"
+msgstr "Bingie Afleveringen"
+
+msgctxt "#31018"
+msgid "Bingie Main Landscape"
+msgstr "Bingie Thuisbasis landschap"
+
+msgctxt "#31027"
+msgid "Bingie Main Poster"
+msgstr "Bingie Thuisbasis poster"
+
+msgctxt "#320006"
+msgid "Bingie OSD buttons color"
+msgstr "Bingie OSD-knoppen kleur"
+
+msgctxt "#31097"
+msgid "Bingie OSD details row text color"
+msgstr "Bingie OSD details rij tekstkleur"
+
+msgctxt "#320007"
+msgid "Bingie OSD focus button color"
+msgstr "Bingie OSD focusknop kleur"
+
+msgctxt "#31068"
+msgid "Bingie OSD header text color"
+msgstr "Bingie OSD koptekst kleur"
+
+msgctxt "#31052"
+msgid "Bingie OSD info text color"
+msgstr "Bingie OSD info tekstkleur"
+
+msgctxt "#31103"
+msgid "Bingie OSD label text color"
+msgstr "Bingie OSD-label tekstkleur"
+
+msgctxt "#320049"
+msgid "Bingie OSD plot text color"
+msgstr "Bingie OSD plot tekstkleur"
+
+msgctxt "#31096"
+msgid "Bingie OSD primary text color"
+msgstr "Bingie OSD primaire tekstkleur"
+
+msgctxt "#31032"
+msgid "Bingie OSD progress bar background color"
+msgstr "Bingie OSD voortgangsbalk achtergrondkleur"
+
+msgctxt "#31043"
+msgid "Bingie OSD progress bar cache color"
+msgstr "Bingie OSD voortgangsbalk cache kleur"
+
+msgctxt "#31033"
+msgid "Bingie OSD progress bar color"
+msgstr "Bingie OSD voortgangsbalk kleur"
+
+msgctxt "#31044"
+msgid "Bingie OSD progress text color"
+msgstr "Bingie OSD voortgang tekstkleur"
+
+msgctxt "#320050"
+msgid "Bingie OSD sublabel text color"
+msgstr "Bingie OSD sublabel tekstkleur"
+
+msgctxt "#31016"
+msgid "Bingie Playback & OSD"
+msgstr "Bingie Weergave & OSD"
+
+msgctxt "#320241"
+msgid "Bingie Screensaver - Disable Clearlogo"
+msgstr "Bingie Screensaver - Clearlogo uitschakelen"
+
+msgctxt "#320240"
+msgid "Bingie Screensaver - Disable Netflix Logo"
+msgstr "Bingie Screensaver - Netflix-logo uitschakelen"
+
+msgctxt "#320238"
+msgid "Bingie Screensaver - Slow Down Image Change Time"
+msgstr "Bingie Screensaver - Vertraag de beeldwisseltijd"
+
+msgctxt "#320239"
+msgid "Bingie Screensaver - Slow Down Image Scroll Speed"
+msgstr "Bingie Screensaver - Vertraag de scrollsnelheid van afbeeldingen"
+
+msgctxt "#31095"
+msgid "Bingie Seasons"
+msgstr "Bingie Seizoenen"
+
+msgctxt "#320062"
+msgid "Bingie Top 250 icon color"
+msgstr "Bingie Top 250 icoon kleur"
+
+msgctxt "#31914"
+msgid "Bingie Views"
+msgstr "Bingie Overzicht"
+
+msgctxt "#320061"
+msgid "Bingie additional info icons color"
+msgstr "Bingie extra info iconen kleur"
+
+msgctxt "#31411"
+msgid "Bingie additional info text color"
+msgstr "Bingie extra info tekstkleur"
+
+msgctxt "#31735"
+msgid "Bingie details row text color"
+msgstr "Bingie details rij tekstkleur"
+
+msgctxt "#31084"
+msgid "Bingie dialog video info additional info icon color"
+msgstr "Bingie dialoogvenster, video-informatie, aanvullende informatie, icoon kleur"
+
+msgctxt "#31001"
+msgid "Bingie dialog video info additional info text color"
+msgstr "Bingie dialoogvenster, video-informatie, aanvullende informatie, tekstkleur"
+
+msgctxt "#31832"
+msgid "Bingie flags color"
+msgstr "Bingie vlaggen kleur"
+
+msgctxt "#31085"
+msgid "Bingie flags text color"
+msgstr "Bingie vlaggen tekstkleur"
+
+msgctxt "#31003"
+msgid "Bingie header text color"
+msgstr "Bingie koptekst kleur"
+
+msgctxt "#31091"
+msgid "Bingie home progress bar background color"
+msgstr "Bingie Thuisbasis voortgangsbalk achtergrondkleur"
+
+msgctxt "#31086"
+msgid "Bingie home progress bar color"
+msgstr "Bingie Thuisbasis voortgangsbalk kleur"
+
+msgctxt "#31093"
+msgid "Bingie home progress bar text color"
+msgstr "Bingie Thuisbasis voortgangsbalk tekstkleur"
+
+msgctxt "#31102"
+msgid "Bingie label text color"
+msgstr "Bingie label tekstkleur"
+
+msgctxt "#320035"
+msgid "Bingie plot text color"
+msgstr "Bingie plot tekstkleur"
+
+msgctxt "#31011"
+msgid "Bingie primary button focus text color"
+msgstr "Bingie primaire focus-knop tekstkleur"
+
+msgctxt "#31015"
+msgid "Bingie primary button text color"
+msgstr "Bingie primaire knop tekstkleur"
+
+msgctxt "#31830"
+msgid "Bingie primary text color"
+msgstr "Bingie primaire tekstkleur"
+
+msgctxt "#31020"
+msgid "Bingie progress bar background color"
+msgstr "Bingie voortgangsbalk achtergrondkleur"
+
+msgctxt "#31019"
+msgid "Bingie progress bar color"
+msgstr "Bingie voortgangsbalk kleur"
+
+msgctxt "#31836"
+msgid "Bingie ratings in details row color"
+msgstr "Bingie beoordelingen in detail rij kleur"
+
+msgctxt "#31143"
+msgid "Bingie secondary button focus text color"
+msgstr "Bingie secundaire knop focus tekstkleur"
+
+msgctxt "#31140"
+msgid "Bingie secondary button text color"
+msgstr "Bingie secundaire knop tekstkleur"
+
+msgctxt "#31831"
+msgid "Bingie secondary text color"
+msgstr "Bingie secundaire tekstkleur"
+
+msgctxt "#31002"
+msgid "Bingie spotlight plot text color"
+msgstr "Bingie Schijnwerper plot tekstkleur"
+
+msgctxt "#31412"
+msgid "Bingie sublabel text color"
+msgstr "Bingie sublabel tekstkleur"
+
+msgctxt "#31078"
+msgid "Blockbuster Movies"
+msgstr "Blockbuster Films"
+
+msgctxt "#320037"
+msgid "Border Color for Fixed MPAA Panel"
+msgstr "Randkleur voor vast Kijkwijzer-paneel"
+
+msgctxt "#31628"
+msgid "Bordersize for focused posters/thumbs"
+msgstr "Randformaat voor gerichte posters/thumbs"
+
+msgctxt "#320195"
+msgid "Born:"
+msgstr "Geboren:"
+
+msgctxt "#31076"
+msgid "British Series"
+msgstr "Britse Series"
+
+msgctxt "#31379"
+msgid "Budget"
+msgstr "Begroting"
+
+msgctxt "#31876"
+msgid "Busy Spinner Options"
+msgstr "Laadicoon opties"
+
+msgctxt "#31505"
+msgid "Busy animation color diffuse"
+msgstr "Laadicoon diffuus kleur"
+
+msgctxt "#31504"
+msgid "Busy animation image"
+msgstr "Animatie-afbeelding voor laden"
+
+msgctxt "#31139"
+msgid "Cancel recording of all episodes"
+msgstr "Opname van alle afleveringen annuleren"
+
+msgctxt "#31138"
+msgid "Cancel recording of this episode only"
+msgstr "Annuleer alleen de opname van deze aflevering"
+
+msgctxt "#31658"
+msgid "Cards"
+msgstr "Kaarten"
+
+msgctxt "#320082"
+msgid "Cast in Movies"
+msgstr "Acteurs in films"
+
+msgctxt "#320083"
+msgid "Cast in TV Shows"
+msgstr "Acteurs in TV-series"
+
+msgctxt "#31025"
+msgid "Categories"
+msgstr "Categorieën"
+
+msgctxt "#320090"
+msgid "Categories Hub"
+msgstr "Categorieën Hub"
+
+msgctxt "#320233"
+msgid "Categories List"
+msgstr "Categorieën Lijst"
+
+msgctxt "#31960"
+msgid "Center"
+msgstr "Midden"
+
+msgctxt "#31290"
+msgid "Chance of Precipitation"
+msgstr "Kans op neerslag"
+
+msgctxt "#31175"
+msgid "Change Shortcut"
+msgstr "Snelkoppeling wijzigen"
+
+msgctxt "#31855"
+msgid "Change rating"
+msgstr "Wijzig beoordeling"
+
+msgctxt "#31957"
+msgid "Channel list"
+msgstr "Kanalenlijst"
+
+msgctxt "#320002"
+msgid "Choose Art"
+msgstr "Kies afbeelding"
+
+msgctxt "#320100"
+msgid "Choose a profile icon"
+msgstr "Kies een profielpictogram"
+
+msgctxt "#31941"
+msgid "Classic"
+msgstr "Klassiek"
+
+msgctxt "#31057"
+msgid "ClearArt"
+msgstr "ClearArt"
+
+msgctxt "#31705"
+msgid "Clock"
+msgstr "Klok"
+
+msgctxt "#31308"
+msgid "Close"
+msgstr "Sluiten"
+
+msgctxt "#320065"
+msgid "Collection"
+msgstr "Collectie"
+
+msgctxt "#31475"
+msgid "Color for buttons in the skin"
+msgstr "Kleur voor knoppen in het thema"
+
+msgctxt "#31591"
+msgid "Color theme during day time"
+msgstr "Kleurthema overdag"
+
+msgctxt "#31592"
+msgid "Color theme during night time"
+msgstr "Kleurthema tijdens de nacht"
+
+msgctxt "#31462"
+msgid "Color themes"
+msgstr "Kleurenthema's"
+
+msgctxt "#320103"
+msgid "Comedies"
+msgstr "Komedies"
+
+msgctxt "#31157"
+msgid "Comedy Movies"
+msgstr "Komische Films"
+
+msgctxt "#31703"
+msgid "Configure Header for Home screen"
+msgstr "Koptekst voor Thuisbasis configureren"
+
+msgctxt "#31702"
+msgid "Configure Header for all windows (except home)"
+msgstr "Header configureren voor alle vensters (behalve Thuisbasis)"
+
+msgctxt "#31692"
+msgid "Configure Ratings List"
+msgstr "Beoordelingslijst configureren"
+
+msgctxt "#31731"
+msgid "Configure individually per-widget"
+msgstr "Individueel per widget configureren"
+
+msgctxt "#31013"
+msgid "Configure shortcuts"
+msgstr "Snelkoppelingen configureren"
+
+msgctxt "#31167"
+msgid "Configure the home screen menu layout"
+msgstr "De menu-indeling van Thuisbasis instellen"
+
+msgctxt "#320212"
+msgid "Content loading"
+msgstr "Inhoud laden"
+
+msgctxt "#31535"
+msgid "Continue Watching"
+msgstr "Blijven kijken"
+
+msgctxt "#31861"
+msgid "Continue Watching"
+msgstr "Blijven kijken"
+
+msgctxt "#320080"
+msgid "Created by"
+msgstr "Gemaakt door"
+
+msgctxt "#320079"
+msgid "Creator"
+msgstr "Bedenker"
+
+msgctxt "#320064"
+msgid "Creators"
+msgstr "Makers"
+
+msgctxt "#320067"
+msgid "Credits & More Info"
+msgstr "Aftiteling & meer informatie"
+
+msgctxt "#31089"
+msgid "Crew"
+msgstr "Acteurs"
+
+msgctxt "#320084"
+msgid "Crew in Movies"
+msgstr "Film-acteurs"
+
+msgctxt "#320085"
+msgid "Crew in TV Shows"
+msgstr "TV-acteurs"
+
+msgctxt "#320108"
+msgid "Crime"
+msgstr "Misdaad"
+
+msgctxt "#31532"
+msgid "Critically Acclaimed Movies"
+msgstr "Veelgeprezen Films"
+
+msgctxt "#31098"
+msgid "Critically Acclaimed TV Shows"
+msgstr "Veelgeprezen TV-series"
+
+msgctxt "#31608"
+msgid "Critics"
+msgstr "Critici"
+
+msgctxt "#320136"
+msgid "Currently Airing TV Shows"
+msgstr "Momenteel uitgezonden TV-series"
+
+msgctxt "#31979"
+msgid "Custom Header"
+msgstr "Aangepaste kop"
+
+msgctxt "#31667"
+msgid "Custom color settings"
+msgstr "Aangepaste kleurinstellingen"
+
+msgctxt "#31204"
+msgid "Customize power menu"
+msgstr "Energiemenu aanpassen"
+
+msgctxt "#31784"
+msgid "Decoder"
+msgstr "Decoder"
+
+msgctxt "#31116"
+msgid "Default"
+msgstr "Standaard"
+
+msgctxt "#31663"
+msgid "Default OSD button for Live TV playback"
+msgstr "Standaard OSD-knop voor Live TV-weergave"
+
+msgctxt "#31664"
+msgid "Default OSD button for music playback"
+msgstr "Standaard OSD-knop voor het afspelen van muziek"
+
+msgctxt "#31662"
+msgid "Default OSD button for video playback"
+msgstr "Standaard OSD-knop voor videoweergave"
+
+msgctxt "#31824"
+msgid "Default music background (as fallback if no artist fanart or fanart disabled)"
+msgstr "Standaard muziekachtergrond (als fallback als er geen artiest fanart is of fanart uitgeschakeld)"
+
+msgctxt "#31767"
+msgid "Default palette for color picker"
+msgstr "Standaardpalet voor kleurkiezer"
+
+msgctxt "#31727"
+msgid "Default position to focus in home menu"
+msgstr "Standaardpositie om te focussen in het hoofdmenu"
+
+msgctxt "#31799"
+msgid "Default widgets"
+msgstr "Standaard widgets"
+
+msgctxt "#31843"
+msgid "Details Options"
+msgstr "Detail Opties"
+
+msgctxt "#320098"
+msgid "Dialog Video Info Lists Filter"
+msgstr "Dialoog Video-informatielijsten Filter"
+
+msgctxt "#31391"
+msgid "Did you add content to your library yet?"
+msgstr "Heb je al inhoud aan je bibliotheek toegevoegd?"
+
+msgctxt "#320196"
+msgid "Died:"
+msgstr "Overleden:"
+
+msgctxt "#31813"
+msgid "Diffuse color for lyrics overlay"
+msgstr "Diffuus kleur voor tekstoverlay"
+
+msgctxt "#31506"
+msgid "Dim screen when the busy animation is active"
+msgstr "Scherm dimmen wanneer het laadicoon actief is"
+
+msgctxt "#320071"
+msgid "Directed by"
+msgstr "Geregisseerd door"
+
+msgctxt "#320070"
+msgid "Director"
+msgstr "Directeur"
+
+msgctxt "#31039"
+msgid "Disable 'New Episodes' indicator"
+msgstr "Indicator 'Nieuwe afleveringen' uitschakelen"
+
+msgctxt "#320188"
+msgid "Disable 'Top 250' indicator"
+msgstr "De 'Top 250'-indicator uitschakelen"
+
+msgctxt "#320224"
+msgid "Disable Additional Details Cast Thumbnails"
+msgstr "Extra details acteur-miniaturen uitschakelen"
+
+msgctxt "#31818"
+msgid "Disable Clearlogo in Bingie Views (text title instead)"
+msgstr "Clearlogo uitschakelen in Bingie Views (in plaats daarvan teksttitel)"
+
+msgctxt "#320148"
+msgid "Disable Collections"
+msgstr "Collecties uitschakelen"
+
+msgctxt "#320171"
+msgid "Disable Continue Watching Netflix Style"
+msgstr "Doorgaan met kijken Netflix-stijl uitschakelen"
+
+msgctxt "#320232"
+msgid "Disable Dummy Spotlight Widget"
+msgstr "Dummy Schijnwerper Widget uitschakelen"
+
+msgctxt "#31653"
+msgid "Disable Extra Fanart"
+msgstr "Extra fanart uitschakelen"
+
+msgctxt "#31268"
+msgid "Disable FanArt"
+msgstr "FanArt uitschakelen"
+
+msgctxt "#320046"
+msgid "Disable Highlight Widget (use current layout)"
+msgstr "Widget markeren uitschakelen (huidige lay-out gebruiken)"
+
+msgctxt "#31715"
+msgid "Disable Kodi screensaver on fullscreen music playback"
+msgstr "Kodi-schermbeveiliging uitschakelen bij muziekweergave op volledig scherm"
+
+msgctxt "#31006"
+msgid "Disable Media/Codec Info in Bingie Views"
+msgstr "Media/Codec-info in Bingie-weergaven uitschakelen"
+
+msgctxt "#320178"
+msgid "Disable Netflix logo on Home and Settings"
+msgstr "Netflix-logo op Thuisbasis en Instellingen uitschakelen"
+
+msgctxt "#31198"
+msgid "Disable Powermenu on Home"
+msgstr "Powermenu op Thuisbasis uitschakelen"
+
+msgctxt "#320175"
+msgid "Disable Profile on Sideblade Menu"
+msgstr "Profiel op zijbladmenu uitschakelen"
+
+msgctxt "#31028"
+msgid "Disable Seek/Jump Indicator"
+msgstr "Zoek/sprongindicator uitschakelen"
+
+msgctxt "#31881"
+msgid "Disable Spotlight Widget"
+msgstr "Schijnwerper-widget uitschakelen"
+
+msgctxt "#320177"
+msgid "Disable Static Slim Menu"
+msgstr "Statisch menu uitschakelen"
+
+msgctxt "#320153"
+msgid "Disable Sub Label on Spotlight"
+msgstr "Subetiket op Schijnwerper uitschakelen"
+
+msgctxt "#31890"
+msgid "Disable Thumbs Up/Down"
+msgstr "Duimen omhoog/omlaag uitschakelen"
+
+msgctxt "#320168"
+msgid "Disable Top250 Sublabel on Home and Bingie Views"
+msgstr "Top250-sublabel in Thuisbasis en Bingieweergave uitschakelen"
+
+msgctxt "#320151"
+msgid "Disable Top250 Sublabel on Video Info"
+msgstr "Top250 sublabel op video-info uitschakelen"
+
+msgctxt "#320181"
+msgid "Disable Total Media Count in Bingie Views"
+msgstr "Totaal keer bekeken uitschakelen in Bingie Views"
+
+msgctxt "#31041"
+msgid "Disable (splash image instead)"
+msgstr "Uitschakelen (splash-afbeelding in plaats daarvan)"
+
+msgctxt "#31265"
+msgid "Disable all submenus"
+msgstr "Alle submenu's uitschakelen"
+
+msgctxt "#31332"
+msgid "Disable background-overlay in lyrics window"
+msgstr "Achtergrond-overlay in songtekstvenster uitschakelen"
+
+msgctxt "#31736"
+msgid "Disable clearart in Now Playing info bar"
+msgstr "Clearart in de infobalk van afspelen uitschakelen"
+
+msgctxt "#31924"
+msgid "Disable clock in Now Playing info bar"
+msgstr "Klok in infobalk afspelen uitschakelen"
+
+msgctxt "#31634"
+msgid "Disable discart in Now Playing info bar"
+msgstr "Disart in de infobalk van afspelen uitschakelen"
+
+msgctxt "#31345"
+msgid "Disable header completely"
+msgstr "Kopregel volledig uitschakelen"
+
+msgctxt "#31107"
+msgid "Disbanded:"
+msgstr "Opgeheven:"
+
+msgctxt "#31368"
+msgid "Disc Art"
+msgstr "Schijf Kunst"
+
+msgctxt "#31158"
+msgid "Disney & Pixar Films"
+msgstr "Disney & Pixar Films"
+
+msgctxt "#320047"
+msgid "Display Clearlogo as fallback on landscape images"
+msgstr "Clearlogo weergeven om terug te vallen wanneer landschaps-afbeeldingen niet laden"
+
+msgctxt "#31675"
+msgid "Display Tags on Widgets"
+msgstr "Tags weergeven op widgets"
+
+msgctxt "#31648"
+msgid "Display tags/labels for episodes"
+msgstr "Tags/labels voor afleveringen weergeven"
+
+msgctxt "#31030"
+msgid "Display weather"
+msgstr "Het weer weergeven"
+
+msgctxt "#31357"
+msgid "Do not auto rotate the widgets"
+msgstr "De widgets niet automatisch roteren"
+
+msgctxt "#31673"
+msgid "Do not display channel logo in the guide"
+msgstr "Kanaallogo niet weergeven in de gids"
+
+msgctxt "#31333"
+msgid "Do not display channel names in the guide"
+msgstr "Toon geen kanaalnamen in de gids"
+
+msgctxt "#31642"
+msgid "Do not display channel numbers in the guide"
+msgstr "Kanaalnummers niet weergeven in de gids"
+
+msgctxt "#31232"
+msgid "Do not hide OSD infopanel on fullscreen music playback"
+msgstr "OSD-infopaneel niet verbergen bij schermvullende muziekweergave"
+
+msgctxt "#31159"
+msgid "Documentaries"
+msgstr "Documentaires"
+
+msgctxt "#31160"
+msgid "Docuseries"
+msgstr "Docuserie"
+
+msgctxt "#31825"
+msgid "Don't use rich artwork on the OSD at livetv playback"
+msgstr "Gebruik geen rijke illustraties op de OSD bij Live TV-weergave"
+
+msgctxt "#320102"
+msgid "Dramas"
+msgstr "Drama's"
+
+msgctxt "#31872"
+msgid "E"
+msgstr "E"
+
+msgctxt "#31014"
+msgid "Edit menu shortcuts"
+msgstr "Snelkoppelingen in het menu Bewerken"
+
+msgctxt "#320088"
+msgid "Emmy"
+msgstr "Emmy"
+
+msgctxt "#31487"
+msgid "Enable/disable views"
+msgstr "Weergaven in-/uitschakelen"
+
+msgctxt "#320182"
+msgid "Enable Animated Discart on Supported OSD"
+msgstr "Animatiediscart inschakelen op ondersteunde OSD"
+
+msgctxt "#320164"
+msgid "Enable Audio Codec on Details Row"
+msgstr "Audio Codec inschakelen op Details Rij"
+
+msgctxt "#320231"
+msgid "Enable Auto Play Trailer Only for Highlight Widget"
+msgstr "Trailer alleen automatisch afspelen voor Highlight Widget inschakelen"
+
+msgctxt "#31017"
+msgid "Enable Bingie Video OSD Layout"
+msgstr "Bingie Video OSD-indeling inschakelen"
+
+msgctxt "#320156"
+msgid "Enable Circular Navigation"
+msgstr "Circulaire navigatie inschakelen"
+
+msgctxt "#320162"
+msgid "Enable Color MPAA Icons"
+msgstr "Kleur Kijkwijzer-pictogrammen inschakelen"
+
+msgctxt "#320163"
+msgid "Enable Color MPAA Icons With Fixed Panel Size"
+msgstr "Kleur Kijkwijzer-pictogrammen met vaste paneelgrootte inschakelen"
+
+msgctxt "#31908"
+msgid "Enable Details Icons (cast, director, genre, etc...)"
+msgstr "Pictogrammen voor details inschakelen (cast, regisseur, genre, enz...)"
+
+msgctxt "#31765"
+msgid "Enable Emby coverart plugin compatability"
+msgstr "Emby coverart plugin compatibiliteit inschakelen"
+
+msgctxt "#31031"
+msgid "Enable FanArt"
+msgstr "FanArt inschakelen"
+
+msgctxt "#320183"
+msgid "Enable Finish Time, Current Time, & Total Duration for OSD Playback"
+msgstr "Eindtijd, huidige tijd en totale duur voor OSD-weergave inschakelen"
+
+msgctxt "#320045"
+msgid "Enable Highlight Widget"
+msgstr "Widget markeren inschakelen"
+
+msgctxt "#31123"
+msgid "Enable Moving Frame in Home & Hubs"
+msgstr "Bewegende frame inschakelen in Thuisbasis & Hubs"
+
+msgctxt "#31075"
+msgid "Enable Netflix startup animation in 4K"
+msgstr "Start Netflix-opstartanimatie in 4K"
+
+msgctxt "#31302"
+msgid "Enable Next Aired notifications for TV Shows"
+msgstr "Meldingen voor volgende uitzending inschakelen voor TV-series"
+
+msgctxt "#320187"
+msgid "Enable OSD Seek/Jump Indicator"
+msgstr "OSD-indicator voor zoeken/springen inschakelen"
+
+msgctxt "#31807"
+msgid "Enable OSD of buffering progess during video playback"
+msgstr "OSD van bufferprogress tijdens videoweergave inschakelen"
+
+msgctxt "#31566"
+msgid "Enable PVR artwork"
+msgstr "PVR-kunstwerk inschakelen"
+
+msgctxt "#320185"
+msgid "Enable Plot on Pause"
+msgstr "Uitzetten op pauze inschakelen"
+
+msgctxt "#320048"
+msgid "Enable Ratings"
+msgstr "Beoordelingen inschakelen"
+
+msgctxt "#31644"
+msgid "Enable Snow effect on Home"
+msgstr "Sneeuweffect inschakelen in Thuisbasis"
+
+msgctxt "#320099"
+msgid "Enable Streaming Services Filter"
+msgstr "Filters voor Streamingdiensten inschakelen"
+
+msgctxt "#31042"
+msgid "Enable Studio Logo"
+msgstr "Studio logo inschakelen"
+
+msgctxt "#320161"
+msgid "Enable UK MPAA Icons on Details Row (only for US and UK ratings)"
+msgstr "Britse kijkwijzer-pictogrammen inschakelen op de Detail-rij (alleen voor Amerikaanse en Britse classificaties)"
+
+msgctxt "#31805"
+msgid "Enable Zoom Effect"
+msgstr "Zoomeffect inschakelen"
+
+msgctxt "#320237"
+msgid "Enable air date"
+msgstr "Uitzenddatum inschakelen"
+
+msgctxt "#31341"
+msgid "Enable artist slideshow while playing music"
+msgstr "Diavoorstelling van artiest inschakelen tijdens het afspelen van muziek"
+
+msgctxt "#31708"
+msgid "Enable artwork lookups for PVR"
+msgstr "Kunstwerk zoeken voor PVR inschakelen"
+
+msgctxt "#320060"
+msgid "Enable auto pause on OSD open"
+msgstr "Automatisch pauzeren bij het openen van de OSD inschakelen"
+
+msgctxt "#31723"
+msgid "Enable auto rotate"
+msgstr "Automatisch roteren inschakelen"
+
+msgctxt "#31771"
+msgid "Enable auto scroll for plots/descriptions"
+msgstr "Automatisch scrollen voor plots/beschrijvingen inschakelen"
+
+msgctxt "#31072"
+msgid "Enable autoclose video OSD"
+msgstr "Video-OSD automatisch sluiten inschakelen"
+
+msgctxt "#31812"
+msgid "Enable automatic creation of wall backgrounds"
+msgstr "Automatisch achtergronden voor wanden maken"
+
+msgctxt "#31099"
+msgid "Enable automatic download of Artwork during Library scan"
+msgstr "Automatisch downloaden van artwork inschakelen tijdens bibliotheekscan"
+
+msgctxt "#31266"
+msgid "Enable background animation"
+msgstr "Achtergrondanimatie inschakelen"
+
+msgctxt "#31619"
+msgid "Enable circular navigation"
+msgstr "Circulaire navigatie inschakelen"
+
+msgctxt "#31589"
+msgid "Enable day/night color themes"
+msgstr "Dag/nacht-kleurenthema's inschakelen"
+
+msgctxt "#31515"
+msgid "Enable indicator for Movie Sets"
+msgstr "Indicator voor filmsets inschakelen"
+
+msgctxt "#31514"
+msgid "Enable indicator for in progress items"
+msgstr "Indicator voor items die bezig zijn inschakelen"
+
+msgctxt "#31516"
+msgid "Enable indicator for unwatched episodes"
+msgstr "Indicator voor niet bekeken afleveringen inschakelen"
+
+msgctxt "#31568"
+msgid "Enable indicator for unwatched items"
+msgstr "Indicator voor niet bekeken items inschakelen"
+
+msgctxt "#31513"
+msgid "Enable indicator for watched items"
+msgstr "Indicator voor bekeken items inschakelen"
+
+msgctxt "#31789"
+msgid "Enable indicator if item is playing or is recording/timer (pvr)"
+msgstr "Indicator inschakelen als item wordt afgespeeld of is opgenomen/timer (pvr)"
+
+msgctxt "#31318"
+msgid "Enable kiosk mode"
+msgstr "Kioskmodus inschakelen"
+
+msgctxt "#31256"
+msgid "Enable large onscreen playback and seek indicators"
+msgstr "Grote afspeel- en zoekindicatoren op het scherm inschakelen"
+
+msgctxt "#31738"
+msgid "Enable letters popup while scrolling"
+msgstr "Letter popup inschakelen tijdens scrollen"
+
+msgctxt "#31616"
+msgid "Enable mini guide on fullscreen Live TV"
+msgstr "Minigids inschakelen op volledig scherm Live TV"
+
+msgctxt "#31004"
+msgid "Enable moving frame"
+msgstr "Bewegend frame inschakelen"
+
+msgctxt "#31550"
+msgid "Enable option for a complete keyboard"
+msgstr "Optie inschakelen voor een volledig toetsenbord"
+
+msgctxt "#31746"
+msgid "Enable quick-jump alphabet navigation strip"
+msgstr "Snel springen alfabetnavigatiestrook inschakelen"
+
+msgctxt "#31710"
+msgid "Enable skin helper artwork lookups for addons"
+msgstr "Skin helper artwork lookups inschakelen voor addons"
+
+msgctxt "#31792"
+msgid "Enable small PVR Channels OSD"
+msgstr "Kleine PVR-kanalen OSD inschakelen"
+
+msgctxt "#31323"
+msgid "Enable smart shortcuts"
+msgstr "Slimme snelkoppelingen inschakelen"
+
+msgctxt "#31321"
+msgid "Enable smart shortcuts for favourites"
+msgstr "Slimme snelkoppelingen voor favorieten inschakelen"
+
+msgctxt "#31320"
+msgid "Enable smart shortcuts for playlists"
+msgstr "Slimme snelkoppelingen inschakelen voor afspeellijsten"
+
+msgctxt "#31339"
+msgid "Enable smart shortcuts for the Emby addon"
+msgstr "Slimme snelkoppelingen inschakelen voor de Emby addon"
+
+msgctxt "#31737"
+msgid "Enable square submenu"
+msgstr "Vierkant submenu inschakelen"
+
+msgctxt "#31596"
+msgid "Enable the Now Playing info bar"
+msgstr "De infobalk van Afspelen inschakelen"
+
+msgctxt "#31902"
+msgid "Enable welcome message notification"
+msgstr "Notificatie welkomstbericht inschakelen"
+
+msgctxt "#31717"
+msgid "Enable widget force refresh"
+msgstr "Geforceerde verversing van widget inschakelen"
+
+msgctxt "#31183"
+msgid "Enhanced all-in-one homescreen"
+msgstr "Verbeterde alles-in-één Thuisbasis"
+
+msgctxt "#31873"
+msgid "Ep"
+msgstr "Aflevering"
+
+msgctxt "#320004"
+msgid "Episode"
+msgstr "Aflevering"
+
+msgctxt "#31579"
+msgid "Episode titles related to"
+msgstr "Afleveringstitels gerelateerd aan"
+
+msgctxt "#31867"
+msgid "Episodes"
+msgstr "Afleveringen"
+
+msgctxt "#31161"
+msgid "European Movies"
+msgstr "Europese Films"
+
+msgctxt "#320094"
+msgid "Exit"
+msgstr "Sluiten"
+
+msgctxt "#320029"
+msgid "Exit Netflix"
+msgstr "Netflix afsluiten"
+
+msgctxt "#31433"
+msgid "Extended"
+msgstr "Uitgebreid"
+
+msgctxt "#31269"
+msgid "Extended Info"
+msgstr "Uitgebreide info"
+
+msgctxt "#31950"
+msgid "Extra fanart (slideshow)"
+msgstr "Extra fanart (diashow)"
+
+msgctxt "#31253"
+msgid "FAST FORWARD"
+msgstr "SNEL VOORUIT"
+
+msgctxt "#320166"
+msgid "Fake Codec Info on Details Row (if no codec info is present)"
+msgstr "Valse codec-info op de Details-rij (als er geen codec-info aanwezig is)"
+
+msgctxt "#31434"
+msgid "FanArt"
+msgstr "FanArt"
+
+msgctxt "#31121"
+msgid "Fanart Visibility"
+msgstr "Fanart Zichtbaarheid"
+
+msgctxt "#320210"
+msgid "Fanarts"
+msgstr "Fanarts"
+
+msgctxt "#320109"
+msgid "Fantasy"
+msgstr "Fantasie"
+
+msgctxt "#31956"
+msgid "Fast Forward"
+msgstr "SNEL VOORUIT"
+
+msgctxt "#31291"
+msgid "Fetching forecast info..."
+msgstr "Weerverwachting ophalen..."
+
+msgctxt "#31112"
+msgid "Finishes at"
+msgstr "Eindigt bij"
+
+msgctxt "#320191"
+msgid "Fixed Focus Home Panel"
+msgstr "Vaste Focus Thuisbasis"
+
+msgctxt "#31725"
+msgid "Focus the homemenu when entering homescreen"
+msgstr "Focus Thuisbasis bij het openen van Thuisbasis"
+
+msgctxt "#31233"
+msgid "Focuscolor for buttons in the skin"
+msgstr "Focuskleur voor knoppen in de skin"
+
+msgctxt "#31174"
+msgid "Focuscolor for home tiles and widgets"
+msgstr "Focuskleur voor Thuisbasis-tegels en widgets"
+
+msgctxt "#31788"
+msgid "Focused/active color for radiobuttons and spin controls"
+msgstr "Gefocuste/actieve kleur voor radiobuttons en draaiknoppen"
+
+msgctxt "#31459"
+msgid "Focused textcolor for buttons in the skin"
+msgstr "Gerichte tekstkleur voor knoppen in de skin"
+
+msgctxt "#31187"
+msgid "Food & Travel"
+msgstr "Eten & Reizen"
+
+msgctxt "#31916"
+msgid "Footer Colors"
+msgstr "Kleuren voettekst"
+
+msgctxt "#320173"
+msgid "Footer (except Bingie Views)"
+msgstr "Footer (behalve Bingie Views)"
+
+msgctxt "#31471"
+msgid "Footer panel color"
+msgstr "Kleur voettekstpaneel"
+
+msgctxt "#31024"
+msgid "Force stop playback when not in fullscreen mode (exc. Live TV)"
+msgstr "Afspelen forceren stoppen wanneer niet in volledig scherm (m.u.v. Live TV)"
+
+msgctxt "#31518"
+msgid "Forced views"
+msgstr "Gedwongen weergaven"
+
+msgctxt "#31106"
+msgid "Formed:"
+msgstr "Gevormd:"
+
+msgctxt "#320158"
+msgid "General"
+msgstr "Algemeen"
+
+msgctxt "#31929"
+msgid "General Artwork & Details Options"
+msgstr "Algemene artwork en detailopties"
+
+msgctxt "#320020"
+msgid "General Audiences Panel Color"
+msgstr "Algemene publiek Panel Kleur"
+
+msgctxt "#31486"
+msgid "General Color Settings"
+msgstr "Algemene kleurinstellingen"
+
+msgctxt "#31005"
+msgid "General Skin Settings"
+msgstr "Algemene huidinstellingen"
+
+msgctxt "#31260"
+msgid "General panels color"
+msgstr "Algemene kleur panelen"
+
+msgctxt "#31572"
+msgid "General text color for highlights and headers"
+msgstr "Algemene tekstkleur voor highlights en kopteksten"
+
+msgctxt "#31460"
+msgid "General textcolor"
+msgstr "Algemene tekstkleur"
+
+msgctxt "#31267"
+msgid "General widget settings"
+msgstr "Algemene widget instellingen"
+
+msgctxt "#31973"
+msgid "Genre Type"
+msgstr "Type genre"
+
+msgctxt "#320068"
+msgid "Genres"
+msgstr "Genres"
+
+msgctxt "#31646"
+msgid "Global background"
+msgstr "Algemene achtergrond"
+
+msgctxt "#31142"
+msgid "Global background settings"
+msgstr "Algemene achtergrondinstellingen"
+
+msgctxt "#320087"
+msgid "Golden Globe"
+msgstr "Golden Globe"
+
+msgctxt "#31188"
+msgid "HBO Shows"
+msgstr "HBO-programma's"
+
+msgctxt "#320180"
+msgid "Halloween Animation"
+msgstr "Halloween Animatie"
+
+msgctxt "#31782"
+msgid "Hardware decoding"
+msgstr "Hardwaredecodering"
+
+msgctxt "#31915"
+msgid "Header Colors"
+msgstr "Kleuren koptekst"
+
+msgctxt "#31791"
+msgid "Header panel color"
+msgstr "Kleur koptekstpaneel"
+
+msgctxt "#320174"
+msgid "Hide Ratings and Studio Icon While Trailer is Playing"
+msgstr "Verberg beoordelingen en studiopictogrammen terwijl trailer wordt afgespeeld"
+
+msgctxt "#320228"
+msgid "Hide Ratings and Studio Logo on Spotlight"
+msgstr "Verberg beoordelingen en het studiologo in Schijnwerper"
+
+msgctxt "#320227"
+msgid "Hide Ratings and Studio Logo on Widgets"
+msgstr "Verberg beoordelingen en het studiologo op widgets"
+
+msgctxt "#31711"
+msgid "Hide Row Details for Unwatched/In-Progress Episodes"
+msgstr "Rij details verbergen voor niet bekeken/lopende afleveringen"
+
+msgctxt "#31141"
+msgid "Hide fanart background"
+msgstr "Verberg fanart achtergrond"
+
+msgctxt "#31309"
+msgid "Hide panel background"
+msgstr "Verberg paneelachtergrond"
+
+msgctxt "#320137"
+msgid "Highest Revenue Movies"
+msgstr "Films met de hoogste opbrengst"
+
+msgctxt "#31061"
+msgid "Highlight Layout"
+msgstr "Markeer lay-out"
+
+msgctxt "#320051"
+msgid "Highlight Widget"
+msgstr "Widget markeren"
+
+msgctxt "#31776"
+msgid "Highlight channel row in guide"
+msgstr "Markeer kanaalrij in gids"
+
+msgctxt "#320110"
+msgid "History & War"
+msgstr "Geschiedenis & Oorlog"
+
+msgctxt "#31189"
+msgid "History & War Movies"
+msgstr "Geschiedenis & Oorlogsfilms"
+
+msgctxt "#31744"
+msgid "Home mainmenu/submenu focused text color"
+msgstr "Thuisbasis hoofdmenu/submenu geselecteerde tekstkleur"
+
+msgctxt "#31743"
+msgid "Home mainmenu/submenu text color"
+msgstr "Thuisbasis hoofdmenu/submenu tekstkleur"
+
+msgctxt "#31077"
+msgid "Home mainmenu buttons color"
+msgstr "Thuisbasis Kleur knoppen"
+
+msgctxt "#31834"
+msgid "Home mainmenu focus button color"
+msgstr "Thuisbasis kleur focusknop"
+
+msgctxt "#320001"
+msgid "Home mainmenu line under icons"
+msgstr "Thuisbasis hoofdmenu lijn onder pictogrammen"
+
+msgctxt "#31115"
+msgid "Homescreen layout"
+msgstr "Indeling Thuisbasis"
+
+msgctxt "#31445"
+msgid "Horizontal Panel"
+msgstr "Horizontaal paneel"
+
+msgctxt "#31635"
+msgid "Horizontal navigation"
+msgstr "Horizontale navigatie"
+
+msgctxt "#320105"
+msgid "Horror"
+msgstr "Horror"
+
+msgctxt "#31048"
+msgid "Horror Movies"
+msgstr "Horrorfilms"
+
+msgctxt "#31287"
+msgid "Hourly Forecast"
+msgstr "Weervoorspelling per uur"
+
+msgctxt "#31393"
+msgid "Hubs can be configured with their own widgets here, but they need to be unlocked first.[CR]When you're done, lock them in:[CR]Settings -> Skin Settings -> Configure Shortcuts tab -> Lock Hubs."
+msgstr "Hubs kunnen hier worden geconfigureerd met hun eigen widgets, maar ze moeten eerst worden ontgrendeld.[CR]Als je klaar bent, vergrendel ze dan:[CR]Instellingen -> Thema-instellingen -> Tabblad Snelkoppelingen configureren -> Hubs vergrendelen."
+
+msgctxt "#31190"
+msgid "Hulu Original Series"
+msgstr "Hulu Original Serie"
+
+msgctxt "#31906"
+msgid "IMDB Rating"
+msgstr "IMDB-beoordeling"
+
+msgctxt "#320042"
+msgid "IMDB Top 250"
+msgstr "IMDB top 250"
+
+msgctxt "#31390"
+msgid "I want to keep my current config"
+msgstr "Ik wil mijn huidige configuratie behouden"
+
+msgctxt "#31500"
+msgid "Image"
+msgstr "Afbeelding"
+
+msgctxt "#31657"
+msgid "In library"
+msgstr "In bibliotheek"
+
+msgctxt "#31783"
+msgid "Inactive"
+msgstr "Inactief"
+
+msgctxt "#320086"
+msgid "Information"
+msgstr "Informatie"
+
+msgctxt "#31449"
+msgid "Interval (in seconds) for multi-image and random fanart backgrounds"
+msgstr "Interval (in seconden) voor multi-image en willekeurige fanart achtergronden"
+
+msgctxt "#31806"
+msgid "Jump to a specific time (hh:mm:ss)"
+msgstr "Naar een specifieke tijd springen (uu:mm:ss)"
+
+msgctxt "#320104"
+msgid "Kids & Family"
+msgstr "Kinderen & Familie"
+
+msgctxt "#31537"
+msgid "Kids & Family Movies"
+msgstr "Films voor kinderen en familie"
+
+msgctxt "#31109"
+msgid "Label:"
+msgstr "Label:"
+
+msgctxt "#31603"
+msgid "Label overlays on posters and thumbs panel color"
+msgstr "Label overlays op posters en duimen paneel kleur"
+
+msgctxt "#31604"
+msgid "Label overlays on posters and thumbs text color"
+msgstr "Label overlays op posters en duimen tekstkleur"
+
+msgctxt "#31056"
+msgid "Landscape"
+msgstr "Landschap"
+
+msgctxt "#31430"
+msgid "Landscape"
+msgstr "Landschap"
+
+msgctxt "#31938"
+msgid "Landscape Details"
+msgstr "Details landschap"
+
+msgctxt "#31937"
+msgid "Landscape Large"
+msgstr "Landschap Groot"
+
+msgctxt "#31431"
+msgid "Landscape Single Row"
+msgstr "Landschap Enkele rij"
+
+msgctxt "#31932"
+msgid "Landscape Small"
+msgstr "Landschap Klein"
+
+msgctxt "#31940"
+msgid "Landscape Widebox"
+msgstr "Landschap Wijde Doos"
+
+msgctxt "#31432"
+msgid "Landscape details"
+msgstr "Details landschap"
+
+msgctxt "#31945"
+msgid "Large Color Icons"
+msgstr "Grote kleurenpictogrammen"
+
+msgctxt "#31427"
+msgid "Large Poster"
+msgstr "Grote poster"
+
+msgctxt "#31944"
+msgid "Large White Icons"
+msgstr "Grote witte pictogrammen"
+
+msgctxt "#320205"
+msgid "Last Air Date"
+msgstr "Laatste uitzenddatum"
+
+msgctxt "#31293"
+msgid "Last updated"
+msgstr "Laatst bijgewerkt"
+
+msgctxt "#31334"
+msgid "Last updated"
+msgstr "Laatst bijgewerkt"
+
+msgctxt "#31214"
+msgid "Latest Episode"
+msgstr "Laatste aflevering"
+
+msgctxt "#320036"
+msgid "Layout for Widget"
+msgstr "Opmaak voor Widget"
+
+msgctxt "#31507"
+msgid "Layout for Widgets"
+msgstr "Lay-out voor widgets"
+
+msgctxt "#31962"
+msgid "Left"
+msgstr "Links"
+
+msgctxt "#31351"
+msgid "Let skin decide based on content/artwork"
+msgstr "Laat thema beslissen op basis van inhoud/kunstwerk"
+
+msgctxt "#320091"
+msgid "Library List"
+msgstr "Bibliotheeklijst"
+
+msgctxt "#31443"
+msgid "List"
+msgstr "Lijst"
+
+msgctxt "#31828"
+msgid "Listitem border focus color"
+msgstr "Lijstitem rand focus kleur"
+
+msgctxt "#31088"
+msgid "Live-TV"
+msgstr "Live-tv"
+
+msgctxt "#320096"
+msgid "Local library"
+msgstr "Plaatselijke bibliotheek"
+
+msgctxt "#31926"
+msgid "Lock Widgets in Hubs"
+msgstr "Widgets vergrendelen in hubs"
+
+msgctxt "#31073"
+msgid "Lock view"
+msgstr "Weergave slot"
+
+msgctxt "#31058"
+msgid "Logo"
+msgstr "Logo"
+
+msgctxt "#31461"
+msgid "Logos"
+msgstr "Logos"
+
+msgctxt "#31442"
+msgid "Low List"
+msgstr "Lage lijst"
+
+msgctxt "#320033"
+msgid "MANAGE PROFILES"
+msgstr "PROFIELEN BEHEREN"
+
+msgctxt "#320019"
+msgid "MPAA Color Panel"
+msgstr "Kijkwijzer Kleurenpanel"
+
+msgctxt "#320026"
+msgid "MPAA Font Color"
+msgstr "Kijkwijzer lettertypekleur"
+
+msgctxt "#31978"
+msgid "Mainmenu Title"
+msgstr "Titel hoofdmenu"
+
+msgctxt "#31835"
+msgid "Mainmenu secondary focus button color"
+msgstr "Kleur knop secundaire focus hoofdmenu"
+
+msgctxt "#31800"
+msgid "Manage color themes"
+msgstr "Kleurenthema's beheren"
+
+msgctxt "#31801"
+msgid "Manage skin backups"
+msgstr "Back-ups van thema beheren"
+
+msgctxt "#31533"
+msgid "Marvel Movies"
+msgstr "Marvel Films"
+
+msgctxt "#31191"
+msgid "Marvel TV Shows"
+msgstr "Marvel TV-series"
+
+msgctxt "#31857"
+msgid "Match"
+msgstr "Wedstrijd"
+
+msgctxt "#31894"
+msgid "Maximum (inclusive) User Rating to Show Thumbs Down"
+msgstr "Maximale (inclusieve) gebruikersbeoordeling om Duim Omlaag weer te geven"
+
+msgctxt "#31512"
+msgid "Media Items Indicators"
+msgstr "Media-items Indicatoren"
+
+msgctxt "#31221"
+msgid "Media Library Views"
+msgstr "Mediabibliotheek weergeven"
+
+msgctxt "#31222"
+msgid "Media details general text color"
+msgstr "Mediadetails algemene tekstkleur"
+
+msgctxt "#31223"
+msgid "Media details general text shadow color"
+msgstr "Mediadetails algemene tekst schaduwkleur"
+
+msgctxt "#31226"
+msgid "Media details header/highlights color"
+msgstr "Media details header/highlights kleur"
+
+msgctxt "#31227"
+msgid "Media details header/highlights shadow color"
+msgstr "Mediadetails header/highlights schaduwkleur"
+
+msgctxt "#31472"
+msgid "Media details panel color"
+msgstr "Details mediapaneel kleur"
+
+msgctxt "#31571"
+msgid "Media listitem focus color"
+msgstr "Media lijstitem focus kleur"
+
+msgctxt "#31570"
+msgid "Media listitem text color (focused)"
+msgstr "Media-item tekstkleur (gefocust)"
+
+msgctxt "#31569"
+msgid "Media listitem text color (unfocused)"
+msgstr "Media-item tekstkleur (onscherp)"
+
+msgctxt "#31257"
+msgid "Memory Usage"
+msgstr "Geheugengebruik"
+
+msgctxt "#31846"
+msgid "Menu Options"
+msgstr "Menu-opties"
+
+msgctxt "#320038"
+msgid "Metacritic Rating"
+msgstr "Metacritic Score"
+
+msgctxt "#31958"
+msgid "Mini guide"
+msgstr "Minigids"
+
+msgctxt "#31893"
+msgid "Minimum (inclusive) User Rating to Show Thumbs Up"
+msgstr "Minimale (inclusieve) gebruikersbeoordeling om duimen omhoog te tonen"
+
+msgctxt "#320208"
+msgid "Minutes"
+msgstr "Minuten"
+
+msgctxt "#31965"
+msgid "Modern"
+msgstr "Modern"
+
+msgctxt "#31966"
+msgid "Modern (Alternative)"
+msgstr "Modern (Alternatief)"
+
+msgctxt "#31853"
+msgid "More Episodes"
+msgstr "Meer afleveringen"
+
+msgctxt "#31838"
+msgid "More Info"
+msgstr "Meer info"
+
+msgctxt "#31622"
+msgid "More Like This"
+msgstr "Meer zoals dit"
+
+msgctxt "#320144"
+msgid "Most Played Movies"
+msgstr "Meest gespeelde films"
+
+msgctxt "#320145"
+msgid "Most Played TV Shows"
+msgstr "Meest gespeelde TV-series"
+
+msgctxt "#320138"
+msgid "Most Voted Movies"
+msgstr "Meest beoordeelde films"
+
+msgctxt "#320139"
+msgid "Most Voted TV Shows"
+msgstr "Meest beoordeelde TV-series"
+
+msgctxt "#320146"
+msgid "Most Watched Movies"
+msgstr "Meest bekeken films"
+
+msgctxt "#320147"
+msgid "Most Watched TV Shows"
+msgstr "Meest bekeken TV-series"
+
+msgctxt "#320201"
+msgid "Movie Collections"
+msgstr "Film Collecties"
+
+msgctxt "#31651"
+msgid "Movie sets"
+msgstr "Filmsets"
+
+msgctxt "#31556"
+msgid "Movie titles by director"
+msgstr "Filmtitels per regisseur"
+
+msgctxt "#31300"
+msgid "Movie titles from country"
+msgstr "Filmtitels van land"
+
+msgctxt "#31557"
+msgid "Movie titles from country"
+msgstr "Filmtitels van land"
+
+msgctxt "#320057"
+msgid "Movies"
+msgstr "Films"
+
+msgctxt "#31865"
+msgid "Movies Hub"
+msgstr "Films Hub"
+
+msgctxt "#31035"
+msgid "Movies in progress"
+msgstr "Films die nog niet uitgekeken zijn"
+
+msgctxt "#31753"
+msgid "Multiple widgets"
+msgstr "Meerdere widgets"
+
+msgctxt "#31049"
+msgid "Music & Musicals"
+msgstr "Muziek & Musicals"
+
+msgctxt "#31670"
+msgid "Music playback"
+msgstr "Muziek afspelen"
+
+msgctxt "#31580"
+msgid "Music videos title related to"
+msgstr "Muziekvideo's titel gerelateerd aan"
+
+msgctxt "#31383"
+msgid "My Custom List"
+msgstr "Mijn aangepaste lijst"
+
+msgctxt "#31252"
+msgid "My Hub"
+msgstr "Mijn Hub"
+
+msgctxt "#31534"
+msgid "My List"
+msgstr "Mijn Lijst"
+
+msgctxt "#320214"
+msgid "My Movie List"
+msgstr "Mijn filmlijst"
+
+msgctxt "#320215"
+msgid "My TV Show List"
+msgstr "Mijn lijst met TV-series"
+
+msgctxt "#31129"
+msgid "My TV Shows"
+msgstr "Mijn TV-series"
+
+msgctxt "#31130"
+msgid "My movies"
+msgstr "Mijn films"
+
+msgctxt "#320115"
+msgid "Mysteries"
+msgstr "Mysteries"
+
+msgctxt "#31397"
+msgid "Nah, I'll figure it out myself"
+msgstr "Nee, ik zoek het zelf wel uit."
+
+msgctxt "#31182"
+msgid "Netflix Original Movies"
+msgstr "Netflix Original Films"
+
+msgctxt "#31181"
+msgid "Netflix Original Series"
+msgstr "Netflix-serie"
+
+msgctxt "#320189"
+msgid "Netflix alternative"
+msgstr "Netflix-alternatief"
+
+msgctxt "#320236"
+msgid "Netflix default"
+msgstr "Netflix standaard"
+
+msgctxt "#320190"
+msgid "Netflix exteneded"
+msgstr "Netflix uitgebreid"
+
+msgctxt "#320075"
+msgid "Network"
+msgstr "Netwerk"
+
+msgctxt "#31355"
+msgid "Never show tags"
+msgstr "Laat nooit tags zien"
+
+msgctxt "#31837"
+msgid "New"
+msgstr "Nieuw"
+
+msgctxt "#320032"
+msgid "New & Popular"
+msgstr "Nieuw & Populair"
+
+msgctxt "#31007"
+msgid "New Episodes"
+msgstr "Nieuwe Afleveringen"
+
+msgctxt "#31866"
+msgid "New Hub"
+msgstr "Nieuwe Hub"
+
+msgctxt "#31577"
+msgid "New Releases"
+msgstr "Nieuwe Releases"
+
+msgctxt "#320053"
+msgid "New Search"
+msgstr "Nieuwe Zoekopdracht"
+
+msgctxt "#31212"
+msgid "Next Episode in"
+msgstr "Volgende aflevering in"
+
+msgctxt "#31637"
+msgid "No active weather alerts"
+msgstr "Geen actieve weerwaarschuwingen"
+
+msgctxt "#31371"
+msgid "No items in My List.[CR]Start adding Movies & TV Shows you like, just press the 'Add to My List' button from information page."
+msgstr "Geen items in Mijn Lijst.[CR]Begin met het toevoegen van films en TV-series die je leuk vindt, druk gewoon op de knop 'Toevoegen aan Mijn Lijst' op de informatiepagina."
+
+msgctxt "#31064"
+msgid "No items in this category."
+msgstr "Geen items in deze categorie."
+
+msgctxt "#31822"
+msgid "No widget assigned [click to configure]"
+msgstr "Geen widget toegewezen [klik om te configureren]."
+
+msgctxt "#31641"
+msgid "None (use current layout)"
+msgstr "Geen (gebruik de huidige lay-out)"
+
+msgctxt "#31970"
+msgid "Normal"
+msgstr "Normaal"
+
+msgctxt "#320025"
+msgid "Not Rated Panel Color"
+msgstr "Niet beoordeeld Paneelkleur"
+
+msgctxt "#31376"
+msgid "Notice"
+msgstr "Bericht"
+
+msgctxt "#31295"
+msgid "Notification TV Shows airing today"
+msgstr "Aankondiging TV Shows die vandaag worden uitgezonden"
+
+msgctxt "#31067"
+msgid "Now"
+msgstr "Nu"
+
+msgctxt "#31669"
+msgid "Now Playing Infobar"
+msgstr "Afspelen Infobalk"
+
+msgctxt "#31040"
+msgid "Now playing"
+msgstr "Afspelen"
+
+msgctxt "#31245"
+msgid "Number of rows to show in the timeline"
+msgstr "Aantal rijen dat moet worden weergegeven in de tijdlijn"
+
+msgctxt "#31389"
+msgid "OK, do it for me!"
+msgstr "Oké, doe het voor mij!"
+
+msgctxt "#31918"
+msgid "OSD Info Panel"
+msgstr "OSD-infopaneel"
+
+msgctxt "#320172"
+msgid "OSD buffering spinner color"
+msgstr "OSD laadicoon kleur"
+
+msgctxt "#31484"
+msgid "OSD buttons color"
+msgstr "Kleur OSD-knoppen"
+
+msgctxt "#31485"
+msgid "OSD buttons color focus"
+msgstr "OSD-knoppen kleur focus"
+
+msgctxt "#31473"
+msgid "OSD panel color"
+msgstr "Kleur OSD-paneel"
+
+msgctxt "#31478"
+msgid "OSD panel primary text color"
+msgstr "OSD-paneel primaire tekstkleur"
+
+msgctxt "#31479"
+msgid "OSD panel primary text shadow color"
+msgstr "Schaduwkleur OSD-paneel primaire tekst"
+
+msgctxt "#31480"
+msgid "OSD panel secondary text color"
+msgstr "Kleur secundaire tekst OSD-paneel"
+
+msgctxt "#31481"
+msgid "OSD panel secondary text shadow color"
+msgstr "Schaduwkleur secundaire tekst OSD-paneel"
+
+msgctxt "#31482"
+msgid "OSD progress bar background color"
+msgstr "OSD voortgangsbalk achtergrondkleur"
+
+msgctxt "#31547"
+msgid "OSD progress bar border color"
+msgstr "OSD voortgangsbalk randkleur"
+
+msgctxt "#31573"
+msgid "OSD progress bar buffer cache color"
+msgstr "OSD voortgangsbalk buffer cache kleur"
+
+msgctxt "#31483"
+msgid "OSD progress bar color"
+msgstr "OSD voortgangsbalk kleur"
+
+msgctxt "#320010"
+msgid "OSD volume button color"
+msgstr "Kleur OSD-volumeknop"
+
+msgctxt "#31171"
+msgid "One of the main advantages of using the skinshortcuts-script is that your menu layout is shared across skins that support this addon. This is not always convenient as you won’t get the skins default menu layout which is optimized for the skin or you have played a bit in another skin and you don’t like the menu layout now. If you see weird behavior on your home menu or you just want to start fresh and get the most out of this skin, you can reset the menu structures to the skins default settings with the button below."
+msgstr "Een van de belangrijkste voordelen van het gebruik van het skinshortcuts-script is dat je menu-layout gedeeld wordt tussen thema's die deze addon ondersteunen. Dit is niet altijd handig omdat je dan niet de standaard menu-indeling van het thema krijgt die geoptimaliseerd is voor het thema of omdat je een beetje gespeeld hebt in een ander thema en de menu-indeling je nu niet bevalt. Als je raar gedrag ziet in Thuisbasis of je wilt gewoon opnieuw beginnen en het meeste uit dit thema te halen, dan kun je de menustructuren terugzetten naar de standaardinstellingen van de thema's met de knop hieronder."
+
+msgctxt "#320165"
+msgid "Only Show Atmos Audio Codec on Details Row"
+msgstr "Toon alleen Atmos-audiocodec op de Details-rij"
+
+msgctxt "#31999"
+msgid "Only Show Logo"
+msgstr "Alleen logo tonen"
+
+msgctxt "#31348"
+msgid "Only Show Profile"
+msgstr "Alleen profiel tonen"
+
+msgctxt "#31991"
+msgid "Only Show Time"
+msgstr "Alleen tijd weergeven"
+
+msgctxt "#31992"
+msgid "Only Show Title"
+msgstr "Alleen titel weergeven"
+
+msgctxt "#31358"
+msgid "Only rotate the spotlight widget every"
+msgstr "Roteer de Schijnwerper-widget alleen elke"
+
+msgctxt "#31993"
+msgid "Only show Weather"
+msgstr "Toon alleen het weer"
+
+msgctxt "#31347"
+msgid "Only show Weather (left)"
+msgstr "Toon alleen het weer (links)"
+
+msgctxt "#31346"
+msgid "Only show Weather (right)"
+msgstr "Toon alleen het weer (rechts)"
+
+msgctxt "#31952"
+msgid "Only when OSD active"
+msgstr "Alleen wanneer OSD actief is"
+
+msgctxt "#31565"
+msgid "Open submenu"
+msgstr "Submenu openen"
+
+msgctxt "#31374"
+msgid "Option 'Enable Experimental Recommended Widgets' must be enabled in Skin Helper Widgets Settings."
+msgstr "De optie 'Experimentele aanbevolen Widgets inschakelen' moet ingeschakeld zijn in de instellingen van de Thema Helper Widgets."
+
+msgctxt "#320040"
+msgid "Oscar"
+msgstr "Oscar"
+
+msgctxt "#31285"
+msgid "Overview"
+msgstr "Overzicht"
+
+msgctxt "#31251"
+msgid "PAUSED"
+msgstr "Gepauzeerd"
+
+msgctxt "#31778"
+msgid "PVR Guide focused item color"
+msgstr "PVR-gids gericht item kleur"
+
+msgctxt "#31780"
+msgid "PVR Guide focused item textcolor"
+msgstr "PVR-gids gericht item tekstkleur"
+
+msgctxt "#31777"
+msgid "PVR Guide unfocused item color"
+msgstr "PVR Gids onscherpe itemkleur"
+
+msgctxt "#31779"
+msgid "PVR Guide unfocused item textcolor"
+msgstr "PVR Gids onscherpe item tekstkleur"
+
+msgctxt "#31069"
+msgid "PVR Hub"
+msgstr "PVR Hub"
+
+msgctxt "#31709"
+msgid "PVR artwork settings"
+msgstr "PVR artwork instellingen"
+
+msgctxt "#31680"
+msgid "Panel"
+msgstr "Paneel"
+
+msgctxt "#31681"
+msgid "Panel Low"
+msgstr "Paneel Laag"
+
+msgctxt "#31436"
+msgid "Panel Square"
+msgstr "Paneel Vierkant"
+
+msgctxt "#31437"
+msgid "Panel Square details"
+msgstr "Paneel Vierkant details"
+
+msgctxt "#31423"
+msgid "Panel Wall"
+msgstr "Paneel Wand"
+
+msgctxt "#31422"
+msgid "Panel details"
+msgstr "Paneel details"
+
+msgctxt "#320021"
+msgid "Parental Guidance Suggested Panel Color"
+msgstr "Ouderlijk toezicht voorgesteld paneel-kleur"
+
+msgctxt "#320022"
+msgid "Parents Strongly Cautioned Panel Color"
+msgstr "Ouderlijk toezicht aanbevolen paneel-kleur"
+
+msgctxt "#31953"
+msgid "Pause"
+msgstr "PAUZE"
+
+msgctxt "#31821"
+msgid "Pause Rotating if Widget is Focused"
+msgstr "Pauzeer roteren als widget is gefocust"
+
+msgctxt "#320059"
+msgid "People"
+msgstr "Mensen"
+
+msgctxt "#320000"
+msgid "Play From Beginning"
+msgstr "Spelen vanaf het begin"
+
+msgctxt "#320230"
+msgid "Play Movie/Open Seasons Instead Open Info"
+msgstr "Speel Film/Open Seizoenen In plaats daarvan Open Info"
+
+msgctxt "#320063"
+msgid "Play Next Episode"
+msgstr "Volgende aflevering afspelen"
+
+msgctxt "#320093"
+msgid "Play Something Else"
+msgstr "Speel iets anders"
+
+msgctxt "#31868"
+msgid "Play Trailer"
+msgstr "Trailer afspelen"
+
+msgctxt "#31668"
+msgid "Playback & OSD"
+msgstr "Afspelen & OSD"
+
+msgctxt "#31786"
+msgid "Player process info"
+msgstr "Info over spelersproces"
+
+msgctxt "#31124"
+msgid "Please select your preference for the homescreen layout"
+msgstr "Selecteer uw voorkeur voor de lay-out van Thuisbasis"
+
+msgctxt "#320211"
+msgid "Plot"
+msgstr "Plot"
+
+msgctxt "#31563"
+msgid "Popular"
+msgstr "Populair"
+
+msgctxt "#31728"
+msgid "Position %s"
+msgstr "Positie %s"
+
+msgctxt "#31053"
+msgid "Poster"
+msgstr "Poster"
+
+msgctxt "#31939"
+msgid "Poster Details"
+msgstr "Poster Details"
+
+msgctxt "#31440"
+msgid "Poster Row"
+msgstr "Poster Rij"
+
+msgctxt "#31441"
+msgid "Poster Shift"
+msgstr "Poster Verschuiving"
+
+msgctxt "#320078"
+msgid "Posters"
+msgstr "Posters"
+
+msgctxt "#320031"
+msgid "Power Off System"
+msgstr "Systeem uitschakelen"
+
+msgctxt "#31447"
+msgid "Prefer ClearArt"
+msgstr "Geef de voorkeur aan ClearArt"
+
+msgctxt "#31652"
+msgid "Prefer ClearArt images over landscape images"
+msgstr "Geef de voorkeur aan ClearArt-afbeeldingen boven liggende afbeeldingen"
+
+msgctxt "#320159"
+msgid "Prefer IMDB/RT/TVDB Ratings over Percentage on Details Row"
+msgstr "Geef de voorkeur aan IMDB/RT/TVDB beoordelingen boven percentage op detail-rij"
+
+msgctxt "#320170"
+msgid "Prefer Red/White Additional Details Icon"
+msgstr "Voorkeur Rood/Wit Extra details Icoon"
+
+msgctxt "#320155"
+msgid "Prefer Red/White Additionali Details Icon on Spotlight Sublabel"
+msgstr "Voorkeur Rood/Wit Extra Detail Pictogram op Schijnwerper-sublabel"
+
+msgctxt "#31794"
+msgid "Prefer Short Plot Outline in Widget Details"
+msgstr "Geef de voorkeur aan een kort plotoverzicht in Widget Details"
+
+msgctxt "#31304"
+msgid "Prefer TV Show Thumb for Episodes in Widgets"
+msgstr "Geef de voorkeur aan TV-serie duim voor afleveringen in Widgets"
+
+msgctxt "#31910"
+msgid "Prefer Trailers from Youtube in Trailers & More"
+msgstr "Trailers van YouTube verkiezen in Trailers & Meer"
+
+msgctxt "#320152"
+msgid "Prefer White Icon on Top250 Sublabel"
+msgstr "Geef de voorkeur aan wit pictogram op Top250 sublabel"
+
+msgctxt "#320169"
+msgid "Prefer White Icon on Top250 Sublabel"
+msgstr "Geef de voorkeur aan wit pictogram op Top250 sublabel"
+
+msgctxt "#320160"
+msgid "Prefer White Logos on Details Row"
+msgstr "Geef de voorkeur aan witte logo's op de Details-rij"
+
+msgctxt "#31896"
+msgid "Prefer White Ratings and Studio Logo"
+msgstr "Geef de voorkeur aan witte beoordelingen en het studiologo"
+
+msgctxt "#320154"
+msgid "Prefer White Top 250 Icon on Spotlight Sublabel"
+msgstr "Geef de voorkeur aan wit Top 250-pictogram op Schijnwerper-sublabel"
+
+msgctxt "#31706"
+msgid "Prefer animated posters (if available)"
+msgstr "Bij voorkeur geanimeerde posters (indien beschikbaar)"
+
+msgctxt "#31210"
+msgid "Prefer fanart in landscape views"
+msgstr "Geef de voorkeur aan fanart in landschapsaanzichten"
+
+msgctxt "#320204"
+msgid "Premiered"
+msgstr "In première:"
+
+msgctxt "#320076"
+msgid "Premiered in"
+msgstr "In première in"
+
+msgctxt "#31365"
+msgid "Press UP to Play Trailer"
+msgstr "Druk op OMHOOG om de trailer af te spelen"
+
+msgctxt "#320202"
+msgid "Press up for full keyboard"
+msgstr "Druk op omhoog voor volledig toetsenbord"
+
+msgctxt "#31134"
+msgid "Profile"
+msgstr "Profiel"
+
+msgctxt "#31119"
+msgid "Profile Icon"
+msgstr "Profiel pictogram"
+
+msgctxt "#31254"
+msgid "REWIND"
+msgstr "Terugspoelen"
+
+msgctxt "#320017"
+msgid "Radio Channels"
+msgstr "Radiozenders"
+
+msgctxt "#31135"
+msgid "Radio channels"
+msgstr "Radiozenders"
+
+msgctxt "#320034"
+msgid "Random Movies"
+msgstr "Willekeurige films"
+
+msgctxt "#31036"
+msgid "Random TV Shows"
+msgstr "Willekeurige TV-series"
+
+msgctxt "#320028"
+msgid "Random TV Shows"
+msgstr "Willekeurige TV-series"
+
+msgctxt "#31747"
+msgid "Randomize images (multi-image only)"
+msgstr "Afbeeldingen in willekeurige volgorde zetten (alleen bij meerdere afbeeldingen)"
+
+msgctxt "#31854"
+msgid "Rate This Title"
+msgstr "Beoordeel deze titel"
+
+msgctxt "#31023"
+msgid "Rated"
+msgstr "Beoordeeld"
+
+msgctxt "#320206"
+msgid "Rating"
+msgstr "Beoordeling"
+
+msgctxt "#31845"
+msgid "Ratings & Studio Logo (Home, Hubs & Bingie Views)"
+msgstr "Beoordelingen & Studio Logo (Thuisbasis, Hubs & Bingie Views)"
+
+msgctxt "#31118"
+msgid "Ratings and Studio Logo Visibility"
+msgstr "Beoordelingen en zichtbaarheid studiologo"
+
+msgctxt "#31192"
+msgid "Reality TV"
+msgstr "Reality-tv"
+
+msgctxt "#320030"
+msgid "Reboot"
+msgstr "Herstart"
+
+msgctxt "#31127"
+msgid "Recently Added"
+msgstr "Onlangs toegevoegd"
+
+msgctxt "#31716"
+msgid "Recently Added Movies"
+msgstr "Onlangs toegevoegde films"
+
+msgctxt "#31101"
+msgid "Recently Added Series"
+msgstr "Onlangs toegevoegde series"
+
+msgctxt "#31128"
+msgid "Recently played"
+msgstr "Onlangs gespeeld"
+
+msgctxt "#320073"
+msgid "Recommendations"
+msgstr "Aanbevelingen"
+
+msgctxt "#320069"
+msgid "Recommended"
+msgstr "AANBEVOLEN"
+
+msgctxt "#31562"
+msgid "Recommended Movies"
+msgstr "Aanbevolen films"
+
+msgctxt "#31385"
+msgid "Recommended TV Shows"
+msgstr "Aanbevolen TV-series"
+
+msgctxt "#31263"
+msgid "Recommended by TMDB"
+msgstr "Aanbevolen door TMDB"
+
+msgctxt "#31108"
+msgid "Released:"
+msgstr "Uitgebracht:"
+
+msgctxt "#31714"
+msgid "Reload"
+msgstr "Herladen"
+
+msgctxt "#31870"
+msgid "Remove from My List"
+msgstr "Verwijderen uit Mijn Lijst"
+
+msgctxt "#320213"
+msgid "Replace Add to My List (local library) with Add/Remove Watchlist (trakt)"
+msgstr "Toevoegen aan mijn lijst (lokale bibliotheek) vervangen door Toevoegen/Verwijderen aan watchlist (Trakt)"
+
+msgctxt "#320226"
+msgid "Replace Cast and Crew List with Cast and Crew Images"
+msgstr "Cast en Crew Lijst vervangen door Cast en Crew Afbeeldingen"
+
+msgctxt "#320222"
+msgid "Replace Credits & More Info with Extended Info"
+msgstr "Credits & Meer info vervangen door Uitgebreide info"
+
+msgctxt "#320149"
+msgid "Replace Default Choose Art with Artwork Beef"
+msgstr "Standaard keuze voor kunst vervangen door Artwork Beef"
+
+msgctxt "#31170"
+msgid "Reset menu to skin's defaults"
+msgstr "Menu terugzetten naar de standaardinstellingen van het thema"
+
+msgctxt "#31274"
+msgid "Reset the skin to default settings"
+msgstr "Zet het thema terug naar de standaardinstellingen"
+
+msgctxt "#31880"
+msgid "Restore Default Widgets in Hubs"
+msgstr "Standaardwidgets herstellen in hubs"
+
+msgctxt "#31273"
+msgid "Restore the skin settings"
+msgstr "Thema-instellingen herstellen"
+
+msgctxt "#31375"
+msgid "Restoring Widgets in Hubs will overrite all current widgets in hubs."
+msgstr "Widgets in hubs herstellen overschrijft alle huidige widgets in hubs."
+
+msgctxt "#320023"
+msgid "Restricted Panel Color"
+msgstr "Beperkte paneelkleur"
+
+msgctxt "#31120"
+msgid "Reviews"
+msgstr "Beoordelingen"
+
+msgctxt "#31955"
+msgid "Rewind"
+msgstr "Terugspoelen"
+
+msgctxt "#31961"
+msgid "Right"
+msgstr "Rechts"
+
+msgctxt "#31722"
+msgid "Right List"
+msgstr "Rechtse lijst"
+
+msgctxt "#320219"
+msgid "Roles"
+msgstr "Rollen"
+
+msgctxt "#320113"
+msgid "Romance"
+msgstr "Romantiek"
+
+msgctxt "#31047"
+msgid "Romantic Movies"
+msgstr "Romantische Films"
+
+msgctxt "#31363"
+msgid "Rotate all widgets (including spotlight) every"
+msgstr "Roteer alle widgets (inclusief Schijnwerper) elke"
+
+msgctxt "#31359"
+msgid "Rotate the first widget (if assigned) every"
+msgstr "Roteer de eerste widget (indien toegewezen) elke"
+
+msgctxt "#31362"
+msgid "Rotate the fourth widget (if assigned) every"
+msgstr "Roteer de vierde widget (indien toegewezen) elke"
+
+msgctxt "#31360"
+msgid "Rotate the second widget (if assigned) every"
+msgstr "Roteer de tweede widget (indien toegewezen) elke"
+
+msgctxt "#31361"
+msgid "Rotate the third widget (if assigned) every"
+msgstr "Roteer de derde widget (indien toegewezen) elke"
+
+msgctxt "#320044"
+msgid "Rotten Tomatoes Audience Rating"
+msgstr "Rotten Tomatoes Publiekswaardering"
+
+msgctxt "#320043"
+msgid "Rotten Tomatoes Fresh Certified"
+msgstr "Rotten Tomatoes Fresh gecertificeerd"
+
+msgctxt "#31775"
+msgid "Rotten Tomatoes Rating"
+msgstr "Rotten Tomatoes beoordeling"
+
+msgctxt "#320066"
+msgid "Runtime"
+msgstr "Tijdsduur"
+
+msgctxt "#31871"
+msgid "S"
+msgstr "s"
+
+msgctxt "#31336"
+msgid "SEASON FINALE"
+msgstr "SEIZOEN FINALE"
+
+msgctxt "#31255"
+msgid "SEEKING"
+msgstr "ZOEKEN"
+
+msgctxt "#31335"
+msgid "SERIES FINALE"
+msgstr "SERIE FINALE"
+
+msgctxt "#320114"
+msgid "Sci-Fi"
+msgstr "Sci-Fi"
+
+msgctxt "#31194"
+msgid "Science Fiction Movies"
+msgstr "Science Fiction Films"
+
+msgctxt "#31495"
+msgid "Scrollbar background color"
+msgstr "Achtergrondkleur schuifbalk"
+
+msgctxt "#31497"
+msgid "Scrollbar focused color"
+msgstr "Kleur voor schuifbalk"
+
+msgctxt "#31496"
+msgid "Scrollbar unfocused color"
+msgstr "Kleur onscherpe schuifbalk"
+
+msgctxt "#31344"
+msgid "Scrollbar visibility"
+msgstr "Zichtbaarheid schuifbalk"
+
+msgctxt "#320055"
+msgid "Search Library"
+msgstr "Zoeken in bibliotheek"
+
+msgctxt "#31038"
+msgid "Search Music Videos, Albums, Artists or Songs"
+msgstr "Muziekvideo's, albums, artiesten of liedjes zoeken"
+
+msgctxt "#31415"
+msgid "Search Settings"
+msgstr "Instellingen zoeken"
+
+msgctxt "#320052"
+msgid "Search TMDB Helper"
+msgstr "TMDB-helper zoeken"
+
+msgctxt "#31419"
+msgid "Search YouTube"
+msgstr "Zoeken op YouTube"
+
+msgctxt "#320225"
+msgid "Search by Movies, Movie Collections, TV Shows or People"
+msgstr "Zoeken op films, filmcollecties, TV-series of personen"
+
+msgctxt "#31559"
+msgid "Search by Title, Genre, Actor, Director, Country, Studio or Year"
+msgstr "Zoeken op titel, genre, acteur, regisseur, land, studio of jaar"
+
+msgctxt "#31560"
+msgid "Search by Title, Genre, Actor, Studio, Year or Episode"
+msgstr "Zoeken op titel, genre, acteur, studio, jaar of aflevering"
+
+msgctxt "#320234"
+msgid "Search categories"
+msgstr "Categorieën zoeken"
+
+msgctxt "#31026"
+msgid "Search for Addons"
+msgstr "Addons zoeken"
+
+msgctxt "#31416"
+msgid "Search for Episodes by name"
+msgstr "Afleveringen zoeken op naam"
+
+msgctxt "#31418"
+msgid "Search for Music Albums, Artists and Songs"
+msgstr "Muziekalbums, artiesten en nummers zoeken"
+
+msgctxt "#31417"
+msgid "Search for Music Videos"
+msgstr "Zoeken naar muziekvideo's"
+
+msgctxt "#320095"
+msgid "Search results for"
+msgstr "Zoekresultaten voor"
+
+msgctxt "#320003"
+msgid "Season"
+msgstr "Seizoen"
+
+msgctxt "#31104"
+msgid "Season Greetings"
+msgstr "Seizoensgroeten"
+
+msgctxt "#320207"
+msgid "Seasons"
+msgstr "Seizoenen"
+
+msgctxt "#31884"
+msgid "Select Delay Interval for Auto-Trailers"
+msgstr "Selecteer vertragingsinterval voor Auto-Trailers"
+
+msgctxt "#31626"
+msgid "Select Movie/TV Genre icons"
+msgstr "Selecteer film-/tv-genrepictogrammen"
+
+msgctxt "#31772"
+msgid "Select Movie Genre fanart"
+msgstr "Kies filmgenre fanart"
+
+msgctxt "#31627"
+msgid "Select Music Genre icons"
+msgstr "Selecteer muziekgenre-pictogrammen"
+
+msgctxt "#31624"
+msgid "Select Weather fanart"
+msgstr "Selecteer Weer fanart"
+
+msgctxt "#31623"
+msgid "Select Weather icons"
+msgstr "Weerpictogrammen selecteren"
+
+msgctxt "#31117"
+msgid "Select Which Buttons to Show in Credits & More Info"
+msgstr "Selecteer welke knoppen moeten worden weergegeven in Credits &amp; Meer informatie"
+
+msgctxt "#31695"
+msgid "Select Which Buttons to Show in Video Info"
+msgstr "Selecteer welke knoppen moeten worden weergegeven in de video-info"
+
+msgctxt "#320129"
+msgid "Select Which Categories to Show in Categories Hub"
+msgstr "Selecteer welke categorieën worden weergegeven in de categoriehub"
+
+msgctxt "#31090"
+msgid "Select Which Details to Show in Extended Info"
+msgstr "Selecteer welke details moeten worden weergegeven in Uitgebreide info"
+
+msgctxt "#31930"
+msgid "Select Which Details to Show in Video Info"
+msgstr "Selecteer welke details moeten worden weergegeven in de video-info"
+
+msgctxt "#31463"
+msgid "Select a color theme"
+msgstr "Selecteer een kleurthema"
+
+msgctxt "#31768"
+msgid "Select a default palette for color picker"
+msgstr "Selecteer een standaard palet voor kleurkiezer"
+
+msgctxt "#31384"
+msgid "Set Content"
+msgstr "Inhoud instellen"
+
+msgctxt "#31882"
+msgid "Set Custom Content in Home Spotlight Widget"
+msgstr "Aangepaste inhoud instellen in Thuisbasis Schijnwerper Widget"
+
+msgctxt "#31874"
+msgid "Set Custom Spotlight Content"
+msgstr "Aangepaste Schijnwerper-inhoud instellen"
+
+msgctxt "#31886"
+msgid "Set Default 'Select' Action to Show Information (only applies to widgets)"
+msgstr "Standaard 'Selecteer'-actie instellen op Informatie weergeven (geldt alleen voor widgets)"
+
+msgctxt "#31369"
+msgid "Set Icon"
+msgstr "Pictogram instellen"
+
+msgctxt "#320218"
+msgid "Set Number of Roles to Show in Cast Info"
+msgstr "Stel het aantal rollen in dat moet worden weergegeven in Cast Info"
+
+msgctxt "#31842"
+msgid "Set Spotlight Content to Recommendations Based on Recently Watched"
+msgstr "Schijnwerper-inhoud instellen op aanbevelingen op basis van recent bekeken"
+
+msgctxt "#31037"
+msgid "Set default limit for items in Widgets"
+msgstr "Standaardlimiet instellen voor items in Widgets"
+
+msgctxt "#31687"
+msgid "Set infoline"
+msgstr "Infoline instellen"
+
+msgctxt "#31688"
+msgid "Set infoline for subheader"
+msgstr "Infoline instellen voor subkop"
+
+msgctxt "#31071"
+msgid "Setting level"
+msgstr "Niveau instellen"
+
+msgctxt "#31704"
+msgid "Settings for Header"
+msgstr "Instellingen voor koptekst"
+
+msgctxt "#31137"
+msgid "Settings for recordings"
+msgstr "Instellingen voor opnamen"
+
+msgctxt "#31477"
+msgid "Shadow color for footer"
+msgstr "Schaduwkleur voor voettekst"
+
+msgctxt "#31220"
+msgid "Shadow color for header"
+msgstr "Schaduwkleur voor koptekst"
+
+msgctxt "#31817"
+msgid "Shadowcolor for focused lyrics text"
+msgstr "Schaduwkleur voor gerichte songtekst"
+
+msgctxt "#31816"
+msgid "Shadowcolor for unfocused lyrics text"
+msgstr "Schaduwkleur voor onscherpe songtekst"
+
+msgctxt "#31060"
+msgid "Show/Hide OSD buttons"
+msgstr "OSD-knoppen weergeven/verbergen"
+
+msgctxt "#31122"
+msgid "Show Additional Video Info Fanarts"
+msgstr "Toon extra video-info Fanarts"
+
+msgctxt "#31131"
+msgid "Show Cast and Crew Fanarts"
+msgstr "Showcast en crew Fanarts"
+
+msgctxt "#320184"
+msgid "Show ClearArt Instead of Clearlogo on Pause"
+msgstr "ClearArt tonen in plaats van Clearlogo op pauze"
+
+msgctxt "#31733"
+msgid "Show Clearart/Clearlogo (if available) at Top-Right if OSD-Panel Active"
+msgstr "Clearart/Clearlogo (indien beschikbaar) rechtsboven tonen als OSD-paneel actief is"
+
+msgctxt "#320186"
+msgid "Show Clearart Instead of Clearlogo on Infopane"
+msgstr "Clearart tonen in plaats van Clearlogo op infopaneel"
+
+msgctxt "#31200"
+msgid "Show Disc-art"
+msgstr "Toon Disc-art"
+
+msgctxt "#31125"
+msgid "Show Extended Info Fanarts"
+msgstr "Toon Uitgebreide Info Fanarts"
+
+msgctxt "#31913"
+msgid "Show First Unwatched/Currently Watching Episode Info in TV Show's Info"
+msgstr "Toon Eerste niet bekeken/actuele aflevering in info van TV-series"
+
+msgctxt "#31985"
+msgid "Show Header Title (left) and Time (right)"
+msgstr "Titel kop (links) en tijd (rechts) weergeven"
+
+msgctxt "#31987"
+msgid "Show Header Title (left) and Weather (right)"
+msgstr "Titel koptekst (links) en Weer (rechts) weergeven"
+
+msgctxt "#31995"
+msgid "Show Logo & Weather (left) and Time (right)"
+msgstr "Toon Logo & Weer (links) en Tijd (rechts)"
+
+msgctxt "#31996"
+msgid "Show Logo (left) and Profile (right)"
+msgstr "Toon logo (links) en profiel (rechts)"
+
+msgctxt "#31988"
+msgid "Show Logo (left) and Time & Weather (right)"
+msgstr "Toon logo (links) en tijd & weer (rechts)"
+
+msgctxt "#31984"
+msgid "Show Logo (left) and Time (right)"
+msgstr "Toon tijd (links) en tijd (rechts)"
+
+msgctxt "#31997"
+msgid "Show Logo (left) and Weather (right)"
+msgstr "Toon logo (links) en weer (rechts)"
+
+msgctxt "#31259"
+msgid "Show OSD Infopanel on Pause"
+msgstr "OSD-infopaneel tonen bij pauze"
+
+msgctxt "#31009"
+msgid "Show Plot when Spotlight Plays Trailer"
+msgstr "Toon plot wanneer Schijnwerper de trailer afspeelt"
+
+msgctxt "#31998"
+msgid "Show Profile (left) and Time (right)"
+msgstr "Profiel (links) en tijd (rechts) weergeven"
+
+msgctxt "#320167"
+msgid "Show TV Show Status on Details Row Home & Bingie Views"
+msgstr "Toon TV-serie status op detail-rij Thuisbasis & Bingie Views"
+
+msgctxt "#31724"
+msgid "Show The Runtime in Minutes Instead of Hours in The Details Section"
+msgstr "Toon de looptijd in minuten in plaats van uren in het gedeelte Details"
+
+msgctxt "#31990"
+msgid "Show Time & Weather (right)"
+msgstr "Toon tijd en weer (rechts)"
+
+msgctxt "#31989"
+msgid "Show Title (left) and Time & Weather (right)"
+msgstr "Titel weergeven (links) en Tijd &amp; Weer (rechts)"
+
+msgctxt "#31986"
+msgid "Show Weather (left) and Time (right)"
+msgstr "Weer (links) en tijd (rechts) weergeven"
+
+msgctxt "#31802"
+msgid "Show animated art only in details/info (not in lists)"
+msgstr "Toon geanimeerde kunst alleen in details/info (niet in lijsten)"
+
+msgctxt "#31640"
+msgid "Show artist biography on OSD while playing music"
+msgstr "Artiestenbiografie tonen op OSD tijdens het afspelen van muziek"
+
+msgctxt "#31665"
+msgid "Show artist logo on fullscreen music playback"
+msgstr "Artiestenlogo tonen bij muziek afspelen op volledig scherm"
+
+msgctxt "#31327"
+msgid "Show clearlogo (if available)"
+msgstr "Duidelijk logo weergeven (indien beschikbaar)"
+
+msgctxt "#31325"
+msgid "Show current weather in the video info & video on-screen displays"
+msgstr "Toon het huidige weer in de video info & video on-screen displays"
+
+msgctxt "#31029"
+msgid "Show footer bar in views"
+msgstr "Toon voettekstbalk in weergaven"
+
+msgctxt "#31749"
+msgid "Show info"
+msgstr "Toon info"
+
+msgctxt "#31599"
+msgid "Show infopanel right"
+msgstr "Infopaneel rechts tonen"
+
+msgctxt "#31732"
+msgid "Show large scrolling text while music playback"
+msgstr "Grote scrollende tekst tonen tijdens het afspelen van muziek"
+
+msgctxt "#31114"
+msgid "Show large thumbnail"
+msgstr "Grote miniatuur weergeven"
+
+msgctxt "#31155"
+msgid "Show panel background"
+msgstr "Achtergrond paneel weergeven"
+
+msgctxt "#31133"
+msgid "Show plot in video infopanel or onscreen display"
+msgstr "Plot weergeven in video-infopaneel of schermdisplay"
+
+msgctxt "#31338"
+msgid "Show video preview in PVR section"
+msgstr "Videovoorvertoning tonen in PVR-sectie"
+
+msgctxt "#31429"
+msgid "Showcase"
+msgstr "Showcase"
+
+msgctxt "#31601"
+msgid "Sideblade/options menu panel color"
+msgstr "Kleur zijblad/opties menupaneel"
+
+msgctxt "#31602"
+msgid "Sideblade/options menu text color"
+msgstr "Tekstkleur zijblad/opties menu"
+
+msgctxt "#320005"
+msgid "Similar"
+msgstr "Vergelijkbare"
+
+msgctxt "#31575"
+msgid "Similar Movies"
+msgstr "Vergelijkbare films"
+
+msgctxt "#31576"
+msgid "Similar TV Shows"
+msgstr "Vergelijkbare TV-series"
+
+msgctxt "#31567"
+msgid "Simple list (PVR)"
+msgstr "Eenvoudige lijst (PVR)"
+
+msgctxt "#31435"
+msgid "Single Poster"
+msgstr "Enkele poster"
+
+msgctxt "#31949"
+msgid "Single fanart image"
+msgstr "Enkele fanart afbeelding"
+
+msgctxt "#31751"
+msgid "Single widget"
+msgstr "Enkele widget"
+
+msgctxt "#31878"
+msgid "Skin Resources Settings"
+msgstr "Instellingen thema-bronnen"
+
+msgctxt "#31450"
+msgid "Slim List"
+msgstr "Smallere lijst"
+
+msgctxt "#31969"
+msgid "Small"
+msgstr "Klein"
+
+msgctxt "#31936"
+msgid "Small Posters"
+msgstr "Kleine posters"
+
+msgctxt "#31367"
+msgid "Small poster"
+msgstr "Kleine poster"
+
+msgctxt "#31531"
+msgid "Smart shortcuts"
+msgstr "Slimme snelkoppelingen"
+
+msgctxt "#31322"
+msgid "Smart shortcuts will enable a background scanner for supported favourites and/or playlists. If you add a smart shortcut to your home menu, you'll get auto rotating tile images and backgrounds for that particular section."
+msgstr "Slimme snelkoppelingen schakelen een achtergrondscanner in voor ondersteunde favorieten en/of afspeellijsten. Als je een slimme snelkoppeling toevoegt aan Thuisbasis, krijg je automatisch roterende tegelafbeeldingen en achtergronden voor die specifieke sectie."
+
+msgctxt "#320179"
+msgid "Snow Animation"
+msgstr "Sneeuw Animatie"
+
+msgctxt "#31787"
+msgid "Software"
+msgstr "Software"
+
+msgctxt "#31082"
+msgid "Song titles related to"
+msgstr "Songtitels gerelateerd aan"
+
+msgctxt "#31176"
+msgid "Splash Screen Settings"
+msgstr "Instellingen splash-scherm"
+
+msgctxt "#31185"
+msgid "Spotlight"
+msgstr "Schijnwerper"
+
+msgctxt "#31307"
+msgid "Spotlight widget"
+msgstr "Schijnwerper-widget"
+
+msgctxt "#31934"
+msgid "Square"
+msgstr "Vierkant"
+
+msgctxt "#31193"
+msgid "Stand-Up Comedy"
+msgstr "Stand-up komedie"
+
+msgctxt "#320223"
+msgid "Starring"
+msgstr "Met in de hoofdrol"
+
+msgctxt "#31850"
+msgid "Starting in"
+msgstr "Start in"
+
+msgctxt "#320235"
+msgid "Startup animations"
+msgstr "Opstartanimaties"
+
+msgctxt "#320209"
+msgid "Status"
+msgstr "Status"
+
+msgctxt "#31954"
+msgid "Stop"
+msgstr "Stop"
+
+msgctxt "#320097"
+msgid "Streaming services"
+msgstr "Streamingdiensten"
+
+msgctxt "#320074"
+msgid "Studio"
+msgstr "Studio"
+
+msgctxt "#31632"
+msgid "Style for Media/Codec Info"
+msgstr "Stijl voor Media/Codec-info"
+
+msgctxt "#320008"
+msgid "Style for media/codec info"
+msgstr "Stijl voor Media/Codec-info"
+
+msgctxt "#31773"
+msgid "Submenu heading"
+msgstr "Submenutitel"
+
+msgctxt "#31696"
+msgid "Supported Addons"
+msgstr "Ondersteunde addons"
+
+msgctxt "#320027"
+msgid "Surprise Me"
+msgstr "Verras me."
+
+msgctxt "#31713"
+msgid "Swap poster"
+msgstr "Ruilposter"
+
+msgctxt "#31839"
+msgid "Switch Profiles"
+msgstr "Schakelprofielen"
+
+msgctxt "#31195"
+msgid "SyFy Series"
+msgstr "SyFy-serie"
+
+msgctxt "#320092"
+msgid "TMDB Helper List"
+msgstr "TMDB-helperlijst"
+
+msgctxt "#31010"
+msgid "TMDB Helper search content"
+msgstr "TMDB Helper zoek content"
+
+msgctxt "#320131"
+msgid "TMDB Popular Movies"
+msgstr "TMDB Populaire Films"
+
+msgctxt "#320132"
+msgid "TMDB Popular TV Shows"
+msgstr "TMDB Populaire TV-series"
+
+msgctxt "#31907"
+msgid "TMDB Rating"
+msgstr "TMDB-beoordeling"
+
+msgctxt "#320112"
+msgid "TMDB Trending Movies"
+msgstr "TMDB Trending Films"
+
+msgctxt "#320106"
+msgid "TMDB Trending TV Shows"
+msgstr "TMDB Trending TV-series"
+
+msgctxt "#320041"
+msgid "TVDB Rating"
+msgstr "TVDB-beoordeling"
+
+msgctxt "#320118"
+msgid "TV Action & Adventure"
+msgstr "TV Actie & Avontuur"
+
+msgctxt "#320126"
+msgid "TV Animations"
+msgstr "TV Animatie"
+
+msgctxt "#320012"
+msgid "TV Channels"
+msgstr "TV-kanalen"
+
+msgctxt "#320120"
+msgid "TV Comedies"
+msgstr "TV Komedies"
+
+msgctxt "#320123"
+msgid "TV Crime"
+msgstr "TV Misdaad"
+
+msgctxt "#320122"
+msgid "TV Documentaries"
+msgstr "TV-documentaires"
+
+msgctxt "#320119"
+msgid "TV Dramas"
+msgstr "Tv Drama's"
+
+msgctxt "#320013"
+msgid "TV Guide"
+msgstr "TV Gids"
+
+msgctxt "#320121"
+msgid "TV Kids & Family"
+msgstr "TV Kinderen & Familie"
+
+msgctxt "#320127"
+msgid "TV Mysteries"
+msgstr "TV Mysteries"
+
+msgctxt "#320015"
+msgid "TV Recordings"
+msgstr "TV-opnames"
+
+msgctxt "#320124"
+msgid "TV Sci-Fi & Fantasy"
+msgstr "TV Sci-Fi & Fantasy"
+
+msgctxt "#320014"
+msgid "TV Search"
+msgstr "TV zoeken"
+
+msgctxt "#320011"
+msgid "TV Shows"
+msgstr "TV-series"
+
+msgctxt "#320058"
+msgid "TV Shows"
+msgstr "TV-series"
+
+msgctxt "#31864"
+msgid "TV Shows Hub"
+msgstr "Hub TV-series"
+
+msgctxt "#320125"
+msgid "TV War & Politics"
+msgstr "TV Oorlog & politiek"
+
+msgctxt "#320128"
+msgid "TV Westerns"
+msgstr "TV Westerns"
+
+msgctxt "#31132"
+msgid "TV channels"
+msgstr "TV-kanalen"
+
+msgctxt "#320200"
+msgid "TV show"
+msgstr "TV-series"
+
+msgctxt "#31458"
+msgid "Textcolor for buttons in the skin"
+msgstr "Tekstkleur voor knoppen in het thema"
+
+msgctxt "#31815"
+msgid "Textcolor for focused lyrics"
+msgstr "Tekstkleur voor centrale songteksten"
+
+msgctxt "#31455"
+msgid "Textcolor for footer"
+msgstr "Tekstkleur voor voettekst"
+
+msgctxt "#31219"
+msgid "Textcolor for header"
+msgstr "Tekstkleur voor koptekst"
+
+msgctxt "#31814"
+msgid "Textcolor for unfocused lyrics"
+msgstr "Tekstkleur voor onscherpe teksten"
+
+msgctxt "#31388"
+msgid "The new Titan skin for Kodi Nexus.[CR]This skin has many different layouts to choose from, let us start with the Titan BINGIE MOD main layout. This layout is designed to simulate Netflix user experience for TV.[CR]In order to get everything running as it should, it's recommended to set the following Kodi options:[CR][CR][COLOR ff41b957]    - Disable mouse[CR]    - Hide parent folder items[CR]    - Auto focus first unwatched episode[CR]    - Flatten TV Shows seasons (show all episodes)[CR]    - Set media default action to 'Resume'[/COLOR][CR][CR]Note that this settings are global and will be valid for all installed skins.[CR]But no worries, all settings can be reverted in Kodi settings."
+msgstr "Het nieuwe Titan thema voor Kodi Nexus.[CR]Dit thema heeft veel verschillende layouts om uit te kiezen, laten we beginnen met de Titan BINGIE MOD hoofdlayout. Deze lay-out is ontworpen om de Netflix gebruikerservaring voor TV te simuleren.[CR]Om alles naar behoren te laten werken, is het aan te raden om de volgende Kodi opties in te stellen:[CR][CR][COLOR ff41b957] - Muis uitschakelen[CR] - Bovenliggende map items verbergen[CR] - Automatisch focussen op eerste niet bekeken aflevering[CR] - TV-series seizoenen afvlakken (alle afleveringen tonen)[CR] - Media standaard actie instellen op 'Hervatten'[/COLOR][CR][CR]Merk op dat deze instellingen globaal zijn en geldig zijn voor alle geïnstalleerde thema's.[CR]Maar geen zorgen, alle instellingen kunnen worden teruggedraaid in de Kodi-instellingen."
+
+msgctxt "#31558"
+msgid "There are no matches for this category."
+msgstr "Er zijn geen resultaten voor deze categorie."
+
+msgctxt "#31578"
+msgid "There are no matches for your search."
+msgstr "Er zijn geen overeenkomsten voor je zoekopdracht."
+
+msgctxt "#31903"
+msgid "This section will take effect only when content is sorted by title."
+msgstr "Dit gedeelte is alleen van kracht als inhoud wordt gesorteerd op titel."
+
+msgctxt "#31464"
+msgid "This skin allows you to customize almost every color in the skin manually. You can also choose to save your customizations to a color theme or use one of the predefined color themes."
+msgstr "Met dit thema kun je bijna elke kleur in het thema handmatig aanpassen. Je kunt er ook voor kiezen om je aanpassingen op te slaan in een kleurthema of een van de vooraf gedefinieerde kleurthema's te gebruiken."
+
+msgctxt "#31168"
+msgid "This skin is integrated with the skinshortcuts script to provide you maximized flexibility in how you want to arrange your homescreen menu’s. You’re able to add and delete tiles on the homescreen, change the images, define submenus etc. Click the button below to get started modifying the skin menu’s to your own preferences."
+msgstr "Dit thema is geïntegreerd met het skinshortcuts-script om je maximale flexibiliteit te bieden in hoe je Thuisbasis-menu's wilt indelen. Je kunt tegels op Thuisbasis toevoegen en verwijderen, de afbeeldingen wijzigen, submenu's definiëren, enz. Klik op de knop hieronder om te beginnen met het aanpassen van de thema-menu's aan je eigen voorkeuren."
+
+msgctxt "#320116"
+msgid "Thriller"
+msgstr "Thriller"
+
+msgctxt "#31196"
+msgid "Thriller & Suspense Movies"
+msgstr "Thriller & Suspense Films"
+
+msgctxt "#31197"
+msgid "Thriller & Suspense Series"
+msgstr "Thriller & Suspense Serie"
+
+msgctxt "#31438"
+msgid "Thumbs"
+msgstr "Duimpjes"
+
+msgctxt "#31892"
+msgid "Thumbs Down Rate Value"
+msgstr "Duim omlaag Waarde"
+
+msgctxt "#31844"
+msgid "Thumbs Up/Down Options"
+msgstr "Duim omhoog/omlaag opties"
+
+msgctxt "#31891"
+msgid "Thumbs Up Rate Value"
+msgstr "Duim omhoog Waarde"
+
+msgctxt "#31439"
+msgid "Thumbs details"
+msgstr "Duimpjes details"
+
+msgctxt "#31296"
+msgid "Time to show each fanart image (in seconds)"
+msgstr "Tijd om elke fanart afbeelding te tonen (in seconden)"
+
+msgctxt "#320016"
+msgid "Timer Rules"
+msgstr "Regels voor timer"
+
+msgctxt "#31739"
+msgid "Title of current (random) background (if available)"
+msgstr "Titel van huidige (willekeurige) achtergrond (indien beschikbaar)"
+
+msgctxt "#31555"
+msgid "Titles featuring actor"
+msgstr "Titels met acteur"
+
+msgctxt "#31554"
+msgid "Titles from studio"
+msgstr "Titels van studio"
+
+msgctxt "#31552"
+msgid "Titles in genre"
+msgstr "Titels in genre"
+
+msgctxt "#31551"
+msgid "Titles related to"
+msgstr "Titels gerelateerd aan"
+
+msgctxt "#31553"
+msgid "Titles released in year"
+msgstr "Titels uitgebracht in jaar"
+
+msgctxt "#320133"
+msgid "Top Rated Movies"
+msgstr "Best gewaardeerde films"
+
+msgctxt "#320134"
+msgid "Top Rated TV Shows"
+msgstr "Best gewaardeerde TV-series"
+
+msgctxt "#31380"
+msgid "Total Revenue"
+msgstr "Totale inkomsten"
+
+msgctxt "#31597"
+msgid "Total duration"
+msgstr "Totale duur"
+
+msgctxt "#31523"
+msgid "Trailer"
+msgstr "Trailer"
+
+msgctxt "#320081"
+msgid "Trailers"
+msgstr "Trailers"
+
+msgctxt "#320192"
+msgid "Trailers & More"
+msgstr "Trailers & Meer"
+
+msgctxt "#31849"
+msgid "Trailers Settings"
+msgstr "Trailer Instellingen"
+
+msgctxt "#320217"
+msgid "Trakt"
+msgstr "Trakt"
+
+msgctxt "#320220"
+msgid "Trakt Manager"
+msgstr "Trakt Beheerder"
+
+msgctxt "#320142"
+msgid "Trakt Popular Movies"
+msgstr "Trakt Populaire Films"
+
+msgctxt "#320143"
+msgid "Trakt Popular TV Shows"
+msgstr "Trakt Populaire TV-series"
+
+msgctxt "#320039"
+msgid "Trakt Rating"
+msgstr "Trakt Beoordeling"
+
+msgctxt "#320140"
+msgid "Trakt Trending Movies"
+msgstr "Trakt Trending Films"
+
+msgctxt "#320141"
+msgid "Trakt Trending TV Shows"
+msgstr "Trakt Trending TV-series"
+
+msgctxt "#320107"
+msgid "Trending This Week Movies"
+msgstr "Trending deze week Films"
+
+msgctxt "#320130"
+msgid "Trending This Week TV Shows"
+msgstr "Trending deze week TV-series"
+
+msgctxt "#31394"
+msgid "Unlock Hubs now"
+msgstr "Hubs nu ontgrendelen"
+
+msgctxt "#31925"
+msgid "Unlock Hubs to change spotlight content and set widgets inside the hubs."
+msgstr "Ontgrendel hubs om de Schijnwerperinhoud te wijzigen en widgets in de hubs in te stellen."
+
+msgctxt "#31074"
+msgid "Unlock view"
+msgstr "Weergave ontgrendelen"
+
+msgctxt "#31092"
+msgid "Unwatched Episodes"
+msgstr "Onbekeken afleveringen"
+
+msgctxt "#31065"
+msgid "Up Next"
+msgstr "Volgende"
+
+msgctxt "#31921"
+msgid "Up Next Addon Options"
+msgstr "Volgende Addon-opties"
+
+msgctxt "#31238"
+msgid "Use 8 rows in EPG timeline instead of 5"
+msgstr "Gebruik 8 rijen in EPG-tijdlijn in plaats van 5"
+
+msgctxt "#31045"
+msgid "Use Alternative Splash Image"
+msgstr "Alternatieve splash-afbeelding gebruiken"
+
+msgctxt "#31919"
+msgid "Use Bingie Info Panel OSD"
+msgstr "Bingie-infopaneel OSD gebruiken"
+
+msgctxt "#31917"
+msgid "Use Bingie OSD Panel"
+msgstr "Bingie OSD-paneel gebruiken"
+
+msgctxt "#31378"
+msgid "Use Bingie Video Info Dialog"
+msgstr "Bingie-video-infodialoog gebruiken"
+
+msgctxt "#31511"
+msgid "Use Fixed Focus"
+msgstr "Vaste scherpstelling gebruiken"
+
+msgctxt "#31350"
+msgid "Use GenreType for guide listings (Kodi default)"
+msgstr "GenreType gebruiken voor gidsvermeldingen (Kodi-standaard)"
+
+msgctxt "#31349"
+msgid "Use Genre for guide listings"
+msgstr "Gebruik Genre voor gidsvermeldingen"
+
+msgctxt "#31420"
+msgid "Use Global Search Add-on"
+msgstr "Add-on Globaal zoeken gebruiken"
+
+msgctxt "#320176"
+msgid "Use Netflix user Profile Icon Instead of Default"
+msgstr "Gebruik het pictogram van het gebruikersprofiel van Netflix in plaats van de standaardinstelling"
+
+msgctxt "#31100"
+msgid "Use Netflix user picture "
+msgstr "Netflix-gebruikersafbeelding gebruiken "
+
+msgctxt "#31476"
+msgid "Use Slim OSD Panel"
+msgstr "Slank OSD-paneel gebruiken"
+
+msgctxt "#31239"
+msgid "Use alternative EPG progress indicator"
+msgstr "Alternatieve EPG-voortgangsindicator gebruiken"
+
+msgctxt "#31803"
+msgid "Use animated fanart as background (if available)"
+msgstr "Gebruik geanimeerde fanart als achtergrond (indien beschikbaar)"
+
+msgctxt "#31671"
+msgid "Use compact Header"
+msgstr "Gebruik compacte kop"
+
+msgctxt "#31452"
+msgid "Use extended layout"
+msgstr "Uitgebreide lay-out gebruiken"
+
+msgctxt "#31451"
+msgid "Use extended layout for weather"
+msgstr "Gebruik uitgebreide lay-out voor het weer"
+
+msgctxt "#31207"
+msgid "Use extra fanart"
+msgstr "Gebruik extra fanart"
+
+msgctxt "#31701"
+msgid "Use extra large info panel"
+msgstr "Gebruik extra groot infopaneel"
+
+msgctxt "#31498"
+msgid "Use fake discart when no discart exists for a media item"
+msgstr "Gebruik valse discart als er geen discart bestaat voor een media-item"
+
+msgctxt "#31804"
+msgid "Use fanart from widget as background"
+msgstr "Gebruik fanart van widget als achtergrond"
+
+msgctxt "#31823"
+msgid "Use fixed focus"
+msgstr "Vaste focus gebruiken"
+
+msgctxt "#31237"
+msgid "Use genre colors in EPG timeline"
+msgstr "Genrekleuren gebruiken in EPG-tijdlijn"
+
+msgctxt "#31598"
+msgid "Use large banners"
+msgstr "Gebruik grote banners"
+
+msgctxt "#31493"
+msgid "Use rounded icons in OSD"
+msgstr "Gebruik afgeronde pictogrammen in OSD"
+
+msgctxt "#31922"
+msgid "Use simplified layout (no info, just 2 buttons)"
+msgstr "Gebruik vereenvoudigde lay-out (geen info, alleen 2 knoppen)"
+
+msgctxt "#31697"
+msgid "Use slim icons in OSD"
+msgstr "Slanke pictogrammen gebruiken in OSD"
+
+msgctxt "#31453"
+msgid "Use slim list"
+msgstr "Smalle lijst gebruiken"
+
+msgctxt "#31720"
+msgid "Use small context/sidebar menu"
+msgstr "Klein context-/zijbalkmenu gebruiken"
+
+msgctxt "#31364"
+msgid "Use the shortcuts editor to enable rotation for a widget"
+msgstr "Gebruik de sneltoetsen-editor om rotatie in te schakelen voor een widget"
+
+msgctxt "#320009"
+msgid "Video Information"
+msgstr "Video-informatie"
+
+msgctxt "#31745"
+msgid "Video Playback"
+msgstr "Video afspelen"
+
+msgctxt "#31781"
+msgid "Video process information"
+msgstr "Informatie videoproces"
+
+msgctxt "#31305"
+msgid "View"
+msgstr "Bekijk"
+
+msgctxt "#31959"
+msgid "Visualizations"
+msgstr "Visualisaties"
+
+msgctxt "#31809"
+msgid "Volume Display/Change Indicator Style"
+msgstr "Volumeweergave/wijzigingsindicator Stijl"
+
+msgctxt "#320203"
+msgid "Votes"
+msgstr "Stemmen"
+
+msgctxt "#31066"
+msgid "Watch"
+msgstr "Kijk naar"
+
+msgctxt "#31021"
+msgid "Watch Credits"
+msgstr "Credits bekijken"
+
+msgctxt "#31080"
+msgid "Watch It Again"
+msgstr "Opnieuw kijken"
+
+msgctxt "#31649"
+msgid "Watch It Again Movies"
+msgstr "Opnieuw kijken films"
+
+msgctxt "#31650"
+msgid "Watch It Again TV Shows"
+msgstr "Opnieuw kijken TV-series"
+
+msgctxt "#31841"
+msgid "Watch Now"
+msgstr "Nu bekijken"
+
+msgctxt "#31070"
+msgid "Watch Season"
+msgstr "Seizoen kijken"
+
+msgctxt "#31840"
+msgid "Watch Season 1 Now"
+msgstr "Bekijk seizoen 1 nu"
+
+msgctxt "#320221"
+msgid "Watchlist"
+msgstr "Kijklijst"
+
+msgctxt "#320198"
+msgid "We think you'll like this"
+msgstr "We denken dat je dit leuk zult vinden"
+
+msgctxt "#31636"
+msgid "Weather Alerts"
+msgstr "Weeralarmen"
+
+msgctxt "#31288"
+msgid "Weekend Forecast"
+msgstr "Weekend Voorspelling"
+
+msgctxt "#31858"
+msgid "Welcome Back"
+msgstr "Welkom terug"
+
+msgctxt "#320018"
+msgid "Welcome to[CR]Titan BINGIE MOD"
+msgstr "Welkom bij [CR]Titan BINGIE MOD"
+
+msgctxt "#31387"
+msgid "Welcome to Titan BINGIE MOD"
+msgstr "Welkom bij Titan BINGIE MOD"
+
+msgctxt "#320117"
+msgid "Westerns"
+msgstr "Westerns"
+
+msgctxt "#31856"
+msgid "Who's watching Netflix?"
+msgstr "Wie kijkt er naar Netflix?"
+
+msgctxt "#31659"
+msgid "Wide"
+msgstr "Breed"
+
+msgctxt "#31413"
+msgid "Wide Box"
+msgstr "Brede doos"
+
+msgctxt "#31499"
+msgid "Widget"
+msgstr "Widget"
+
+msgctxt "#31851"
+msgid "Widget Content"
+msgstr "Widget-inhoud"
+
+msgctxt "#31679"
+msgid "Widget auto rotation interval"
+msgstr "Widget automatisch roteren interval"
+
+msgctxt "#31520"
+msgid "Widget loading animation color diffuse"
+msgstr "Widget laadanimatie kleur diffuus"
+
+msgctxt "#31370"
+msgid "Widget loading image"
+msgstr "Widget laadt afbeelding"
+
+msgctxt "#31750"
+msgid "Widget rows"
+msgstr "Widget rijen"
+
+msgctxt "#31564"
+msgid "Widgets"
+msgstr "Widgets"
+
+msgctxt "#31395"
+msgid "With Titan BINGIE MOD you can have all of your Kodi and library content in one place, through the use of widgets.[CR][CR]Home widgets can be configured from:[CR][COLOR white]    - Skin Settings -> Configure Shortcuts tab -> Edit Menu Shortcuts[/COLOR][CR][CR]There are also Hubs for Movies, TV Shows, New and you can add your own.[CR]Hubs can have their own spotlight and widgets and everything is set from the hub's screen, when the hub is UNLOCKED.[CR][COLOR white]    - Skin Settings -> Configure Shortcuts tab -> Tick off the 'Lock Hubs' button[/COLOR][CR]When you're done, don't forget to lock the hubs![CR][CR][COLOR ff41b957]The skin is pre-packed with widgets for Movies & TV Shows.[CR]If you haven't added files to your video library yet, now is a good time![CR]Otherwise, you'd be staring at a blank screen...[/COLOR]"
+msgstr "Met Titan BINGIE MOD kun je al je Kodi- en bibliotheekcontent op één plek hebben, door het gebruik van widgets.[CR][CR]Thuisbasis widgets kunnen worden geconfigureerd via:[CR][KLEUR WIT] - Thema-instellingen -> Configureer snelkoppelingen tab -> Bewerk menu-snelkoppelingen[/COLOR][CR][CR]Er zijn ook Hubs voor Films, TV-series, Nieuw en je kunt je eigen Hubs toevoegen.CR][CR]Hubs kunnen hun eigen Schijnwerper en widgets hebben en alles wordt ingesteld vanaf het scherm van de hub, wanneer de hub ONVERGRENDELD is.[CR][COLOR white] - Thema-instellingen -> Configureer snelkoppelingen tab -> vink de knop 'Hubs vergrendelen' uit[/COLOR][CR]Als je klaar bent, vergeet dan niet om de hubs te vergrendelen![CR][CR][COLOR ff41b957]Het thema zit boordevol widgets voor Films & TV-series.[CR]Als je nog geen bestanden aan je videobibliotheek hebt toegevoegd, is dit een goed moment![CR]Anders zou je naar een leeg scherm zitten te staren...[/COLOR]"
+
+msgctxt "#320089"
+msgid "Writer"
+msgstr "Schrijver"
+
+msgctxt "#320072"
+msgid "Written by"
+msgstr "Geschreven door"
+
+msgctxt "#320077"
+msgid "Year"
+msgstr "Jaar"
+
+msgctxt "#31366"
+msgid "You're watching"
+msgstr "Je kijkt naar"
+
+msgctxt "#31062"
+msgid "YouTube"
+msgstr "YouTube"
+
+msgctxt "#31590"
+msgid "You can configure the skin to automatically enable a different theme during day or night time"
+msgstr "Je kunt het thema zo instellen dat overdag of 's nachts automatisch een ander thema wordt ingeschakeld."
+
+msgctxt "#31769"
+msgid "You can select which palette is displayed by default when the color picker is called by the skin."
+msgstr "Je kunt kiezen welk palet standaard wordt weergegeven wanneer de kleurenkiezer wordt opgeroepen door het thema."
+
+msgctxt "#31546"
+msgid "You might need to restart Kodi for the changes to take effect"
+msgstr "Mogelijk moet je Kodi opnieuw opstarten om de wijzigingen door te voeren"
+
+msgctxt "#31797"
+msgid "Youtube videos"
+msgstr "YouTube video's"
+
+msgctxt "#31408"
+msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from kodi.tv · Modify Add-on settings"
+msgstr "[B]ADD-ONS CONFIGUREREN[/B][CR][CR]Uw geïnstalleerde add-ons beheren - Add-ons zoeken en installeren vanaf kodi.tv - Add-on-instellingen wijzigen"
+
+msgctxt "#31400"
+msgid "[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language and region · Change file listing options · Set up a screensaver"
+msgstr "[B]WEERGAVE INSTELLINGEN CONFIGUREREN[/B][CR][CR]Thema wijzigen - Taal en regio instellen - Opties voor bestandsvermelding wijzigen - Screensaver instellen"
+
+msgctxt "#31403"
+msgid "[B]CONFIGURE GAMES SETTINGS[/B][CR][CR]Set gameplay options"
+msgstr "[B]SPEL-INSTELLINGEN CONFIGUREREN[/B][CR][CR]Spelopties instellen"
+
+msgctxt "#31410"
+msgid "[B]CONFIGURE LIVE-TV SETTINGS[/B][CR][CR]Configure PVR settings"
+msgstr "[B]LIVE-TV INSTELLINGEN CONFIGUREREN[/B][CR][CR]PVR-instellingen configureren"
+
+msgctxt "#31401"
+msgid "[B]CONFIGURE MEDIA SETTINGS[/B][CR][CR]Manage your video, music and picture library · Change video, music and picture listing options"
+msgstr "[B]MEDIA-INSTELLINGEN CONFIGUREREN[/B][CR][CR]Uw video-, muziek- en fotobibliotheek beheren - Opties voor video-, muziek- en fotolijsten wijzigen"
+
+msgctxt "#31405"
+msgid "[B]CONFIGURE NETWORK SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing · Set internet access options"
+msgstr "[B]NETWERKINSTELLINGEN CONFIGUREREN[/B][CR][CR]Besturing van Kodi instellen via UPnP en HTTP - Bestandsdeling configureren - Opties voor internettoegang instellen"
+
+msgctxt "#31402"
+msgid "[B]CONFIGURE PLAYER SETTINGS[/B][CR][CR]Set video and music playback options · Configure slideshows · Set subtitle fonts"
+msgstr "[B]AFSPEELINSTELLINGEN CONFIGUREREN[/B][CR][CR]Afspeelopties voor video en muziek instellen - Diavoorstellingen configureren - Lettertypen ondertitels instellen"
+
+msgctxt "#31407"
+msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup Titan Bingie Mod skin · Add and remove home menu items · Change skin backgrounds"
+msgstr "[B]THEMA INSTELLINGEN[/B][CR][CR]Titan Bingie Mod thema instellen - Toevoegen en verwijderen Thuisbasis menu items - Thema-achtergronden wijzigen"
+
+msgctxt "#31406"
+msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Set power saving options · Enable debugging"
+msgstr "[B]SYSTEEMINSTELLINGEN CONFIGUREREN[/B][CR][CR]Beeldschermen instellen en kalibreren - Audio-uitgang configureren - Energiebesparingsopties instellen - Debuggen inschakelen"
+
+msgctxt "#31404"
+msgid "[B]FILE MANAGER[/B][CR][CR]Browse and organize files"
+msgstr "[B]BESTANDSBEHEERDER[/B][CR][CR]Door bestanden bladeren en ze ordenen"
+
+msgctxt "#31549"
+msgid "[B]Note[/B] After enabling smart shortcuts for a particular section you must manually add those shortcuts to your menu. Go to [I]configure shortcuts[/I] and press Add, you will see the smart shortcuts listed there."
+msgstr "[B]Opmerking[/B] Nadat u slimme snelkoppelingen voor een bepaalde sectie hebt ingeschakeld, moet u deze snelkoppelingen handmatig toevoegen aan uw menu. Ga naar [I]configureer snelkoppelingen[/I] en druk op Toevoegen. Daar zie je de slimme snelkoppelingen staan."
+
+msgctxt "#31421"
+msgid "[B]SELECT YOUR KODI USER PROFILE[/B][CR][CR]To login and continue"
+msgstr "[B]SELECTEER UW KODI GEBRUIKERSPROFIEL[/B][CR][CR]Om in te loggen en verder te gaan"
+
+msgctxt "#31409"
+msgid "[B]SYSTEM INFO[/B][CR][CR]Summary · Storage · Network · Video · Hardware"
+msgstr "[B]SYSTEEM INFORMATIE[/B][CR][CR]Samenvatting - Opslag - Netwerk - Video - Hardware"
+
+msgctxt "#31971"
+msgid "(delayed)"
+msgstr "(vertraagd)"
+
+msgctxt "#320056"
+msgid "and"
+msgstr "en"
+
+msgctxt "#31008"
+msgid "color for indicator background"
+msgstr "kleur voor indicatorachtergrond"
+
+msgctxt "#31517"
+msgid "color for indicator background (triangle)"
+msgstr "kleur voor indicatorachtergrond (driehoek)"
+
+msgctxt "#31521"
+msgid "color for indicator image or text"
+msgstr "kleur voor indicatorafbeelding of -tekst"
+
+msgctxt "#31105"
+msgid "color for indicator text"
+msgstr "kleur voor indicatietekst"
+
+msgctxt "#31790"
+msgid "color for play icon"
+msgstr "kleur voor afspeelpictogram"
+
+msgctxt "#31862"
+msgid "for"
+msgstr "voor"
+
+msgctxt "#31863"
+msgid "for You"
+msgstr "Voor Jou"
+
+msgctxt "#31859"
+msgid "in IMDB Top 250"
+msgstr "in IMDB top 250"
+
+msgctxt "#320193"
+msgid "in main roles"
+msgstr "in hoofdrollen"
+
+msgctxt "#31034"
+msgid "items total"
+msgstr "Totaal aantal items"
+
+msgctxt "#320199"
+msgid "movie"
+msgstr "film"
+
+msgctxt "#320157"
+msgid "on IMDB Today"
+msgstr "op IMDB vandaag"
+
+msgctxt "#31059"
+msgid "remaining"
+msgstr "overgebleven"
+
+msgctxt "#31231"
+msgid "seconds"
+msgstr "seconden"
+
+msgctxt "#320194"
+msgid "series with"
+msgstr "serie met"
+
+msgctxt "#31330"
+msgid "top center"
+msgstr "boven centraal"
+
+msgctxt "#31329"
+msgid "top left"
+msgstr "boven links"
+
+msgctxt "#31331"
+msgid "top right"
+msgstr "boven rechts"
+
+msgctxt "#320054"
+msgid "with"
+msgstr "met"

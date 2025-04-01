@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BINGIE -->
+<window>
+    <defaultcontrol always="true">10</defaultcontrol>
+    <include>DefaultSkinSettings</include>
+    <onload condition="String.IsEqual(Skin.String(HomeLayout),bingie)">SetProperty(Random,$INFO[System.Time(ss)],Home)</onload>
+    <!-- start up mask - preload -->
+    <onload condition="String.IsEmpty(Skin.String(SplashScreen))">SetProperty(StartupMask,1,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(SplashScreen))">ReplaceWindow($VAR[StartUpWindow])</onload>
+    <onunload condition="Player.HasVideo">PlayerControl(Stop)</onunload>
+	
+	<!-- Start TMDbH service -->
+    <onload>Skin.SetBool(TMDbHelper.Service)</onload>
+	<onload>Skin.SetString(TMDbHelper.MonitorContainer,99950)</onload>
+</window>
