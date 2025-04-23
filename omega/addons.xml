@@ -595,7 +595,7 @@ v0.28.0 (2020-02-08)
 </addon>
 
 <!-- SCREENSAVER -->
-<addon id="screensaver.titan.bingie.mod" name="TBM Screensaver" version="1.0.0" provider-name="drinfernoo, matke">
+<addon id="screensaver.titan.bingie.mod" name="BINGIE MOD Screensaver" version="1.0.0" provider-name="drinfernoo, matke">
     <requires>
         <import addon="skin.titan.bingie.mod" version="2.1.0"/>
     </requires>
