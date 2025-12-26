@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.titan.bingie.mod" name="Titan BINGIE MOD Repository" provider-name="AchillesPunks, Matke" version="2.0.1">
-	<extension point="xbmc.addon.repository" name="Titan BINGIE MOD Repository">
+	<extension point="xbmc.addon.repository" name="BINGIE MOD Repository">
 		<requires>
 			<import addon="xbmc.addon" version="12.0.0"/>
 		</requires>
@@ -16,8 +16,8 @@
 		</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Titan BINGIE MOD Repository</summary>
-        <description lang="en">A repository for Titan BINGIE MOD skin.</description>
+		<summary lang="en">BINGIE MOD Repository</summary>
+        <description lang="en">A repository for BINGIE MOD skin.</description>
         <disclaimer></disclaimer>
         <platform>all</platform>
         <assets>
