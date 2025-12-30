@@ -1,0 +1,257 @@
+[[https://github.com/robwebset/script.tvtunes/raw/master/icon.png]]
+
+== Introduction ==
+TvTunes will play themes while browsing your Kodi library.
+<br />
+== Theme Browser ==
+The "Theme Browser" enables you to look at which Movies/TV Shows/Music Videos you already have themes available for. You can load the theme browser in the following ways:
+
+# From the System Menu -> Add-ons -> My Add-ons -> Video Add-ons -> TvTunes
+# Videos -> Addons -> TvTunes
+<br />
+== Video Themes ==
+If you are using video themes and are storing them with your main videos (i.e. theme.avi) then you will need to ensure that they are not picked up when you run the scraper to load your videos into the library. To ensure they are not picked up you can add the following to the [http://kodi.wiki/view/Advancedsettings.xml advanced settings]
+
+<source lang="xml">
+<advancedsettings>
+    <video>
+        &lt;!-- TvTunes: Section Start -->
+        <excludefromscan action="append">
+            <regexp>/Themes/</regexp>
+            <regexp>[\\/]Themes[\\/]</regexp>
+            <regexp>theme([0-9]*)\.(mp4|mkv|avi|mov|MP4|MKV|AVI|MOV)$</regexp>
+        </excludefromscan>
+        <excludetvshowsfromscan action="append">
+            <regexp>/Themes/</regexp>
+            <regexp>[\\/]Themes[\\/]</regexp>
+            <regexp>theme([0-9]*)\.(mp4|mkv|avi|mov|MP4|MKV|AVI|MOV)$</regexp>
+        </excludetvshowsfromscan>
+        &lt;!-- TvTunes: Section End -->
+    </video>
+</advancedsettings>
+</source>
+<br />
+There is also a button in the TvTunes settings that will do this for you.
+<br />
+
+== NFO File Support ==
+The themes for TvTunes to play can also be configured via a "tvtunes.nfo" file (Located in the same directory as the video the theme is for). This file should take the following format:
+
+<source lang="xml">
+<tvtunes>
+    <file>tvtunes.mp3</file>
+    <file>C:\Kodi\SingleTheme\anothertvtunes.flac</file>
+    <directory>C:\Kodi\RemoteThemes</directory>
+    <playlistfile>playlist.m3u</playlistfile>
+    <excludeFromScreensaver/>
+    <checkThemeExists/>
+</tvtunes>
+</source>
+
+There can be any number of "file"/"directory"/"playlistfile" elements, where they represent:
+* '''file''' - The name of a theme file in the same directory, or the full path if in a different directory
+* '''directory''' - The name of a directory below the existing directory, or the full path to a remote directory
+* '''playlistfile''' - Either the full path to a playlist file, a playlist file in the same directory or the name of an Kodi playlist file. (The extension "m3u" will be added if not already specified)
+* '''excludeFromScreensaver''' - Will result in the given Movie or TvShow being excluded from the TvTunes screensaver
+* '''checkThemeExists''' - Will check each file and directory location listed to see if it exists before adding it to the playlist (This can be useful if you have a removable drive with the themes that is not always attached)
+
+'''Smart Playlists:''' To make use of a Smart Playlist in Kodi you can supply just the name of the playlist file (No path) but including the extension ".xsp"
+
+'''Inclusive behavior:'''The tvtunes.nfo files are non-exclusive to any other valid set up through which the audio themes will play in TVTunes, which means that a tvtunes.nfo will follow same location, search and play criteria as described for 'Theme File Names and Locations', e.g.; any spare audio themes located within the same directory of the tvtunes.nfo will be played along (and shuffled, if option selected) with the themes defined by the latter.
+<br />
+
+== Theme File Names and Locations ==
+If you wish to store your own theme files with each video and have TvTunes play them for you then the naming of the theme is important. There can be multiple themes with each video, but they must all start with the word "theme" and be of one of the supported types configured in the settings menu.
+<br />
+The search order for themes is:
+# Themes in the same directory as the video file
+# (If no theme found) search for themes in the parent directory
+This allows for nested directories where seasons of TV Series are in separate directories, but all wish to use the same theme. It is also possible to store themes in a "Series directory" under a given TV Show, this can allow you to have different themes for each series of a given show.
+<br />
+<br />
+For Movie Sets, all Movies in the set will be searched for themes, and these themes played in a random order when the Movie Set is selected in the Movie List screen.
+<br />
+<br />
+There is also a settings option to define a directory (e.g. Themes) under the Movie or TV Show directory to look for themes, if themes are not found in this directory, then the previously defined order will be followed.
+<br />
+<br />
+::'''Practical scenario of how themes are picked up by TvTunes'''
+::
+::Regardless of how they are named and the file structure you have selected to use in TvTunes (Video folder, Themes folder or Custom path), TvTunes will play all audio files, which extensions are supported by TvTunes, as long as they include the string "theme" in their names. There is an additional feature provided only by the "Themes" folder, which allow you to even ignore the string "theme" in the names. 
+::
+::For example, all the following audio files will be played by TvTunes as themes for Maleficient (2014) regardless of the TvTunes' file system chosen:
+::* Maleficent (2014) 1080p BRRip H264 AAC-theme.ext
+::* Theme - Meleficient Suite.ext
+::* The Curse Won't Reverse theme.ext
+::* Arthemesia.ext (this will play too ;-))
+::* Theme.ext, theme1.ext, theme2.ext, theme3.ext, etc.
+::
+::And if the themes are within the Themes folder, the following will also be played:
+::* Maleficient Suite.ext
+::* Battle of the Moors.ext
+::
+::<small>Obs. where .ext is any valid audio file supported by TvTunes. Remember you can also just have a tvtunes.nfo file pointing to a directory which contains the whole OST of the movie. Supported audio extensions refer to the extensions configured in TvTunes settings.</small>
+<br />
+
+== Screensaver ==
+TvTunes has a companion addon that provides a screensaver that can display images and play themes in the background:
+
+[https://github.com/latts9923/screensaver.tvtunes TvTunesScreensaver]
+<br />
+
+== Settings ==
+This section details all the settings options for TvTunes
+=== TVTunes===
+{| border="0"
+|- valign=top
+|
+:'''Enable Theme Playing (Restart Required)'''
+::Enable or disable if the themes are played while navigating (Useful if you only wish to use the Sceeensaver option). A restart of Kodi is required to pick up this change.
+:'''Play themes when browsing Movie list'''
+:: When moving over items in the Movie list, play the theme if it remains selected
+:'''Play themes when browsing TV Show list'''
+:: When moving over items in the TV Show list, play the theme if it remains selected
+:'''Play themes when browsing Music Video list'''
+:: When moving over items in the Music Video list, play the theme if it remains selected
+:'''Play themes when viewing Video Information'''
+:: Play the theme when showing the Video Information screen
+:'''Play themes when browsing TV Show Seasons'''
+:: Play the theme when showing the seasons in a TV Show
+:'''Play themes when browsing TV Show Episodes'''
+:: Play the theme when showing the episodes in a TV Show
+:'''Play themes when browsing Music Library'''
+:: Play a track by the given artist or from the selected album while browsing (This is supported when browsing by Artist or Album)
+|}
+
+=== Playback ===
+{| border="0"
+|- valign=top
+|
+:'''Play theme in loop'''
+::Will continue to play all themes in a loop
+:'''Theme Volume'''
+::Sets the volume that should be used to play the theme in the background (Setting to 0 will result in no change in volume when playing the themes)
+:'''Delayed Audio Theme Start (Seconds)'''
+::Wait the set amount of time before starting to play the audio theme
+:'''Delay Video Theme Start (Seconds)'''
+::Wait the set amount of time before starting to play the video theme
+:'''Fade out after playing for (minutes)'''
+::Stop playing themes after a set amount of time
+:'''Fade tune out when exiting'''
+::When it is time to stop playing the theme, fade it out
+:'''Fade in tune when starting'''
+::When a theme starts playing, fade the it in so it starts very quietly
+:'''Shuffle multiple tracks'''
+::When there are multiple themes, play them in a random order
+:'''Random start time'''
+::When a theme starts, play it from a random point in the theme
+:'''- Fixed Audio Start Time Into Media (Seconds)'''
+::Start the audio theme playing a specific number of seconds in. If set to zero, then use a random start time. (If the value set is longer than the theme, a random value will be used)
+:'''- Fixed Video Start Time Into Media (Seconds)'''
+::Start the video theme playing a specific number of seconds in. If set to zero, then use a random start time. (If the value set is longer than the theme, a random value will be used)
+:'''Only ever play single theme'''
+::When there are multiple themes, will only play one of them
+:'''Limit track duration when multiple themes (seconds)'''
+::Only play the given amount of a track before moving to the next track
+|}
+
+=== File System ===
+{| border="0"
+|- valign=top
+|
+:'''Use Protected SMB Share'''
+::Allows you to define a username and password when accessing themes via an SMB share
+:'''Store tunes in a custom path'''
+::Allows you to specify a location where the themes will be stores (i.e. not embeded within your Video collection)
+:'''Support themes in sub directories'''
+::Allows you to define the name of a sub directory where the themes will be stored under each movie in the video library
+:'''Change File Types'''
+::Allows the selection of which file types are supported for theme files i.e. mp3, flac, wav
+:'''When A Video Theme Exists'''
+::Allows you to select what to do when a video theme is encountered. The options are "Mix With Audio Themes", "Play Video Themes First" and "Only Play Video Themes"
+:'''- Repeat Single Audio Theme After Video'''
+::Only valid when "Play Video Themes First" is set, will play the video theme first, then if there is also an audio theme, will keep repeating just the audio theme
+:'''Block Refresh Rate Change'''
+::If you have the setting to "Adjust display refresh rate to match video" enabled, then this setting will ignore that setting when playing video themes
+:'''Use Trailer Video If No Theme Available'''
+::Will use any trailer files available as video themes if there is no theme already present
+:<u>'''''Startup'''''</u>
+::
+:'''Reset Volume On Startup'''
+::Will reset the Kodi volume on startup of the system - this is useful if you always run your system at a set volume and use the TV or external audio system to change the volume (This way if the system crashes while playing a TvTunes theme, it will not leave the volume in an inconsistent state)
+:'''- Set Volume On Startup To'''
+::The value to set the Kodi volume to on startup
+:<u>'''''Debugging'''''</u>
+::
+:'''Enable debug logging'''
+::Enables TvTunes debug logging (Required if reporting a problem) - for this to work, system-wide Kodi logging must also be enabled
+|}
+
+<br />
+
+== Skins And Addon Customisations ==
+No skin changes are required in order to use TvTunes.
+<br />
+The following information is aimed at skinners and show what the TvTunes changes in Confluence could be to add specific additional features.
+
+=== TvTunes Active Detection ===
+If a skin (or other Addon) wishes to work out if TvTunes is currently playing a theme (and maybe not show something if TvTunes is running), then a check can be made to see if the PlayingBackgroundMedia value is set: 
+<source lang="xml">
+<visible>IsEmpty(Window(10025).Property(PlayingBackgroundMedia))</visible>
+</source>
+This can be useful if you wish to stop things like "Music Visualizations" while the theme is playing.
+<br />
+Note: In Pre 5.0 versions of TvTunes, this variable was called TvTunesIsAlive.
+<br />
+=== Blocking Theme Playing ===
+If you wish to stop TvTunes from playing a theme, then you can set the value "TvTunesBlocked":
+<source lang="xml">
+xbmcgui.Window(10025).setProperty("TvTunesBlocked", "true")
+</source>
+<br />
+But please ensure you also clear the property when the plugin no longer needs to block themes playing
+<source lang="xml">
+xbmcgui.Window(10025).clearProperty( "TvTunesBlocked" )
+</source>
+<br />
+=== Custom Windows ===
+By Default TvTunes will only activate when in the official "Videos" section. If you have a custom Window in a skin or Addon that you with a theme to be activated for, then you can add the following line to your window-xml file in addition to the previously detailed onLoad action.
+
+For Movie Themes add:
+<source lang="xml">
+<onload>SetProperty("TvTunesSupported", "Movies")</onload>
+</source>
+<br />
+For TV Themes add:
+<source lang="xml">
+<onload>SetProperty("TvTunesSupported", "TvShows")</onload>
+</source>
+<br />
+<br />
+If you have an addon that is migrating between screens and you want to ensure that TvTunes does not have a break in playing, you can set a property on the home screen to force playing of an existing track continues. This can be done by:
+<source lang="xml">
+xbmcgui.Window( 12000 ).setProperty( "TvTunesContinuePlaying", "True" )
+</source>
+<br />
+But please ensure you also clear the property when the plugin no longer needs to force the theme to play
+<source lang="xml">
+xbmcgui.Window( 12000 ).clearProperty( "TvTunesContinuePlaying" )
+</source>
+<br />
+
+== Known Issues ==
+There are currently the following known issue that can not currently be fixed, please do not raise an Issue for these, as there is currently nothing that can be done about this.
+
+=== Setting: Store tunes in a custom path ===
+There is an issue with storing all the themes in a custom path if you use TvTunes to play themes for both TV Shows and Movies. This can occur when you have a TV Show and a Movie with the same name, as it will store them in the same sub-directory. This is a legacy setting that has been in TvTunes a while, ideally the TV Shows and Movies would be stored in different location, however making this change now would break existing users.
+
+=== Video Themes And Looping ===
+If you have a video theme and set it to loop then when it starts the second playing of a video theme, it will flash up full screen. This is a Kodi issue detailed on the following bug report: [http://trac.kodi.tv/ticket/16013 TRAC-16013]
+<br />
+
+== Debugging ==
+If reporting a problem, please also provide a debug log. To do this you need to enable BOTH:
+* Kodi logging from the main setting menu
+* TvTunes debug from the TvTunes addon settings menu
+Please do not paste the log into the forum thread, just link to it.
+<br />

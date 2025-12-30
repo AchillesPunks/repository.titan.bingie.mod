@@ -1,0 +1,71 @@
+VERSION 2.1.1 - RELEASE DATE 01/27/2024
+
+FIXES:
+• I removed the deprecated check for "videolibrary". It was throwing an error in the log.
+• I fixed a problem with the NFO log messages. Thanks to quickmic for reporting the bug!
+
+---------------------------------------
+
+VERSION 2.1.0 - RELEASE DATE 11/17/2023
+
+FIXES:
+• I fixed a problem with the setting "Only ever play single theme". I also renamed that setting to "Play only one theme from playlist". Thanks to gtyper for reporting the bug!
+
+---------------------------------------
+
+VERSION 2.0.9 - RELEASE DATE 7/2/2023
+
+FIXES:
+• I finally fixed the problem with vidoes themes continuing to play.
+
+---------------------------------------
+
+VERSION 2.0.8 - RELEASE DATE 6/5/2023
+
+MAINTENANCE:
+• I updated the French language file. Thanks to skypichat for the updated file!
+• I disabled a log message that was not useful in the logs. Thanks to Shredder_guitar for bringing it to my attention!
+
+---------------------------------------
+
+VERSION 2.0.7 - RELEASE DATE 3/1/2023
+
+FIXES:
+• I fixed an error with the reading of NFO files.
+
+---------------------------------------
+
+VERSION 2.0.6 - RELEASE DATE 2/24/2023
+
+ADDITIONS:
+• I added the ability to play themes while viewing Sets. There is a new setting named "PLAY THEMES WHEN BROWSING SETS LIST" that must be enabled. Thanks to AB30AB for the request!
+
+---------------------------------------
+
+VERSION 2.0.5 - RELEASE DATE 2/22/2023
+
+FIXES:
+• I fixed the code for the debug logger so that when enabled you will see log messages in kodi.log.
+• The Movie Sets will now play random themes from a Movie in the Set. Thanks to Tyrius for providing the fix!
+• There has been a long standing problem with TV Tunes muting the volume at times during use. Thanks to jepsizofye for providing the fix!
+
+---------------------------------------
+
+VERSION 2.0.4 - RELEASE DATE 7/24/2021
+
+FIXES:
+• I updated the file service.py.
+
+---------------------------------------
+
+VERSION 2.0.3 - RELEASE DATE 5/19/2021
+
+FIXES:
+• I fixed the error caused by the "UPDATE ADVANCEDSETTINGS.XML FILE" button. Thanks to bc1113 for reporting the bug!
+
+---------------------------------------
+
+VERSION 2.0.2 - RELEASE DATE 4/19/2021
+
+MAINTENANCE:
+• I updated service.py.
