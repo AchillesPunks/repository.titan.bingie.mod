@@ -16,7 +16,7 @@
 		</dir>
 		<dir minversion="21.9.701+">
 			<info compressed="false">https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/piers/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/piers/addons.xml.md5</checksum>
+			<checksum>https://github.com/AchillesPunks/repository.titan.bingie.mod/blob/master/piers/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/AchillesPunks/repository.titan.bingie.mod/master/piers/</datadir>
 		</dir>
 	</extension>
